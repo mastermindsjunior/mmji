@@ -14,6 +14,7 @@ const NavBar = () => {
 
         tl.to(".navInner", {
             opacity:1,
+            scale:1,
             duration:0.1,
         })
         tl.to(".navInner", {
@@ -39,7 +40,7 @@ const NavBar = () => {
     },[])
   return (
     <header className=' w-full fixed z-50 top-0 left-0 px-20 py-4 flex justify-center items-center '>
-        <div className=' bg-dark shadow px-12 py-2 relative flex justify-end items-center h-28 w-28 opacity-0 navInner'>
+        <div className=' bg-white/5 backdrop-blur-md shadow px-12 py-2 relative flex justify-end items-center h-28 w-28 opacity-0 scale-50 navInner'>
             <div className=' absolute top-1/2 -translate-y-1/2 left-4 opacity-0 navLogo'>
                 <Image src={'/logo-india.png'} width={400} height={200} alt=' logo' className=' h-24 w-auto object-contain' />
             </div>

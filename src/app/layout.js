@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono, Roboto_Flex } from "next/font/google";
-import "./globals.css";
 import NavBar from "./components/common/NavBar";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +22,8 @@ const robo = Roboto_Flex({
   weight:['100', '200','300','400','500','600','700','800','900'],
   variable:'--font-roboto'
 })
+
+
 
 export default function RootLayout({ children }) {
   return (

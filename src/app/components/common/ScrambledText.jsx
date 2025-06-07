@@ -5,18 +5,20 @@ import React, { useState, useEffect, useRef } from 'react';
  * ScrambleText
  *
  * Props:
- *   - text (string):   the final text to reveal
- *   - duration (number, in ms): how long the scramble animation runs before fully revealing
- *   - delay (number, in ms):    how long to wait before starting the scramble
- *   - speed (number, in ms):    how often to refresh random characters while scrambling
- *   - className (string, optional): any additional CSS classNames to apply to the outer wrapper
+ *   - text (string):           the final text to reveal
+ *   - duration (number, ms):   how long the scramble animation runs
+ *   - delay (number, ms):      how long to wait before starting
+ *   - speed (number, ms):      how often to refresh random chars
+ *   - className (string):      additional CSS classes
+ *   - active (boolean, opt.):  whether to run the scramble (default: true)
  *
  * Example:
  *   <ScrambleText
- *     text="HELLO WORLD"
+ *     text="HELLO"
  *     duration={2000}
  *     delay={500}
  *     speed={50}
+ *     active={shouldAnimate}
  *     className="my-scramble"
  *   />
  */
@@ -26,8 +28,9 @@ export default function ScrambleText({
   delay = 0,
   speed = 50,
   className = '',
+  active = true,
 }) {
-  const [displayed, setDisplayed] = useState('');
+  const [displayed, setDisplayed] = useState(text);
   const startTimeRef = useRef(null);
   const timeoutRef = useRef(null);
   const intervalRef = useRef(null);
@@ -39,12 +42,20 @@ export default function ScrambleText({
   const randomChar = () => letters[Math.floor(Math.random() * letters.length)];
 
   useEffect(() => {
-    // If props change or unmount, clear any pending timers/intervals:
+    // Clear any existing timers/intervals:
     clearTimeout(timeoutRef.current);
     clearInterval(intervalRef.current);
-    setDisplayed(''); // start blank each time props change
 
-    // After `delay`, begin the interval-based scramble:
+    if (!active) {
+      // If not active, immediately show the final text
+      setDisplayed(text);
+      return;
+    }
+
+    // Start with blank (or you could leave previous text if you prefer)
+    setDisplayed('');
+
+    // After `delay`, begin the scramble
     timeoutRef.current = setTimeout(() => {
       startTimeRef.current = Date.now();
 
@@ -57,17 +68,13 @@ export default function ScrambleText({
 
         let output = '';
         for (let i = 0; i < totalChars; i++) {
-          if (i < numRevealed) {
-            output += text[i];
-          } else {
-            output += randomChar();
-          }
+          output += i < numRevealed ? text[i] : randomChar();
         }
 
         setDisplayed(output);
 
         if (progress >= 1) {
-          // Once fully revealed, show exact text and clear interval:
+          // Once done, lock it in and clear
           setDisplayed(text);
           clearInterval(intervalRef.current);
         }
@@ -75,10 +82,11 @@ export default function ScrambleText({
     }, delay);
 
     return () => {
+      // Cleanup on unmount or prop change
       clearTimeout(timeoutRef.current);
       clearInterval(intervalRef.current);
     };
-  }, [text, duration, delay, speed]);
+  }, [text, duration, delay, speed, active]);
 
   return (
     <span
@@ -89,16 +97,10 @@ export default function ScrambleText({
         whiteSpace: 'pre',
       }}
     >
-      {/* 
-        Invisible final text reserves the exact width.
-        Using visibility:hidden → it occupies space but isn't seen.
-      */}
+      {/* Reserve space */}
       <span style={{ visibility: 'hidden', whiteSpace: 'pre' }}>{text}</span>
 
-      {/*
-        Absolutely positioned scramble text on top.
-        Because parent is position:relative, top/left:0 aligns it exactly.
-      */}
+      {/* Scrambled/visible text */}
       <span
         style={{
           position: 'absolute',
