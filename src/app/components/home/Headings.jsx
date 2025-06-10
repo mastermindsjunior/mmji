@@ -10,6 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Headings = () => {
   useEffect(() => {
+window.scrollTo(0, 0);
+
     gsap.to(".headingScrambleText", {
       opacity: 1,
       translateX: "0",
@@ -55,7 +57,7 @@ const Headings = () => {
     gsap.to(".headingImg .headingImgInner", {
       height: "80dvh",
       width: "80vw",
-      translateY: "-17%",
+      bottom:'-20%',
       duration: 1,
       delay: 0.2,
       scrollTrigger: {
@@ -98,7 +100,7 @@ ScrollTrigger.refresh()
   }, []);
   return (
     <div className=" flex flex-col justify-center items-center h-[80dvh] mainHeading">
-      <h1 className=" text-center  text-5xl font-robo font-medium w-1/2 flex flex-wrap justify-center items-center gap-1 ">
+      <h1 className=" text-center  4xl:text-5xl text-3xl font-robo font-medium w-1/2 flex flex-wrap justify-center items-center gap-1 ">
         <span className=" headingScrambleText  opacity-0 -translate-x-8">
           MasterMinds Junior:
         </span>
@@ -146,7 +148,7 @@ ScrollTrigger.refresh()
         />
       </h1>
 
-      <p className="headingPara opacity-0 translate-y-12 mt-3">
+      <p className="headingPara opacity-0 translate-y-12 mt-3 4xl:text-base text-sm ">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
         mollitia!
       </p>
@@ -159,8 +161,9 @@ ScrollTrigger.refresh()
         <span className=" opacity-0 scale-75 translate-y-4">Get Started</span>
       </button>
 
-      <div className=" h-[40%] w-full mt-8 relative headingImg opacity-0 scale-50">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full headingImgInner">
+
+      <div className=" 4xl:h-[40%] h-[35%] w-full mt-8 relative headingImg opacity-0 scale-50">
+        <div className="fixed 4xl:h-[40dvh] h-[30dvh] bottom-[-30%] left-1/2 -translate-x-1/2 headingImgInner">
           <Image
             src={"/heading.jpg"}
             alt="heaing"

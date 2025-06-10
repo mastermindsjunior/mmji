@@ -40,17 +40,17 @@ const NavBar = () => {
     },[])
   return (
     <header className=' w-full fixed z-50 top-0 left-0 px-20 py-4 flex justify-center items-center '>
-        <div className=' bg-white/5 backdrop-blur-md shadow px-12 py-2 relative flex justify-end items-center h-28 w-28 opacity-0 scale-50 navInner'>
+        <div className=' bg-white/5 backdrop-blur-md shadow px-12 py-2 relative flex justify-end items-center 4xl:h-28 2xl:h-24 h-20 4xl:w-28 2xl:w-24 w-20 opacity-0 scale-50 navInner'>
             <div className=' absolute top-1/2 -translate-y-1/2 left-4 opacity-0 navLogo'>
-                <Image src={'/logo-india.png'} width={400} height={200} alt=' logo' className=' h-24 w-auto object-contain' />
+                <Image src={'/logo-india.png'} width={400} height={200} alt=' logo' className=' 4xl:h-24 2xl:h-20 h-16 w-auto object-contain' />
             </div>
 
-            <nav className=' w-3/5 h-24 justify-between items-center gap-4 hidden navLinks font-robo font-bold '>
-                <Link className=' opacity-0 translate-y-2 text-xl' href={"/"}>Home</Link>
-                <Link className=' opacity-0 translate-y-2 text-xl' href={"/"}>About</Link>
-                <Link className=' opacity-0 translate-y-2 text-xl' href={"/"}>Services</Link>
-                <Link className=' opacity-0 translate-y-2 text-xl' href={"/"}>Career</Link>
-                <Link className=' opacity-0 translate-y-2 text-xl' href={"/"}>Contact</Link>
+            <nav className=' w-3/5 4xl:h-24 2xl:h-20 h-16 justify-between items-center gap-4 hidden navLinks font-robo font-bold '>
+                <Link className=' opacity-0 translate-y-2 4xl:text-xl 2xl:text-lg text-base' href={"/"}>Home</Link>
+                <Link className=' opacity-0 translate-y-2 4xl:text-xl 2xl:text-lg text-base' href={"/"}>About</Link>
+                <Link className=' opacity-0 translate-y-2 4xl:text-xl 2xl:text-lg text-base' href={"/"}>Services</Link>
+                <Link className=' opacity-0 translate-y-2 4xl:text-xl 2xl:text-lg text-base' href={"/"}>Career</Link>
+                <Link className=' opacity-0 translate-y-2 4xl:text-xl 2xl:text-lg text-base' href={"/"}>Contact</Link>
             </nav>
         </div>
     </header>
