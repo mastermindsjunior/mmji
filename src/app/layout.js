@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Roboto_Flex } from "next/font/google";
+import { Albert_Sans, Geist, Geist_Mono, Roboto_Flex } from "next/font/google";
 import NavBar from "./components/common/NavBar";
 import "./globals.css";
 
@@ -23,13 +23,18 @@ const robo = Roboto_Flex({
   variable:'--font-roboto'
 })
 
+const albert = Albert_Sans({
+  subsets:['latin'],
+  weight:['100','200','300','400','500','600','700','800','900'],
+  variable:'--font-albert'
+});
 
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${robo.variable} antialiased bg-darker`}
+        className={`${geistSans.variable} ${geistMono.variable} ${robo.variable} ${albert.variable} heading-albert antialiased bg-darker`}
       > 
       <NavBar/>
         {children}

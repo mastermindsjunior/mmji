@@ -106,7 +106,7 @@ useEffect(() => {
             <h5>Advance Details</h5>
             <p className=' 2xl:text-sm text-xs text-white/75'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure cum impedit eaque aliquid rerum at quo temporibus odio similique commodi distinctio, ipsam nesciunt nobis dicta, alias labore quas est.</p>
         </div>
-        <button className=' border-t border-b border-white rounded-[15%] 2xl:py-2 py-1 px-4 absolute z-20 bottom-3 left-1/2 -translate-x-1/2'>Learn More</button>
+        <button className=' border-t border-b border-white rounded-full 2xl:py-2 py-1 px-4 absolute z-20 bottom-3 left-1/2 -translate-x-1/2'>Learn More</button>
       </div>
 
 
@@ -124,7 +124,7 @@ useEffect(() => {
             <h5>Advance Details</h5>
             <p className=' 2xl:text-sm text-xs text-white/75'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure cum impedit eaque aliquid rerum at quo temporibus odio similique commodi distinctio, ipsam nesciunt nobis dicta, alias labore quas est.</p>
         </div>
-        <button className=' border-t border-b border-white rounded-[15%] 2xl:py-2 py-1 px-4 absolute z-20 bottom-3 left-1/2 -translate-x-1/2'>Learn More</button>
+        <button className=' border-t border-b border-white rounded-full 2xl:py-2 py-1 px-4 absolute z-20 bottom-3 left-1/2 -translate-x-1/2'>Learn More</button>
       </div>
 
 
@@ -142,7 +142,7 @@ useEffect(() => {
             <h5>Advance Details</h5>
             <p className=' 2xl:text-sm text-xs text-white/75'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure cum impedit eaque aliquid rerum at quo temporibus odio similique commodi distinctio, ipsam nesciunt nobis dicta, alias labore quas est.</p>
         </div>        
-        <button className=' border-t border-b border-white rounded-[15%] 2xl:py-2 py-1 px-4 absolute z-20 bottom-3 left-1/2 -translate-x-1/2'>Learn More</button>
+        <button className=' border-t border-b border-white rounded-full 2xl:py-2 py-1 px-4 absolute z-20 bottom-3 left-1/2 -translate-x-1/2'>Learn More</button>
       </div>
     </>
   )

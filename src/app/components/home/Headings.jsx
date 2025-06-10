@@ -173,12 +173,12 @@ ScrollTrigger.refresh()
           />
 
           <div style={{transform:'translateX(-50%)'}} className=" absolute bottom-2 left-1/2 px-5 py-2 rounded-xl backdrop-blur-sm bg-white/10 opacity-0 scale-75 headingImgCTA ">
-            <p className=" flex justify-between items-center gap-4">
+            <p className=" flex justify-between items-center gap-4 font-albe">
                 <span className=" font-light text-lg shrink-0">Decentralized AI: <br /> Redefining Web3</span>
                 <span className=" text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam tempore aperiam placeat veniam ipsum sed?</span>
             </p>
             <div className=" w-full flex justify-center items-center mt-2">
-                <button className=" border-t border-b border-white rounded-xl py-2 px-4">
+                <button className=" border-t border-b border-white rounded-full py-2 px-4">
                     <span className=" opacity-0 scale-75 translate-y-4">Discover More</span>
                 </button>
             </div>
