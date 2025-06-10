@@ -13,7 +13,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-robo: var(--font-roboto)
-  --font-alrt: var(--font-albert);
+  /* --font-alrt: var(--font-albert); */
 
 
     --breakpoint-500: 31.25rem;   /* 500px */
@@ -28,7 +28,7 @@
 
 
 .heading-albert {
-  font-family: var(--font-alrt), sans-serif;
+  font-family:  sans-serif;
 }
 
 
