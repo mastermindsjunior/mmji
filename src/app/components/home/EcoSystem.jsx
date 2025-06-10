@@ -89,7 +89,7 @@ export default function EcoSystem() {
     {/* HEADING */}
       <div className='flex justify-center items-center'>
         <div className='flex flex-col justify-center items-center gap-4 ecosystemHeading'>
-          <h3 className='4xl:text-5xl text-3xl'>
+          <h3 className=' text-3xl'>
             <ScrambleText
               text={'Ecosystem'}
               duration={800}

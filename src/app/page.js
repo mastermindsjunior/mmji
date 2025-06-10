@@ -7,7 +7,7 @@ import Strength from "./components/home/Strength";
 
 export default function Home() {
   return (
-    <div className=" w-full 4xl:pt-40 2xl:pt-32 pt-24 ">
+    <div className=" w-full 2xl:pt-32 pt-24 ">
       <BGGrid/>
       <Headings/>
       <Solutions/>

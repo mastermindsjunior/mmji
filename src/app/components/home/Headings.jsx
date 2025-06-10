@@ -100,7 +100,7 @@ ScrollTrigger.refresh()
   }, []);
   return (
     <div className=" flex flex-col justify-center items-center h-[80dvh] mainHeading">
-      <h1 className=" text-center  4xl:text-5xl text-3xl font-robo font-medium w-1/2 flex flex-wrap justify-center items-center gap-1 ">
+      <h1 className=" text-center  text-3xl font-robo font-medium w-1/2 flex flex-wrap justify-center items-center gap-1 ">
         <span className=" headingScrambleText  opacity-0 -translate-x-8">
           MasterMinds Junior:
         </span>
@@ -148,7 +148,7 @@ ScrollTrigger.refresh()
         />
       </h1>
 
-      <p className="headingPara opacity-0 translate-y-12 mt-3 4xl:text-base text-sm ">
+      <p className="headingPara opacity-0 translate-y-12 mt-3  text-sm ">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
         mollitia!
       </p>
@@ -162,8 +162,8 @@ ScrollTrigger.refresh()
       </button>
 
 
-      <div className=" 4xl:h-[40%] h-[35%] w-full mt-8 relative headingImg opacity-0 scale-50">
-        <div className="fixed 4xl:h-[40dvh] h-[30dvh] bottom-[-30%] left-1/2 -translate-x-1/2 headingImgInner">
+      <div className="  h-[35%] w-full mt-8 relative headingImg opacity-0 scale-50">
+        <div className="fixed h-[30dvh] bottom-[-30%] left-1/2 -translate-x-1/2 headingImgInner">
           <Image
             src={"/heading.jpg"}
             alt="heaing"
