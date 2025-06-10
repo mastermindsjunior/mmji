@@ -9,7 +9,7 @@ const Roadmap = () => {
             <div className=' relative -top-4 left-4 backdrop-blur-md p-3 rounded-xl border border-white'>
                 <h6>Title 2024</h6>
                 <p>Title Title</p>
-                <ul className=' text-white/60 list-disc pl-6 text-[13px]'>
+                <ul className=' text-white/60 list-disc 2xl:pl-6 pl-4 2xl:text-[13px] text-[10px]'>
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>Lorem ipsum dolor sit amet.</li>
@@ -19,7 +19,7 @@ const Roadmap = () => {
             <div className=' relative left-4 top-4 backdrop-blur-md p-3 rounded-xl border border-white'>
                 <h6>Title 2024</h6>
                 <p>Title Title</p>
-                <ul className=' text-white/60 list-disc pl-6 text-[13px]'>
+                <ul className=' text-white/60 list-disc 2xl:pl-6 pl-4 2xl:text-[13px] text-[10px]'>
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>Lorem ipsum dolor sit amet.</li>
@@ -29,7 +29,7 @@ const Roadmap = () => {
             <div className=' relative -left-4 -top-4 backdrop-blur-md p-3 rounded-xl border border-white'>
                   <h6>Title 2024</h6>
                 <p>Title Title</p>
-                <ul className=' text-white/60 list-disc pl-6 text-[13px]'>
+                <ul className=' text-white/60 list-disc 2xl:pl-6 pl-4 2xl:text-[13px] text-[10px]'>
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>Lorem ipsum dolor sit amet.</li>
@@ -39,7 +39,7 @@ const Roadmap = () => {
             <div className=' relative top-4 -left-4 backdrop-blur-md p-3 rounded-xl border border-white'>
                 <h6>Title 2024</h6>
                 <p>Title Title</p>
-                <ul className=' text-white/60 list-disc pl-6 text-[13px]'>
+                <ul className=' text-white/60 list-disc 2xl:pl-6 pl-4 2xl:text-[13px] text-[10px]'>
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>Lorem ipsum dolor sit amet.</li>
