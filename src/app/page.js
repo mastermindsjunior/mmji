@@ -1,4 +1,6 @@
 import BGGrid from "./components/common/BGGrid";
+import BlogSection from "./components/home/BlogSection";
+import CTASection from "./components/home/CTASection";
 import EcoSystem from "./components/home/EcoSystem";
 import Headings from "./components/home/Headings";
 import Roadmap from "./components/home/Roadmap";
@@ -14,6 +16,8 @@ export default function Home() {
       <EcoSystem/>
       <Strength/>
       <Roadmap/>
+      <BlogSection/>
+      <CTASection/>
     </div>
   );
 }

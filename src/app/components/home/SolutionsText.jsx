@@ -27,7 +27,7 @@ const SolutionsText = () => {
     },[])
   return (
       <h3 className=' h-dvh w-full text-6xl flex justify-center items-center sticky top-0 left-0 z-0'>
-        <span className='SolutionsText translate-x-full translate-y-full opacity-0'><ScrambleText text={'SOLUTIONS'} duration={500} delay={100} active={start} /></span>
+        <span className='SolutionsText translate-x-full translate-y-full opacity-0'><ScrambleText text={'SERVICES'} duration={500} delay={100} active={start} /></span>
       </h3>
   )
 }

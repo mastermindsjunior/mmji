@@ -13,6 +13,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-robo: var(--font-roboto)
+  --font-albe: var(--font-albert);
 
   
 
@@ -20,7 +21,7 @@
 
 
 .heading-albert {
-  font-family:  sans-serif;
+  font-family:  "Albert Sans",sans-serif;
 }
 
 

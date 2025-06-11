@@ -6,7 +6,17 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import ScrambleText from '../common/ScrambledText';
 import Image from 'next/image';
+import { Activity, Zap, Atom, Shield, Infinity } from "lucide-react";
 
+
+
+const blocks = [
+  { icon: Activity, label: "Monitor", level: 3 },
+  { icon: Zap, label: "Energy", level: 2 },
+  { icon: Atom, label: "Core", level: 1 },
+  { icon: Shield, label: "Security", level: 2 },
+  { icon: Infinity, label: "Scalability", level: 3 },
+];
 gsap.registerPlugin(ScrollTrigger);
 
 export default function EcoSystem() {
@@ -85,48 +95,62 @@ export default function EcoSystem() {
   }, []);
 
   return (
-    <div className='w-full min-h-[100dvh] pt-[150px] px-8 ecosystemMain'>
-    {/* HEADING */}
-      <div className='flex justify-center items-center'>
-        <div className='flex flex-col justify-center items-center gap-4 ecosystemHeading'>
-          <h3 className=' text-3xl'>
-            <ScrambleText
-              text={'Ecosystem'}
-              duration={800}
-              speed={5}
-              active={start}
-            />
-          </h3>
-          <p className='text-white/70'>
-            Lorem ipsum dolor sit amet.
-          </p>
-          <button className='border-b border-white rounded-xl py-2 px-4 ecosystemBtn'>
-            <span className=' inline-block'>Explore Ecosystem</span>
-          </button>
-        </div>
-      </div>
-      {/* HEADING */}
-
-      <div className=' h-[60dvh] w-full flex justify-center mt-8 items-center gap-6 px-[20%] ecosystemMain'>
-        <div className=' grid grid-rows-5 grid-cols-1 2zl:w-20 w-16 h-full gap-4'>
-          <div className=' w-full aspect-square rounded-sm ani3 opacity-0 border border-white'></div>
-          <div className=' w-full aspect-square rounded-sm ani2 opacity-0 border border-white'></div>
-          <div className=' w-full aspect-square rounded-sm ani1 opacity-0 border border-white'></div>
-          <div className=' w-full aspect-square rounded-sm ani2 opacity-0 border border-white'></div>
-          <div className=' w-full aspect-square rounded-sm ani3 opacity-0 border border-white'></div>
-        </div>
-        <div className=' flex-1 h-full'>
-          <Image src={'/heading.jpg'} alt='' width={700} height={500} className=' h-full w-full object-cover object-center'/>
-        </div>
-        <div className=' grid grid-rows-5 grid-cols-1 2zl:w-20 w-16 h-full gap-4'>
-          <div className=' w-full aspect-square rounded-sm ani3 opacity-0 border border-white'></div>
-          <div className=' w-full aspect-square rounded-sm ani2 opacity-0 border border-white'></div>
-          <div className=' w-full aspect-square rounded-sm ani1 opacity-0 border border-white'></div>
-          <div className=' w-full aspect-square rounded-sm ani2 opacity-0 border border-white'></div>
-          <div className=' w-full aspect-square rounded-sm ani3 opacity-0 border border-white'></div>
-        </div>
-      </div>
-      
+<div className="w-full min-h-[100dvh] pt-[150px] px-6 md:px-12 ecosystemMain text-white">
+  {/* Heading Section */}
+  <div className="flex justify-center items-center text-center">
+    <div className="flex flex-col justify-center items-center gap-4 ecosystemHeading max-w-xl">
+      <h3 className="text-4xl font-semibold tracking-tight">
+        <ScrambleText text="Industries we serve" duration={800} speed={5} active={start} />
+      </h3>
+      <p className="text-white/70 text-sm md:text-base">
+        Discover how each part of our system works together in harmony.
+      </p>
+      <button className="border border-white/30 hover:border-white rounded-xl py-2 px-6 ecosystemBtn transition-colors duration-300">
+        <span className="inline-block font-medium">Explore Ecosystem</span>
+      </button>
     </div>
+  </div>
+
+  {/* Visual Layout Section */}
+  <div className="mt-16 flex flex-col lg:flex-row justify-center items-center gap-8">
+    {/* Left Column */}
+<div className="grid grid-rows-5 gap-4 w-16 2xl:w-20 h-[60dvh] text-white/80 2xl:text-xs text-[10px] font-light">
+  {blocks.map(({ icon: Icon, label, level }, i) => (
+    <div
+      key={i}
+      className={`ani${level} opacity-0 w-full aspect-square rounded-md border border-white/20 bg-white/5 flex flex-col justify-center items-center text-center shadow-sm`}
+    >
+      <Icon className="2xl:h-4 h-3 2xl:w-4 w-3 mb-1" />
+      <span>{label}</span>
+    </div>
+  ))}
+</div>
+
+    {/* Central Image */}
+    <div className="flex-1 max-w-4xl h-[60dvh] overflow-hidden rounded-xl shadow-xl">
+      <Image
+        src="/heading.jpg"
+        alt="Ecosystem"
+        width={700}
+        height={500}
+        className="h-full w-full object-cover object-center"
+      />
+    </div>
+
+    {/* Right Column (mirrored) */}
+<div className="grid grid-rows-5 gap-4 w-16 2xl:w-20 h-[60dvh] text-white/80 2xl:text-xs text-[10px] font-light">
+  {blocks.map(({ icon: Icon, label, level }, i) => (
+    <div
+      key={i}
+      className={`ani${level} opacity-0 w-full aspect-square rounded-md border border-white/20 bg-white/5 flex flex-col justify-center items-center text-center shadow-sm`}
+    >
+      <Icon className="2xl:h-4 h-3 2xl:w-4 w-3 mb-1" />
+      <span>{label}</span>
+    </div>
+  ))}
+</div>
+  </div>
+</div>
+
   );
 }
