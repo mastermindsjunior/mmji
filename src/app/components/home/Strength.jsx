@@ -6,8 +6,8 @@ const Strength = () => {
     <div className=' h-dvh w-full flex flex-col justify-center items-center gap-4 pt-[10%] z-20 relative'>
             <div className='flex flex-col justify-center items-center gap-4 '>
 
-            <h3 className='  text-3xl'>Our Strengths</h3>
-              <p className='text-white/70'>
+            <h3 className='  text-3xl font-sfbo'>Our Strengths</h3>
+              <p className='text-white/70 font-sfth'>
                 Lorem ipsum dolor sit amet.
               </p>
         </div>

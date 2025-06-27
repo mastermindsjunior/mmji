@@ -89,7 +89,7 @@ const CTASection = () => {
         />
         <div
           ref={textRef}
-          className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white 2xl:text-9xl text-8xl font-bold whitespace-nowrap"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white 2xl:text-9xl text-8xl font-sfbo whitespace-nowrap"
         >
           Let’s Connect
         </div>

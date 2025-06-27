@@ -99,10 +99,10 @@ export default function EcoSystem() {
   {/* Heading Section */}
   <div className="flex justify-center items-center text-center">
     <div className="flex flex-col justify-center items-center gap-4 ecosystemHeading max-w-xl">
-      <h3 className="text-4xl font-semibold tracking-tight">
+      <h3 className="text-4xl font-semibold tracking-tight font-sfbo">
         <ScrambleText text="Industries we serve" duration={800} speed={5} active={start} />
       </h3>
-      <p className="text-white/70 text-sm md:text-base">
+      <p className="text-white/70 text-sm md:text-base font-sfth">
         Discover how each part of our system works together in harmony.
       </p>
       <button className="border border-white/30 hover:border-white rounded-xl py-2 px-6 ecosystemBtn transition-colors duration-300">

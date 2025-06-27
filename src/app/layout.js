@@ -2,6 +2,8 @@ import { Albert_Sans, Geist, Geist_Mono, Roboto_Flex } from "next/font/google";
 import NavBar from "./components/common/NavBar";
 import "./globals.css";
 import Footer from "./components/common/Footer";
+import localFont from 'next/font/local'
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,12 +32,23 @@ const albert = Albert_Sans({
   variable:'--font-albert'
 });
 
+export const sfThin = localFont({
+  src:'./font/SFPRODISPLAYREGULAR.otf',
+  variable: '--font-sfThin',
+  display: 'swap',
+})
+export const sfBold = localFont({
+  src:'./font/SFPRODISPLAYBOLD.otf',
+  variable: '--font-sfBold',
+  display: 'swap',
+})
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${robo.variable} ${albert.variable} heading-albert antialiased bg-darker`}
+        className={`${geistSans.variable} ${geistMono.variable} ${robo.variable} ${albert.variable} ${sfThin.variable} ${sfBold.variable} heading-albert antialiased bg-darker`}
       > 
       <NavBar/>
         {children}

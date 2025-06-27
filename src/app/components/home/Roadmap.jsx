@@ -51,10 +51,10 @@ const Roadmap = () => {
       {/* Heading */}
       <div className="text-center z-10">
         <div className="flex flex-col items-center gap-4 ecosystemHeading">
-          <h3 className="text-3xl md:text-4xl font-semibold">
+          <h3 className="text-3xl md:text-4xl font-sfbo">
             <ScrambleText text="Roadmap" duration={800} speed={5} />
           </h3>
-          <p className="text-white/70 text-sm md:text-base max-w-md">
+          <p className="text-white/70 text-sm md:text-base max-w-md font-sfth">
             A transparent path to building the decentralized future.
           </p>
           <button className="border border-white/30 hover:border-white rounded-full py-2 px-6 transition-all duration-300 ecosystemBtn">

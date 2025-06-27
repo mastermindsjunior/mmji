@@ -122,7 +122,7 @@ ScrollTrigger.refresh()
   return (
 <div className="flex flex-col justify-center items-center h-[80dvh] mainHeading px-4 md:px-12 text-white">
   {/* Heading */}
-  <h1 className="text-center text-2xl md:text-4xl font-robo font-medium max-w-4xl flex flex-wrap justify-center items-center gap-2 leading-tight">
+  <h1 className="text-center text-2xl md:text-4xl font-sfbo font-medium max-w-4xl flex flex-wrap justify-center items-center gap-2 leading-tight">
     <span className="headingScrambleText opacity-0 -translate-x-8">MasterMinds Junior:</span>
     <ScrambleText className="headingScrambleText opacity-0 translate-x-16 px-1" speed={20} text={"Powering"} duration={1000} delay={200} />
     <ScrambleText className="headingScrambleText opacity-0 translate-x-16 px-1" speed={20} text={"the"} duration={1000} delay={250} />
@@ -133,8 +133,8 @@ ScrollTrigger.refresh()
   </h1>
 
   {/* Paragraphs */}
-  <div className="mt-4 max-w-xl text-center text-white/80 space-y-2">
-    <p className="headingPara opacity-0 translate-y-12 text-sm md:text-base">
+  <div className="mt-4  text-center text-white/80 space-y-2 font-sfth">
+    <p className="headingPara opacity-0 translate-y-12 text-sm md:text-base ">
       Empowering young minds through blockchain innovation and decentralized intelligence.
     </p>
     <p className="headingPara opacity-0 translate-y-12 text-sm md:text-base">
@@ -150,16 +150,12 @@ ScrollTrigger.refresh()
   {/* Image + Floating CTA */}
   <div className="h-[35%] w-full mt-4 relative headingImg opacity-0 scale-50">
     <div className="fixed h-[30dvh] bottom-[-30%] left-1/2 -translate-x-1/2 headingImgInner flex justify-center items-center">
-      <Image
-        src={"/heading.jpg"}
-        alt="heading"
-        width={1800}
-        height={800}
-        className="h-full w-auto object-cover object-center rounded-xl shadow-lg"
-      />
+    <video src="/heading.mp4" autoPlay playsInline loop muted className=" h-full w-auto object-cover object-center rounded-xl shadow-lg">
+    </video>
+
 
       {/* Floating CTA Card */}
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 px-6 py-4 rounded-xl backdrop-blur-md bg-white/10 text-white max-w-2xl headingImgCTA opacity-0 scale-75 transition-all">
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 px-6 py-4 rounded-xl backdrop-blur-md bg-black/60 text-white max-w-2xl headingImgCTA opacity-0 scale-75 transition-all">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm md:text-base">
           <span className="font-light text-lg shrink-0 text-center md:text-left">
             Decentralized AI: <br /> Redefining Web3

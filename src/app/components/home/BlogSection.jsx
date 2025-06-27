@@ -68,10 +68,10 @@ useEffect(() => {
       {/* HEADING */}
       <div className='flex justify-center items-center relative z-10'>
         <div className='flex flex-col justify-center items-center gap-4 ecosystemHeading'>
-          <h3 className='text-3xl'>
+          <h3 className='text-3xl font-sfbo'>
             <ScrambleText text={'Articles'} duration={800} speed={5} />
           </h3>
-          <p className='text-white/70'>Lorem ipsum dolor sit amet.</p>
+          <p className='text-white/70 font-sfth'>Lorem ipsum dolor sit amet.</p>
           <button className='border-b border-white rounded-xl py-2 px-4 ecosystemBtn'>
             <span className='inline-block'>View All</span>
           </button>
