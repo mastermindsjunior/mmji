@@ -17,7 +17,7 @@ export default function MissionVision() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top 60%',
+          start: 'top 90%',
           toggleActions: 'play none none reverse'
         }
       });
