@@ -17,7 +17,12 @@ module.exports = {
         '4xl': '1920px',
         '5xl': '2304px',
       },
+       colors: {
+        'primary': '#0e96cc',
+      },
+
     },
   },
   plugins: [],
 }
+// #0e96cc

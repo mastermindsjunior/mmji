@@ -66,7 +66,7 @@ useEffect(() => {
           {["Home", "About", "Services", "Career", "Contact"].map((link, i) => (
             <Link
               key={i}
-              href={"/"}
+              href={ link === "Home" ? "/" : `/${link}`}
               className="opacity-0 translate-y-2 2xl:text-lg text-base transition-all duration-300 font-sfth"
             >
               {link}
