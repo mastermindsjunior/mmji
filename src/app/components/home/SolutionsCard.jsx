@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const SolutionsCard = ({ img = "/heading.jpg", text, title, side }) => {
   return (
-    <div className="w-full p-4 flex">
+    <div className="w-full p-4 flex relative z-10 px-8">
       <div
         className={`w-full max-w-[200px] md:max-w-[300px] 2xl:max-w-[500px] h-full text-center 
           ${side === 'right' ? 'ml-auto' : 'mr-auto'}`}
