@@ -4,6 +4,7 @@ import Image from 'next/image'
 import MissionVision from '../components/about/MissionVision'
 import Stats from '../components/about/Stats'
 import WhyChooseUs from '../components/about/WhyChooseUs'
+import HistorySection from '../components/about/OurHistory'
 
 const page = () => {
   return (
@@ -12,7 +13,7 @@ const page = () => {
     <MissionVision/>
     <Stats />
     <WhyChooseUs/>
-      
+    <HistorySection/>
     </main>
   )
 }
