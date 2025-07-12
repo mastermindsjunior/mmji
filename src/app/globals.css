@@ -20,6 +20,7 @@
 
   --color-primary-orange: #F2721F;  /* Bright orange from “MAST”/light-bulb outline */
   --color-primary-blue:   #2098D2;  /* Vivid cyan-blue from “Junior”/light-bulb fill */
+  --color-primary-blue-half:   #2098D2;  /* Vivid cyan-blue from “Junior”/light-bulb fill */
 
   /* Secondary palette */
   --color-secondary-orange-light: #EB965D;  /* Softer orange accent */
