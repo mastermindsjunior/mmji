@@ -25,7 +25,7 @@ const Headings_2 = () => {
     });
 
     // 2) lock the wrapper to that width & clear the text
-    wrapperRef.current.style.width = `${maxWidth}px`;
+    wrapperRef.current.style.width = `${maxWidth + 5}px`;
     wordRef.current.textContent = '';
 
     // 3) build an infinite timeline
@@ -98,7 +98,7 @@ const Headings_2 = () => {
 
   return (
     <div className='flex flex-col justify-center items-start h-dvh 2xl:pt-32 pt-24 mainHeading px-32 relative '>
-      <h1 className=' reltive z-10 font-sfth text-white 2xl:text-[110px] text-7xl flex flex-col justify-center items-start'>
+      <h1 className=' reltive z-10 font-jost font-normal text-white 2xl:text-[110px] text-7xl flex flex-col justify-center items-start'>
         <span className='headingPara opacity-0 translate-y-12'>Innovating solutions for</span>
         {/* this outer span is overflow-hidden & fixed-width */}
         <span
@@ -108,7 +108,7 @@ const Headings_2 = () => {
           {/* this inner span gets the words and is animated */}
           <span
             ref={wordRef}
-            className='headingPara opacity-0 font-sfbo text-[#0e96cc] 2xl:text-[67px] text-6xl inline-block whitespace-nowrap'
+            className='headingPara opacity-0 font-jost text-[#0e96cc] 2xl:text-[67px] text-6xl font-semibold inline-block whitespace-nowrap'
           />
         </span>
       </h1>

@@ -1,8 +1,8 @@
-import { Albert_Sans, Geist, Geist_Mono, Roboto_Flex } from "next/font/google";
-import NavBar from "./components/common/NavBar";
-import "./globals.css";
+import { Albert_Sans, Geist, Geist_Mono, Jost, Roboto_Flex } from "next/font/google";
+import localFont from 'next/font/local';
 import Footer from "./components/common/Footer";
-import localFont from 'next/font/local'
+import Navbar from "./components/common/Navbar_2";
+import "./globals.css";
 
 
 const geistSans = Geist({
@@ -43,14 +43,22 @@ export const sfBold = localFont({
   display: 'swap',
 })
 
+const jost = Jost({
+  subsets:['latin'],
+  weight:['100','200','300','400','500','600','700','800','900'],
+  variable:'--font-jost',
+  display:'swap',
+})
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${robo.variable} ${albert.variable} ${sfThin.variable} ${sfBold.variable} heading-albert antialiased bg-darker`}
+        className={`${geistSans.variable} ${geistMono.variable} ${robo.variable} ${albert.variable} ${sfThin.variable} ${sfBold.variable} ${jost.variable} heading-albert antialiased bg-darker`}
       > 
-      <NavBar/>
+      {/* <NavBar/> */}
+      <Navbar/>
         {children}
         <Footer/>
       </body>

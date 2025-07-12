@@ -67,7 +67,7 @@ useEffect(() => {
             <Link
               key={i}
               href={ link === "Home" ? "/" : `/${link}`}
-              className="opacity-0 translate-y-2 2xl:text-lg text-base transition-all duration-300 font-sfth"
+              className="opacity-0 translate-y-2 2xl:text-lg text-base transition-all duration-300 font-jost"
             >
               {link}
             </Link>
