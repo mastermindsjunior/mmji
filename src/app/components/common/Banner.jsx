@@ -40,6 +40,7 @@ export default function Banner({ title, sub }) {
         </p>
       </div>
     </section>
+    <div className=' w-full h-0.5 bg-primary-blue' style={{maskImage:'linear-gradient(90deg, transparent, black, transparent)'}} />
 </div>
   );
 }
