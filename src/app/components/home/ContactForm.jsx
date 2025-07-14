@@ -102,7 +102,7 @@ const ContactForm = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-3 bg-primary-orange/20 border border-white/20 text-white font-medium rounded-full hover:bg-primary-orange/30 transition duration-300 backdrop-filter backdrop-blur-sm hover:scale-105 active:scale-95"
+              className="w-full py-3 bg-primary-orange/20 border border-white/20 text-white font-medium rounded-full hover:bg-white hover:text-dark transition duration-300 backdrop-filter backdrop-blur-sm hover:scale-105 active:scale-95"
             >
               Send Message
             </button>

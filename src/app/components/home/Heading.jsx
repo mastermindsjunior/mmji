@@ -8,9 +8,9 @@ const Heading = () => {
   const slides = [
     {
       videoUrl: '/vid/MasterMinds Junior.mp4',
-      title: 'Slide One',
-      desc: 'This is the description for slide one.',
-      alignment: 'left',
+      title: 'Building Your Brand’s Future in the Digital Universe',
+      desc: 'Next-gen solutions for next-level success.',
+      alignment: 'center',
     },
   ];
 
@@ -45,14 +45,14 @@ const Heading = () => {
             className="w-full h-full object-cover object-bottom"
           />
           <div
-            className={`absolute bottom-5 p-5 text-white bg-black/50 max-w-[50%] 
+            className={`absolute top-1/2 -translate-y-1/2 p-5 text-white bg-black/30 max-w-[50%] 
               ${slide.alignment === 'left' ? 'left-5 text-left' : ''}
               ${slide.alignment === 'center' ? 'left-1/2 -translate-x-1/2 text-center' : ''}
               ${slide.alignment === 'right' ? 'right-5 text-right' : ''}
             `}
           >
-            <h2 className="m-0 font-jost">{slide.title}</h2>
-            <p className='font-sfth'>{slide.desc}</p>
+            <h2 className="mb-4 font-jost text-5xl font-semibold">{slide.title}</h2>
+            <p className='font-sfth text-lg'>{slide.desc}</p>
           </div>
         </div>
       ))}

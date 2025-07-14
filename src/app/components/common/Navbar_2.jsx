@@ -1,20 +1,29 @@
-"use client";
 
-
-
-
+'use client';
 
 import { MenuIcon, XIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const links = ['Home', 'About', 'Services', 'Career', 'Contact'];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-md">
+    <header className={`fixed top-0 left-0 w-full z-50 ${scrolled ? 'bg-black/50' : 'bg-transparent'} backdrop-blur-md`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 py-4">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
@@ -23,7 +32,7 @@ export default function Navbar() {
             alt="MasterMinds Junior"
             width={160}
             height={40}
-            className="h-14 w-auto"
+            className="h-16 w-auto"
           />
         </Link>
 
@@ -33,7 +42,7 @@ export default function Navbar() {
             <Link
               key={label}
               href={label === 'Home' ? '/' : `/${label}`}
-              className="relative group px-1 hover:text-primary-blue transition-colors"
+              className="relative group px-1 hover:text-primary-blue transition-colors text-lg"
             >
               {label}
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
@@ -42,12 +51,18 @@ export default function Navbar() {
         </nav>
 
         {/* CTA Button (desktop) */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:block space-x-2">
           <Link
             href="/quote"
-            className="px-6 py-2 bg-primary-blue text-black font-sfbo rounded-full hover:opacity-90 transition-opacity"
+            className="px-6 py-2 bg-primary-blue text-black font-sfth rounded-full hover:opacity-90 transition-opacity"
           >
             Get a Quote
+          </Link>
+          <Link
+            href="/contact"
+            className="px-6 py-2 bg-primary-orange text-white font-sfth rounded-full hover:opacity-90 transition-opacity"
+          >
+            Contact Us
           </Link>
         </div>
 
@@ -75,7 +90,13 @@ export default function Navbar() {
             ))}
             <Link
               href="/quote"
-              className="mt-2 inline-block px-6 py-2 bg-primary-blue text-black font-sfth rounded-full hover:opacity-90 transition-opacity"
+              className="mt-2 inline-block px-6 py-2 bg-primary-blue text-black font-jost rounded-full hover:opacity-90 transition-opacity"
+            >
+              Get a Quote
+            </Link>
+            <Link
+              href="/quote"
+              className="mt-2 inline-block px-6 py-2 bg-primary-blue text-black font-jost rounded-full hover:opacity-90 transition-opacity"
             >
               Get a Quote
             </Link>
