@@ -37,8 +37,10 @@ const Heading = () => {
     return () => clearInterval(interval); // Cleanup on unmount
   }, [slides.length]);
 
+  // h-[600px]
   return (
-    <section className="relative w-full h-[600px] overflow-hidden">
+    <section className="relative w-full h-dvh  overflow-hidden">
+
       {slides.map((slide, index) => (
         <div
           key={index}

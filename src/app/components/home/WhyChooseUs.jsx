@@ -4,7 +4,7 @@ import React from 'react'
 const WhyChooseUs = () => {
   return (
     <secction className=" w-full h-auto py-20 bg-gradient-to-tr from-black via-transparent to-primary-orange/20 flex justify-center items-center" >
-        <div className=' xl:max-w-7xl bg-dark rounded-2xl  flex flex-col justify-center items-center gap-8 p-8'>
+        <div className=' 2xl:max-w-7xl max-w-6xl bg-dark rounded-2xl  flex flex-col justify-center items-center gap-8 p-8'>
 
            <div className=' flex justify-between items-center gap-2'>
                 <h2 className="font-jost text-4xl md:text-5xl font-bold mb-5 pb-2 textMask_br">

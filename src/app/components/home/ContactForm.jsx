@@ -32,7 +32,7 @@ const ContactForm = () => {
 
   return (
     <section className="bg-gradient-to-bl from-black via-transparent to-primary-blue/20 py-20">
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="relative 2xl:max-w-6xl max-w-5xl mx-auto px-6 lg:px-8">
         {/* Section Heading */}
         <h3 className="font-jost text-4xl md:text-5xl font-bold mb-5 pb-2 textMask_br">
           Let’s Build Something Extraordinary
