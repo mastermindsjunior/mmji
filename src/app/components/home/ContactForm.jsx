@@ -47,7 +47,7 @@ const ContactForm = () => {
         <div className="max-w-lg mx-auto">
           <form
             onSubmit={handleSubmit}
-            className="bg-white/5 backdrop-filter backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:shadow-white/10"
+            className="bg-transparent backdrop-filter backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:shadow-white/10"
           >
             {/* Glassmorphism container with subtle hover effect for "liquid" feel */}
 
