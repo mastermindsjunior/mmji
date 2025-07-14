@@ -6,11 +6,11 @@ const WhyChooseUs = () => {
     <secction className=" w-full h-auto py-20 bg-gradient-to-tr from-black via-transparent to-primary-orange/20 flex justify-center items-center" >
         <div className=' 2xl:max-w-7xl max-w-6xl bg-dark rounded-2xl  flex flex-col justify-center items-center gap-8 p-8'>
 
-           <div className=' flex justify-between items-center gap-2'>
+           <div className=' flex justify-between items-center gap-2 2xl:px-8'>
                 <h2 className="font-jost text-4xl md:text-5xl font-bold mb-5 pb-2 textMask_br">
-                    Why Choose <br /> Us?
+                    Why Choose Us?
                 </h2>
-                <p className="font-sftn text-base text-gray-300 leading-relaxed mb-4 w-1/2"  style={{maskImage:'linear-gradient(135deg, black 60%, #00000077)'}}>
+                <p className="font-sftn text-base text-gray-300 leading-relaxed mb-4 w-[60%]"  style={{maskImage:'linear-gradient(135deg, black 60%, #00000077)'}}>
                     With a stronghold across India and growing global reach, we are the best digital marketing agency for startups and growing businesses. Clients choose us for:
                 </p>
            </div>
