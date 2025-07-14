@@ -4,7 +4,7 @@ import React from 'react'
 const HomeAboutSection = () => {
   return (
     <section className=' w-full h-dvh p-12 py-0  bg-gradient-to-tr from-primary-blue/20 via-transparent to-primary-orange/20 flex justify-center items-center'>
-        <div className=' rounded-2xl p-12 pt-8 2xl:-translate-y-[7rem] -translate-y-[6rem] bg-darker border border-gray-800 w-full h-full relative overflow-hidden flex flex-col gap-14 text-center justify-between items-center'>
+        <div className=' rounded-[2rem] p-12 pt-8 2xl:-translate-y-[7rem] -translate-y-[6rem] bg-darker border border-gray-800 w-full h-full relative overflow-hidden flex flex-col gap-14 text-center justify-between items-center'>
 
             <video
                 src={'/vid/5.mp4'}
