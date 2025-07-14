@@ -80,7 +80,7 @@ const CoreCompetencies = () => {
               </p>
 
               {/* View Details button */}
-              <button className="mt-6 w-full inline-flex items-center justify-between border border-primary-blue rounded-full py-2 2xl:pr-4 pr-2 pl-4 overflow-hidden group transition">
+              <button className="mt-6 w-full inline-flex items-center justify-between border border-primary-blue rounded-full py-2  pr-2 pl-4 overflow-hidden group transition">
                 <span className="font-sfbo text-white 2xl:text-base text-sm">View Details</span>
                 <span className="ml-3 inline-flex items-center justify-center bg-primary-orange w-8 h-8 rounded-full group-hover:bg-primary-blue transition">
                   <ArrowRight className="w-4 h-4 text-white" />
