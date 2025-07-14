@@ -45,14 +45,15 @@ const Heading = () => {
             className="w-full h-full object-cover object-bottom"
           />
           <div
-            className={`absolute top-1/2 -translate-y-1/2 p-5 text-white bg-black/30 max-w-[50%] 
+            className={`absolute top-1/2 -translate-y-1/2 p-5 text-white bg-black/30  w-[75%] 
               ${slide.alignment === 'left' ? 'left-5 text-left' : ''}
               ${slide.alignment === 'center' ? 'left-1/2 -translate-x-1/2 text-center' : ''}
               ${slide.alignment === 'right' ? 'right-5 text-right' : ''}
             `}
           >
-            <h2 className="mb-4 font-jost text-5xl font-semibold">{slide.title}</h2>
-            <p className='font-sfth text-lg'>{slide.desc}</p>
+            <p className='font-sfth text-lg text-white/80'>{slide.desc}</p>
+            <h2 className="my-4 font-jost text-6xl font-medium pb-2">{slide.title}</h2>
+            <button className=' bg-transparent border border-white/50 px-4 py-2 rounded-full font-jost font-light text-white hover:bg-white hover:text-dark transition-all duration-300 ease-in'>Learn More</button>
           </div>
         </div>
       ))}
