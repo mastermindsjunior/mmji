@@ -7,22 +7,10 @@ const Heading = () => {
   // Each slide has videoUrl, title, desc, and alignment ('left', 'center', 'right')
   const slides = [
     {
-      videoUrl: '/vid/1.mp4',
+      videoUrl: '/vid/MasterMinds Junior.mp4',
       title: 'Slide One',
       desc: 'This is the description for slide one.',
       alignment: 'left',
-    },
-    {
-      videoUrl: '/vid/2.mp4',
-      title: 'Slide Two',
-      desc: 'This is the description for slide two.',
-      alignment: 'center',
-    },
-    {
-      videoUrl: '/vid/3.mp4',
-      title: 'Slide Three',
-      desc: 'This is the description for slide three.',
-      alignment: 'right',
     },
   ];
 
@@ -54,7 +42,7 @@ const Heading = () => {
             loop
             muted
             playsInline
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-bottom"
           />
           <div
             className={`absolute bottom-5 p-5 text-white bg-black/50 max-w-[50%] 
