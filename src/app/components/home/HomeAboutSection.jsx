@@ -1,10 +1,25 @@
+'use client';
+
 import { ArrowDownIcon } from 'lucide-react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const HomeAboutSection = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  
+      useEffect(() => {
+        const handleScroll = () => {
+          setScrolled(window.scrollY > 50);
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
   return (
     <section className=' w-full h-dvh p-12 py-0  bg-gradient-to-tr from-primary-blue/20 via-transparent to-primary-orange/20 flex justify-center items-center'>
-        <div className=' rounded-[2rem] p-12 pt-8 pb-20 2xl:-translate-y-[6rem] -translate-y-[5rem] bg-darker border border-gray-800 w-full h-full relative overflow-hidden flex flex-col gap-14 text-center justify-between items-center'>
+        <div className={` rounded-[2rem] p-12 ${scrolled ? " pt-10" : " pt-4"} transition-all duration-300 ease-in-out 2xl:pb-20 pb-10 2xl:-translate-y-[8rem] -translate-y-[7rem] bg-darker border border-gray-800 w-full h-[calc(100%-4rem)] relative overflow-hidden flex flex-col gap-14 text-center justify-between items-center`}>
 
             <video
                 src={'/vid/5.mp4'}
@@ -14,7 +29,7 @@ const HomeAboutSection = () => {
                 playsInline
                 className=" absolute top-0 left-0 opacity-50 w-full h-full object-cover object-top pointer-events-none"
             />
-            <h2 className=' fontjost font-bold 2xl:text-6xl text-5xl text-white textMask_br w-fit text-center px-4 mx-auto'>Welcome to MasterMinds Junior <br /> – Your Growth Catalyst</h2>
+            <h2 className=' fontjost font-bold 2xl:text-6xl text-5xl text-white textMask_br w-fit text-center px-4 mx-auto'>Welcome to MasterMinds Junior <br /> <span className={`${scrolled ? " opacity-100" : "opacity-0"} transition-all ease-in-out duration-300`}>– Your Growth Catalyst</span></h2>
 <div className=' w-full space-y-8'>
                 <div className=' w-[60%] mx-auto flex flex-col justify-center items-start gap-4 font-sfth text-white 2xl:text-sm text-xs  '>
                         <p className=' w-[80%]  mx-auto'>At MasterMinds Junior, we redefine what it means to be a digital partner. As a full-service digital marketing agency in India, we blend creativity with precision to empower businesses to thrive in a digital-first economy. From captivating graphic designs to robust app development, our team crafts every solution with purpose and clarity.</p>
