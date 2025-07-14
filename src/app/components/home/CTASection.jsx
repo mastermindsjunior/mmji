@@ -77,7 +77,7 @@ const CTASection = () => {
   return (
     <div
       ref={sectionRef}
-      className="w-full h-dvh pt-[15%] px-[10%] flex flex-col justify-start items-center"
+      className="w-full h-dvh pt-[15%] px-[10%] flex flex-col justify-start items-center bg-gradient-to-br from-primary-blue/20 via-transparent to-black"
     >
       {/* Image Section */}
       <div className="w-full h-[55%] relative overflow-hidden">

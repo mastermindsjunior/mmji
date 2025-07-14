@@ -43,10 +43,10 @@ const AboutSection = () => {
           </h2>
 
           {/* Text */}
-          <p className="font-sftn text-lg text-gray-300 leading-relaxed mb-4"  style={{maskImage:'linear-gradient(135deg, black 60%, #00000077)'}}>
+          <p className="font-sftn text-base text-gray-300 leading-relaxed mb-4"  style={{maskImage:'linear-gradient(135deg, black 60%, #00000077)'}}>
             Born from a vision to revolutionize online growth, MasterMinds Junior is more than a digital marketing agency—we are enablers of transformation. Our journey began in 2020 with a small but determined team that aimed to bridge the gap between businesses and digital opportunity.
           </p>
-          <p className="font-sftn text-lg text-gray-300 leading-relaxed"  style={{maskImage:'linear-gradient(135deg, black 60%, #00000077)'}}>
+          <p className="font-sftn text-base text-gray-300 leading-relaxed"  style={{maskImage:'linear-gradient(135deg, black 60%, #00000077)'}}>
             Today, we are among the top creative agencies in India, serving clients across industries and continents.
           </p>
         </div>

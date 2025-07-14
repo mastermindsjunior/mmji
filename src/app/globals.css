@@ -32,6 +32,9 @@
 
 }
 
+.textMask_br {
+  mask-image: linear-gradient(150deg, black 20%, rgba(0, 0, 0, 0.178));
+}
 
 .heading-albert {
   font-family:  "Albert Sans",sans-serif;
