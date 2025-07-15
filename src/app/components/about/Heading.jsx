@@ -8,8 +8,8 @@ const Heading = () => {
   const slides = [
     {
       videoUrl: '/vid/2.mp4',
-      title: 'Slide Two',
-      desc: 'This is the description for slide two.',
+      title: 'Building Your Brand’s Future in the Digital Universe',
+      desc: 'Next-gen solutions for next-level success.',
       alignment: 'left',
     },
   ];
@@ -45,14 +45,15 @@ const Heading = () => {
             className="w-full h-full object-cover object-bottom"
           />
           <div
-            className={`absolute bottom-5 p-5 text-white bg-black/50 max-w-[50%] 
+            className={`absolute top-1/2 -translate-y-1/2 p-5 text-white   w-[75%] 
               ${slide.alignment === 'left' ? 'left-5 text-left' : ''}
               ${slide.alignment === 'center' ? 'left-1/2 -translate-x-1/2 text-center' : ''}
               ${slide.alignment === 'right' ? 'right-5 text-right' : ''}
             `}
           >
-            <h2 className="m-0 font-jost">{slide.title}</h2>
-            <p className='font-sfth'>{slide.desc}</p>
+            <p className='font-sfth text-sm text-white/80'>{slide.desc}</p>
+            <h2 className="my-4 font-alum text-4xl pb-2">{slide.title}</h2>
+            <button className=' bg-transparent border border-white/50 px-4 py-2 rounded-full font-jost font-light text-white hover:bg-white hover:text-dark transition-all duration-300 ease-in'>Learn More</button>
           </div>
         </div>
       ))}

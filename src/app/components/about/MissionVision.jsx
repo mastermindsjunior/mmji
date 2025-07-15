@@ -1,126 +1,48 @@
-// components/MissionVision.jsx
-'use client';
+import React from 'react';
 
-import React, { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
-
-export default function MissionVision() {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    // scope all selectors to this component
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top 80%',
-          toggleActions: 'play none none reverse'
-        }
-      });
-
-      // heading in from left
-      tl.from('.mission-heading', {
-        x: -100,
-        opacity: 0,
-        duration: 0.8,
-        ease: 'power1.out'
-      })
-      // paragraph in from right (start at same time as heading)
-      .from('.mission-paragraph', {
-        x: 100,
-        opacity: 0,
-        duration: 0.8,
-        ease: 'power1.out'
-      }, '<')
-      // grid items stagger in from bottom
-      .from('.mission-item', {
-        y: 50,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 0.6,
-        ease: 'power1.out'
-      }, '-=0.4');
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
-
+export const MissionValuesSection = () => {
   return (
-    <div
-      ref={containerRef}
-      className="h-dvh w-full mx-auto max-w-[1200px] flex flex-col justify-center items-center gap-10"
-    >
-      {/* heading + paragraph */}
-      <div className="flex justify-between items-center gap-4 w-full">
-        <h1 className="mission-heading text-white/90 font-sfth w-[55%] text-6xl">
-          Crafting <span className="font-sfbo text-[#0e96cc]">Impactful</span>{' '}
-          Digital experience
-        </h1>
-        <p className="mission-paragraph w-[45%] font-sfth text-white/70 text-right">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-          aperiam consequuntur, quibusdam delectus perferendis eligendi cum
-          explicabo reprehenderit esse ipsum et tempora pariatur?
-        </p>
-      </div>
+    <section className="bg-black py-20 text-white relative overflow-hidden">
+      {/* Background subtle gradient overlay for eye-catchiness */}
+      <div className="absolute inset-0 "></div>
+      
+      <div className="container mx-auto px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Mission Column */}
+          <div className="p-8 rounded-xl bg-gradient-to-br from-blue-950/50 to-black/80 shadow-2xl border border-blue-600/30 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-600/50">
+            <h2 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-blue-400 text-transparent bg-clip-text">Our Mission</h2>
+            <p className="mb-4 text-gray-300 leading-relaxed">
+              We believe in the power of storytelling, strategy, and technology. Our goal is to empower businesses with digital tools that foster engagement, drive results, and deliver long-term brand equity.
+            </p>
+            <p className="text-gray-300 leading-relaxed">
+              We blend artistic creativity with technical precision to engineer solutions that are beautiful, functional, and strategic. Every campaign, every design, every website—we build with intent.
+            </p>
+          </div>
 
-      {/* grid */}
-      <div className="w-full grid grid-cols-3 gap-6">
-        <div
-          style={{ boxShadow: '0px 16px 43px #0e96cc3b' }}
-          className="mission-item bg-white/10 border border-[#0e96cc] rounded-2xl p-6"
-        >
-          <Image
-            src="/heading.jpg"
-            alt="heading"
-            width={300}
-            height={200}
-            className="aspect-video w-full object-cover object-center"
-          />
-          <h5 className="font-sfbo text-lg my-3">Our Mission</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            laudantium impedit aut quisquam porro.
-          </p>
-        </div>
-        <div
-          style={{ boxShadow: '0px 16px 43px #0e96cc3b' }}
-          className="mission-item bg-white/10 border border-[#0e96cc] rounded-2xl p-6"
-        >
-          <Image
-            src="/heading.jpg"
-            alt="heading"
-            width={300}
-            height={200}
-            className="aspect-video w-full object-cover object-center"
-          />
-          <h5 className="font-sfbo text-lg my-3">Our Vision</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            laudantium impedit aut quisquam porro.
-          </p>
-        </div>
-        <div
-          style={{ boxShadow: '0px 16px 43px #0e96cc3b' }}
-          className="mission-item bg-white/10 border border-[#0e96cc] rounded-2xl p-6"
-        >
-          <Image
-            src="/heading.jpg"
-            alt="heading"
-            width={300}
-            height={200}
-            className="aspect-video w-full object-cover object-center"
-          />
-          <h5 className="font-sfbo text-lg my-3">Our Values</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            laudantium impedit aut quisquam porro.
-          </p>
+          {/* Values Column */}
+          <div className="p-8 rounded-xl bg-gradient-to-br from-primary-orange/20 to-black/80 shadow-2xl border border-primary-orange/30 transform transition-all duration-300 hover:scale-105 hover:shadow-primary-orange/50">
+            <h2 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-primary-orange to-primary-orange/50 text-transparent bg-clip-text">Values We Live By</h2>
+            <ul className="space-y-5 font-sfth text-base text-gray-300">
+              <li className="flex items-center justify-start">
+                <span className="text-primary-orange mr-3 text-3xl">•</span>
+                Innovation with Impact
+              </li>
+              <li className="flex items-center justify-start">
+                <span className="text-primary-orange mr-3 text-3xl">•</span>
+                Integrity in Execution
+              </li>
+              <li className="flex items-center justify-start">
+                <span className="text-primary-orange mr-3 text-3xl">•</span>
+                Collaboration over Competition
+              </li>
+              <li className="flex items-center justify-start">
+                <span className="text-primary-orange mr-3 text-3xl">•</span>
+                Performance-Driven Strategies
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
