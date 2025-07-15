@@ -3,7 +3,7 @@ import React from 'react'
 
 const WhyChooseUs = () => {
   return (
-    <secction className=" w-full h-auto py-20 bg-gradient-to-tr from-black via-transparent to-primary-orange/20 flex justify-center items-center" >
+    <secction className=" w-full h-auto py-20 pt-16 bg-gradient-to-tr from-black via-transparent to-primary-orange/20 flex justify-center items-center" >
 
         <div className=' 2xl:max-w-7xl max-w-6xl p-0.5 rounded-2xl bg-gradient-to-b from-blue-600 via-gray-700 to-gray-800 relative overflow-hidden'>
         {/*  */}

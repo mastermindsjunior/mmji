@@ -56,13 +56,13 @@ const CoreCompetencies = () => {
 
       <div className="relative 2xl:max-w-7xl max-w-6xl mx-auto px-6 lg:px-8">
         {/* Section Heading */}
-            <h3 className="font-jost text-4xl md:text-5xl font-bold mb-5 pb-2 textMask_br text-center">
+            <h3 className="font-jost text-4xl md:text-5xl font-bold mb-5 pb-2 textMask_br text-center translate-y-[-3rem]">
               Our Core Competencies That Drive Results
             </h3>
 
 
         {/* Grid of Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 translate-y-[-1rem]">
           {competencies.map(({ title, description, Icon }) => (
             <div
               key={title}
