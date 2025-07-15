@@ -58,11 +58,11 @@ export default function OurStorySection() {
 
           {/* Dots + cards */}
           <div className="relative pt-8 overflow-x-auto">
-            <div className="flex items-start justify-between min-w-max px-4 space-x-8">
+            <div className="flex items-start justify-between min-w-max px-4 2xl:space-x-8 space-x-4">
               {milestones.map(({ year, points }) => (
                 <div
                   key={year}
-                  className="flex-shrink-0 flex flex-col items-center w-48"
+                  className="flex-shrink-0 flex flex-col items-center 2xl:w-48 w-40"
                 >
                   {/* Dot */}
                   <div className="relative z-10 w-3 h-3 -translate-y-1 bg-primary-blue rounded-full border-2 border-gray-800" />
@@ -75,7 +75,7 @@ export default function OurStorySection() {
                     <h3 className="text-xl font-jost font-bold text-primary-blue">
                       {year}
                     </h3>
-                    <ul className="mt-2 font-alum text-gray-300 text-base space-y-2">
+                    <ul className="mt-2 font-alum text-gray-300 text-lg space-y-2">
                       {points.map((pt, i) => (
                         <li key={i}>{pt}</li>
                       ))}
