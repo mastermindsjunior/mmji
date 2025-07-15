@@ -21,11 +21,11 @@ const WhyChooseUs = () => {
                 </p>
            </div>
 
-            <ul className=' text-xs flex justify-center items-center flex-wrap gap-2 '>
-                <li className=' py-2 px-5 rounded-full bg-darker hover:bg-white border border-white/30 hover:text-dark transition-all duration-500 ease-in-out'>Personalized & strategic approach.</li>
-                <li className=' py-2 px-5 rounded-full bg-darker hover:bg-white border border-white/30 hover:text-dark transition-all duration-500 ease-in-out'>Creative solutions tailored to industry needs.</li>
-                <li className=' py-2 px-5 rounded-full bg-darker hover:bg-white border border-white/30 hover:text-dark transition-all duration-500 ease-in-out'>Transparent communication and reporting.</li>
-                <li className=' py-2 px-5 rounded-full bg-darker hover:bg-white border border-white/30 hover:text-dark transition-all duration-500 ease-in-out'>Proven results and ROI-focused mindset.</li>
+            <ul className=' w-full text-xs flex justify-center items-center flex-wrap gap-2 '>
+                <li className=' py-2 2xl:px-5 px-3 rounded-full bg-darker hover:bg-white border border-white/30 hover:text-dark transition-all duration-500 ease-in-out'>Personalized & strategic approach.</li>
+                <li className=' py-2 2xl:px-5 px-3 rounded-full bg-darker hover:bg-white border border-white/30 hover:text-dark transition-all duration-500 ease-in-out'>Creative solutions tailored to industry needs.</li>
+                <li className=' py-2 2xl:px-5 px-3 rounded-full bg-darker hover:bg-white border border-white/30 hover:text-dark transition-all duration-500 ease-in-out'>Transparent communication and reporting.</li>
+                <li className=' py-2 2xl:px-5 px-3 rounded-full bg-darker hover:bg-white border border-white/30 hover:text-dark transition-all duration-500 ease-in-out'>Proven results and ROI-focused mindset.</li>
             </ul>
 
         </div>
