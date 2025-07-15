@@ -10,7 +10,7 @@ const Heading = () => {
       videoUrl: '/vid/2.mp4',
       title: 'Slide Two',
       desc: 'This is the description for slide two.',
-      alignment: 'right',
+      alignment: 'left',
     },
   ];
 

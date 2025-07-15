@@ -68,7 +68,7 @@ export default function OurStorySection() {
                 key={year}
                 className={`
                   group relative flex flex-col ${textAlign} 
-                  bg-gray-900/50 border-gray-700 ${borderSide}
+                  ${isEven ? " bg-gradient-to-br" : " bg-gradient-to-bl"} from-blue-600/20 to-pink-500/20 border-gray-700 
                   border-opacity-50 p-6 rounded-2xl shadow-lg 
                   hover:bg-gray-900/70 hover:shadow-2xl
                   transition-all
@@ -91,13 +91,7 @@ export default function OurStorySection() {
                 </ul>
 
                 {/* Subtle dot that follows the card’s border edge */}
-                <div
-                  className={`
-                    hidden md:block absolute top-1/2 w-3 h-3 bg-primary-blue rounded-full
-                    ${isEven ? '-left-[6px]' : '-right-[6px]'}
-                    transform -translate-y-1/2
-                  `}
-                />
+                
               </div>
             );
           })}
