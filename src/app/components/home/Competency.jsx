@@ -50,7 +50,7 @@ const CoreCompetencies = () => {
   ];
 
   return (
-    <section className="relative py-16 bg-black text-white font-sfth">
+    <section className="relative pb-16 bg-black text-white font-sfth">
       {/* subtle gradient behind the grid */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/20 via-transparent to-primary-orange/20 pointer-events-none" />
 
@@ -66,7 +66,7 @@ const CoreCompetencies = () => {
           {competencies.map(({ title, description, Icon }) => (
             <div
               key={title}
-              className="group bg-gradient-to-br from-blue-600/50 via-darker to-pink-500/50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition relative"
+              className="group bg-gradient-to-br from-blue-600/50 via-darker to-pink-500/50 p-6 rounded-2xl shadow-lg hover:shadow-xl relative hover:scale-90 ease-in duration-200 transition-all"
             >
               {/* Icon container */}
               <div className="2xl:p-3 p-2 bg-dark rounded-lg ring-1 ring-primary-orange group-hover:ring-primary-blue inline-flex items-center justify-center mb-4 transition">
