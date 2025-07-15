@@ -17,6 +17,7 @@
   --font-sfth: var(--font-sfThin);
   --font-sfbo: var(--font-sfBold);
   --font-jost: var(--font-jost);
+  --font-alum: var(--font-alumini);
 
   --color-primary-orange: #F2721F;  /* Bright orange from “MAST”/light-bulb outline */
   --color-primary-blue:   #2098D2;  /* Vivid cyan-blue from “Junior”/light-bulb fill */

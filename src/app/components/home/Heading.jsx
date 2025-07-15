@@ -52,7 +52,7 @@ const Heading = () => {
             `}
           >
             <p className='font-sfth text-sm text-white/80'>{slide.desc}</p>
-            <h2 className="my-4 font-jost text-4xl font-medium pb-2">{slide.title}</h2>
+            <h2 className="my-4 font-alum text-4xl pb-2">{slide.title}</h2>
             <button className=' bg-transparent border border-white/50 px-4 py-2 rounded-full font-jost font-light text-white hover:bg-white hover:text-dark transition-all duration-300 ease-in'>Learn More</button>
           </div>
         </div>
