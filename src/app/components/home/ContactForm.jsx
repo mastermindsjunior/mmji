@@ -34,7 +34,7 @@ const ContactForm = () => {
     // bg-gradient-to-bl from-black via-transparent to-blue-600/20
     <section className=" bg-black py-20 relative">
     {/*  */}
-    <video src="/vid/contact-form.mp4" muted autoPlay loop playsInline className=' absolute bottom-[-3rem] left-1/2 -translate-x-1/2 aspect-video w-auto h-[calc(100%-7rem)] object-cover object-center'></video>
+    <video src="/vid/contact-form2.mp4" muted autoPlay loop playsInline className=' absolute bottom-[-3rem] left-1/2 -translate-x-1/2 aspect-video w-auto h-[calc(100%-7rem)] object-cover object-center'></video>
     {/*  */}
       <div className="relative z-10 2xl:max-w-6xl max-w-5xl mx-auto px-6 lg:px-8">
         {/* Section Heading */}
