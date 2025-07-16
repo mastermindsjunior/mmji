@@ -1,24 +1,17 @@
 import Image from 'next/image';
 import React from 'react';
 
+
+// 
 const Footer = () => {
   return (
-    <footer className="w-full  bg-[#000] relative z-30 text-white px-[10%] py-12 border-t border-primary-blue">
+    <footer className="w-[calc(100%-2rem)] mx-auto mb-4  bg-[#000] z-30 text-white px-[10%] py-12 relative border border-gray-700 border-t-primary-blue rounded-3xl ">
       {/* Top Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 items-start text-sm gap-10 text-center md:text-left">
-        
-        {/* Left - Navigation */}
-        <div className="flex flex-col gap-2">
-          <h4 className="text-lg font-semibold mb-2">Navigation</h4>
-          <a href="#" className="hover:underline">Home</a>
-          <a href="#" className="hover:underline">About</a>
-          <a href="#" className="hover:underline">Services</a>
-          <a href="#" className="hover:underline">Blog</a>
-          <a href="#" className="hover:underline">Contact</a>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-4 items-start text-sm gap-10 text-center md:text-left">
 
-        {/* Center - Logo & Description */}
-        <div className="flex flex-col items-center justify-center text-center">
+        {/* left - Logo & Description */}
+
+        <div className="flex flex-col items-center justify-center text-center ">
             <Image
             src={"/logo-india.png"}
             width={400}
@@ -29,6 +22,26 @@ const Footer = () => {
           <p className="text-white/70 max-w-xs">
             Building better digital experiences through design, code, and creativity.
           </p>
+        </div>
+
+        {/* right - Navigation */}
+        <div className="flex flex-col gap-2 md:items-end">
+          <h4 className="text-lg font-semibold mb-2">Navigation</h4>
+          <a href="#" className="hover:underline">Home</a>
+          <a href="#" className="hover:underline">About</a>
+          <a href="#" className="hover:underline">Services</a>
+          <a href="#" className="hover:underline">Blog</a>
+          <a href="#" className="hover:underline">Contact</a>
+        </div>
+
+        {/* right - Navigation */}
+        <div className="flex flex-col gap-2 md:items-end">
+          <h4 className="text-lg font-semibold mb-2">Services</h4>
+          <a href="#" className="hover:underline">SEO Optimization</a>
+          <a href="#" className="hover:underline">Graphic Designing</a>
+          <a href="#" className="hover:underline">Content Writing</a>
+          <a href="#" className="hover:underline">Web Development</a>
+          <a href="#" className="hover:underline">Social Media Marketing</a>
         </div>
 
         {/* Right - Contact Info */}
@@ -44,6 +57,8 @@ const Footer = () => {
       <div className="mt-12 pt-4 border-t border-white/20 text-center text-xs text-white/50">
         © {new Date().getFullYear()} Masterminds Junior. All rights reserved.
       </div>
+
+      <div className=' absolute z-0 bottom-0 left-1/2 -translate-x-1/2 w-[60%] h-24 bg-blue-600 rounded-t-[100%] blur-3xl opacity-20' />
     </footer>
   );
 };
