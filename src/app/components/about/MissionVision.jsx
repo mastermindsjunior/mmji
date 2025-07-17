@@ -12,17 +12,22 @@ export const MissionValuesSection = () => {
           <div className="p-8 rounded-xl bg-gradient-to-br from-blue-950/50 to-black/80 shadow-2xl border border-blue-600/30 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-600/50">
             <h2 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-blue-400 text-transparent bg-clip-text">Our Mission</h2>
             <p className="mb-4 text-gray-300 leading-relaxed">
-              We believe in the power of storytelling, strategy, and technology. Our goal is to empower businesses with digital tools that foster engagement, drive results, and deliver long-term brand equity.
+              At MasterMinds Junior, our mission is to craft meaningful digital experiences that connect brands with their audiences. By combining creativity, strategy, and cutting-edge technology, we aim to deliver solutions that drive real results, build brand value, and spark sustainable growth for businesses of all sizes.
             </p>
-            <p className="text-gray-300 leading-relaxed">
+            {/* <p className="text-gray-300 leading-relaxed">
               We blend artistic creativity with technical precision to engineer solutions that are beautiful, functional, and strategic. Every campaign, every design, every website—we build with intent.
-            </p>
+            </p> */}
           </div>
 
           {/* Values Column */}
           <div className="p-8 rounded-xl bg-gradient-to-br from-primary-orange/20 to-black/80 shadow-2xl border border-primary-orange/30 transform transition-all duration-300 hover:scale-105 hover:shadow-primary-orange/50">
-            <h2 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-primary-orange to-primary-orange/50 text-transparent bg-clip-text">Values We Live By</h2>
-            <ul className="space-y-5 font-sfth text-base text-gray-300">
+            <h2 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-primary-orange to-primary-orange/50 text-transparent bg-clip-text">Vision We Live By</h2>
+
+
+            <p className="text-gray-300 leading-relaxed">
+              To become a globally trusted digital partner that empowers brands to grow through purposeful storytelling, intelligent strategy, and innovative technology—leaving a lasting legacy in the digital world.
+            </p>
+            {/* <ul className="space-y-5 font-sfth text-base text-gray-300">
               <li className="flex items-center justify-start">
                 <span className="text-primary-orange mr-3 text-3xl">•</span>
                 Innovation with Impact
@@ -39,7 +44,7 @@ export const MissionValuesSection = () => {
                 <span className="text-primary-orange mr-3 text-3xl">•</span>
                 Performance-Driven Strategies
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>

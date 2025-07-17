@@ -2,40 +2,45 @@ import React from 'react';
 
 const milestones = [
   {
-    year: '2020',
+    year: '2020 - Where It All Began',
     points: [
-      'Conceptualized with a bold mission and secured our first client—a leading educational brand.',
+      'Founded with a bold vision to transform digital experiences.',
+      'Secured our first client—a leading educational institution.',
     ],
   },
   {
-    year: '2021',
+    year: '2021 - Momentum Builds',
     points: [
-      'Entered the education, hospitality, and childcare sectors, expanding our digital toolkit.',
+      'Expanded into education, childcare, and hospitality.',
+      'Strengthened our presence with diverse, sector-driven solutions.',
     ],
   },
   {
-    year: '2022',
+    year: '2022 - Scaling Up',
     points: [
-      'Diversified our portfolio with clients in healthcare, construction, retail, and food services.',
+      'Team growth fueled by rising demand.',
+      'Entered new industries: construction, healthcare, retail, and food services.',
     ],
   },
   {
-    year: '2023',
+    year: '2023 - Strategic Reach',
     points: [
       'Expanded our regional footprint to Alberta and Saskatchewan.',
-      'Introduced new offerings like QR solutions and custom branding profiles.',
+      'Introduced new offerings: QR codes, company profiles, and bespoke branding.',
     ],
   },
   {
-    year: '2024',
+    year: '2024 - Going Global',
     points: [
-      'Marked a new beginning with the launch of our India operations and deeper roots in Toronto.',
+      'Launched operations in India.',
+      'Gained traction in Toronto, enhancing our international footprint.',
     ],
   },
   {
-    year: '2025 & Beyond',
+    year: '2025 - The Global Vision',
     points: [
-      'On a trajectory to enter new global markets with a relentless focus on innovation and excellence.',
+      'Actively entering new global markets.',
+      'Advancing with purpose, precision, and performance.',
     ],
   },
 ];
@@ -62,7 +67,7 @@ export default function OurStorySection() {
               {milestones.map(({ year, points }) => (
                 <div
                   key={year}
-                  className="flex-shrink-0 flex flex-col items-center 2xl:w-48 w-40"
+                  className="flex-shrink-0 flex flex-col items-center 2xl:w-52 w-44"
                 >
                   {/* Dot */}
                   <div className="relative z-10 w-3 h-3 -translate-y-1 bg-primary-blue rounded-full border-2 border-gray-800" />
@@ -73,7 +78,12 @@ export default function OurStorySection() {
                   {/* Card */}
                   <div className="mt-4 bg-gray-900 p-4 rounded-lg shadow-lg text-center">
                     <h3 className="text-xl font-jost font-bold text-primary-blue">
-                      {year}
+                      {year.split("-").map((text, i) => (
+                        <>
+                        <span key={i}>{text}</span>
+                        {i < 1 && <br/>}
+                        </>
+                      ))}
                     </h3>
                     <ul className="mt-2 font-alum text-gray-300 text-lg space-y-2">
                       {points.map((pt, i) => (

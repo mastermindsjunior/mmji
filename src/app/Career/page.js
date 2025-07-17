@@ -1,21 +1,24 @@
 // app/careers/page.js
 
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Banner from '../components/common/Banner';
-// import { LocationMarkerIcon, ClockIcon } from '@heroicons/react/outline';
 import { MapPin, Clock } from 'lucide-react';
+import Marquee from 'react-fast-marquee'
+import toast, { Toaster } from 'react-hot-toast';
 
 const opportunities = [
   {
     category: 'job',
-    designation: 'Software Engineer',
-    location: 'San Francisco',
+    designation: 'Digital Marketer',
+    location: 'Remote',
     duration: 'Full-time',
     desc: 'Develop cutting-edge applications and collaborate with a dynamic team to solve complex problems.',
   },
   {
     category: 'job',
-    designation: 'Product Manager',
+    designation: 'Content Creators',
     location: 'Remote',
     duration: 'Part-time',
     desc: 'Lead product development cycles and work closely with engineering and design teams.',
@@ -23,100 +26,315 @@ const opportunities = [
   {
     category: 'internship',
     designation: 'Marketing Intern',
-    location: 'New York',
+    location: 'Remote',
     duration: '3 months',
     desc: 'Assist in creating marketing campaigns and analyzing market trends.',
   },
   {
     category: 'internship',
-    designation: 'Engineering Intern',
+    designation: 'UI/UX Designers Intern',
     location: 'Remote',
     duration: '6 months',
     desc: 'Gain hands-on experience in software development and contribute to real projects.',
   },
-  {
+{
     category: 'course',
-    designation: 'AI Fundamentals',
+    designation: 'Meta Ads Management',
     location: 'Online',
     duration: 'Self-paced',
-    desc: 'Learn the basics of artificial intelligence through interactive modules and projects.',
+    desc: 'Master Meta Ads Manager to plan, build, and optimize ad campaigns on Facebook and Instagram. Learn targeting strategies, budgeting, A/B testing, and performance analysis.',
   },
   {
     category: 'course',
-    designation: 'Advanced Machine Learning',
+    designation: 'Graphic Design Basics',
     location: 'Online',
     duration: '12 weeks',
-    desc: 'Dive deep into machine learning algorithms and their applications in industry.',
+    desc: 'Learn the fundamentals of graphic design—including color theory, typography, layout, and composition—using tools like Adobe Photoshop and Illustrator through hands-on projects.',
+  },
+  {
+    category: 'course',
+    designation: 'Website Development for Beginners',
+    location: 'Online',
+    duration: '12 weeks',
+    desc: 'Build responsive, modern websites from scratch using HTML, CSS, and JavaScript. Explore best practices for accessibility, responsive layouts, and basic deployment.',
+  },
+  {
+    category: 'course',
+    designation: 'Digital Marketing Class',
+    location: 'Online',
+    duration: '12 weeks',
+    desc: 'Get a comprehensive overview of digital marketing channels—SEO, SEM, email, content, and social media—plus analytics and campaign planning to drive measurable results.',
+  },
+  {
+    category: 'course',
+    designation: 'Social Media Marketing (SMM)',
+    location: 'Online',
+    duration: '12 weeks',
+    desc: 'Discover how to craft engaging social media strategies across platforms, create compelling content, schedule posts, engage communities, and analyze performance metrics.',
+  },
+  {
+    category: 'course',
+    designation: 'SEO',
+    location: 'Online',
+    duration: '12 weeks',
+    desc: 'Learn on-page and off-page SEO techniques, keyword research, technical site optimization, and analytics to improve search engine rankings and drive organic traffic.',
   },
 ];
 
-const CareersPage = () => {
-  const groupedOpportunities = opportunities.reduce((acc, item) => {
+export default function CareersPage() {
+  const [position, setPosition] = useState('');
+  const [resume, setResume] = useState(null);
+  const [note, setNote] = useState('');
+
+  const handlePositionChange = e => {
+    setPosition(e.target.value);
+  };
+
+  const handleResumeChange = e => {
+    if (e.target.files && e.target.files.length > 0) {
+      setResume(e.target.files[0]);
+    }
+  };
+
+  const handleNoteChange = e => {
+    setNote(e.target.value);
+  };
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    toast('Sending application...');
+    const formData = new FormData();
+    formData.append('position', position);
+    formData.append('note', note);
+    if (resume) formData.append('resume', resume);
+
+    try {
+      const res = await fetch('/api/application', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await res.json();
+      console.log(data);
+      toast('Application sent!');
+      // reset form
+      setPosition('');
+      setNote('');
+      setResume(null);
+      const input = document.getElementById('resume');
+      if (input) input.value = '';
+    } catch (err) {
+      console.error(err);
+      toast.error('Failed to send application.');
+    }
+  };
+
+  const grouped = opportunities.reduce((acc, item) => {
     if (!acc[item.category]) acc[item.category] = [];
     acc[item.category].push(item);
     return acc;
   }, {});
 
+  // items for marquee/dropdown only jobs & internships
+  const applItems = opportunities.filter(o => o.category === 'job' || o.category === 'internship');
+
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
-      {/* Layered radial gradients */}
-      {/* <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(circle at top left, rgba(131, 58, 180, 0.6), transparent 50%),' +
-            'radial-gradient(circle at bottom right, rgba(253, 29, 29, 0.5), transparent 50%)',
-        }}
-      /> */}
+    <Toaster position='top-center'/>
+      {/* seamless marquee keyframes */}
 
-      {/* Banner with gradient-text */}
-      <Banner
-        title={
-          "Career with"
-        }
-        sub={
-          "Us"
-        }
-      />
+      <Banner title="Careers at " sub="MasterMinds Junior" />
 
-      <main className="relative z-10 max-w-7xl mx-auto px-4 py-12">
-        {Object.entries(groupedOpportunities).map(([category, items]) => (
-          <section key={category} className="mb-16">
-            <h2 className="text-4xl font-semibold mb-6 capitalize bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-blue-500">
-              {category}s
+      <main className="relative z-10 max-w-7xl mx-auto px-6 py-12">
+        {/* Hero */}
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 font-jost bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-blue-600">
+          Where creativity meets opportunity
+        </h2>
+        <p className="text-white/75 text-lg mb-8">
+          At MasterMinds Junior, we don’t just hire employees—we welcome collaborators, thinkers, learners, and go-getters. Whether you’re just starting out or bringing years of experience, this is a space where your ideas are heard, your talent is valued, and your growth truly matters.
+        </p>
+
+        {/* Why Work With Us */}
+        <h3 className="text-2xl font-semibold mb-6 text-white font-jost">Why Work With Us?</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {[
+            {
+              title: 'Learn & Grow Together',
+              desc: 'We believe growth is a journey, not a milestone. From freshers to seasoned professionals, we provide a culture of continuous learning and mentorship.',
+            },
+            {
+              title: 'Create With Purpose',
+              desc: 'Every project at MasterMinds Junior starts with intention. We don’t just build brands—we build impact.',
+            },
+            {
+              title: 'Inclusive & Open Culture',
+              desc: 'Our founder, Harpreet Lamba, leads with empathy and vision. Here, you’re part of a family that supports, challenges, and celebrates one another.',
+            },
+            {
+              title: 'Shape the Digital Future',
+              desc: 'Work on cutting-edge projects across industries, expand your portfolio, and be part of campaigns that are seen and remembered.',
+            },
+          ].map((block, i) => (
+            <div
+              key={i}
+              className="   p-6 rounded-2xl bg-[#111]   shadow-[0_0_10px_rgba(59,130,246,0.5)]   hover:shadow-[0_0_20px_rgba(59,130,246,0.7)]   hover:bg-gradient-to-br hover:from-primary-blue hover:to-blue-600   transition "
+            >
+              <h4 className="text-xl font-bold mb-2">{block.title}</h4>
+              <p className="text-white/75 text-sm">{block.desc}</p>
+            </div>
+          ))}
+        </div>
+
+
+        {/* Marquee */}
+        <h3 className="text-2xl font-semibold mb-4 text-white font-jost">We’re Always Looking For</h3>
+        <div className="overflow-hidden mb-12">
+          <div className="">
+          <Marquee direction={"right"} className=' pt-3' speed={80}>
+
+            {[...applItems, ...applItems].map((item, i) => (
+              <span
+                key={i}
+                className="   inline-block mx-2 px-4 py-2 bg-[#111] rounded-full text-sm   shadow-[0_0_6px_rgba(59,130,246,0.5)] "
+              >
+                {item.designation}
+              </span>
+            ))}
+          </Marquee>
+          </div>
+        </div>
+
+        {/* Perks & Benefits */}
+        <h3 className="text-2xl font-semibold mb-4 text-white font-jost">Perks & Benefits</h3>
+        <div className="flex flex-wrap gap-4 mb-12">
+          {[
+            'Flexible work timings',
+            'Mentorship & training programs',
+            'Opportunity to work with global clients',
+            'Performance recognition',
+            'Friendly and dynamic work environment',
+          ].map((perk, i) => (
+            <span
+              key={i}
+              className="   inline-block px-4 py-2 bg-[#212121] rounded-lg text-sm   shadow-[0_0_6px_rgba(255,165,0,0.5)] "
+            >
+              {perk}
+            </span>
+          ))}
+        </div>
+
+        {/* Learn With Us */}
+        <h3 className="text-2xl font-semibold mb-4 text-white font-jost">
+          Learn With Us – Start Your Digital Career
+        </h3>
+        <p className="text-white/75 text-lg mb-12">
+          We understand that not everyone walks in with experience—that’s why we’ve built a learning ecosystem for aspiring professionals.
+          Our in-house training programs are designed for individuals looking to enter the digital space or upgrade their skills with practical, real-world knowledge.
+        </p>
+
+        {/* Opportunities */}
+        {Object.entries(grouped).map(([cat, items]) => (
+          <section key={cat} className="mb-16">
+            <h2 className="text-4xl font-semibold mb-6 capitalize font-jost text-white">
+              {cat}s
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {items.map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-gradient-to-br from-purple-700 to-pink-700 p-[1px] rounded-2xl hover:scale-105 transform transition duration-300 ease-out"
+                  className="  p-[1px] rounded-2xl bg-gradient-to-br from-primary-blue to-blue-600  shadow-[0_0_10px_rgba(59,130,246,0.5)]  hover:from-primary-orange hover:to-primary-blue  hover:shadow-[0_0_20px_rgba(255,165,0,0.7)]  transition"
                 >
-                  <div className="bg-black rounded-2xl p-6 backdrop-blur-sm h-full">
-                    <h3 className="text-2xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-yellow-300">
+                  <div className="bg-[#111] rounded-2xl p-6 backdrop-blur-sm h-full flex flex-col">
+                    <h3 className="text-2xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-blue-600">
                       {item.designation}
                     </h3>
 
-                    <div className="flex items-center text-gray-400 mb-2">
+                    <div className="flex items-center text-white/75 mb-2">
                       <MapPin className="w-5 h-5 mr-2" />
                       <span>{item.location}</span>
                     </div>
 
-                    <div className="flex items-center text-gray-400 mb-4">
+                    <div className="flex items-center text-white/75 mb-4">
                       <Clock className="w-5 h-5 mr-2" />
                       <span>{item.duration}</span>
                     </div>
 
-                    <p className="text-gray-300 leading-relaxed">{item.desc}</p>
+                    <p className="text-white/75 leading-relaxed flex-grow">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </section>
         ))}
+
+        {/* Application Form */}
+        <section className="mb-16 max-w-6xl p-0.5 rounded-3xl bg-gradient-to-b from-blue-600 via-gray-700 to-gray-800 ">
+                  <div className=' w-full h-full relative bg-darker p-6 rounded-3xl'>
+                      <div className=' absolute h-0.5 left-1/2 -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-blue-600 to-transparent w-[80%]' />
+            <div className='absolute w-[50%] 2xl:h-20 h-14 rounded-t-[100%] opacity-30 bg-blue-600 blur-2xl z-10 bottom-0 left-1/2 -translate-x-1/2' />
+          <h2 className="text-3xl font-semibold mb-6 text-white font-jost">Apply Now</h2>
+          <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+            <div>
+              <label htmlFor="position" className="block mb-2 text-white/75">
+                Position
+              </label>
+              <select
+                id="position"
+                value={position}
+                onChange={handlePositionChange}
+                required
+                className="w-full bg-[#111]/5 border border-blue-600 rounded-full px-4 py-2 text-white"
+              >
+                <option value="">Select a position</option>
+                {applItems.map((o, i) => (
+                  <option key={i} value={o.designation}>
+                    {o.designation}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="resume" className="block mb-2 text-white/75">
+                Resume
+              </label>
+              <input
+                type="file"
+                id="resume"
+                accept=".pdf,.doc,.docx"
+                onChange={handleResumeChange}
+                required
+                className="w-full bg-[#111]/5 border border-blue-600 rounded-full px-4 py-2 text-white"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="note" className="block mb-2 text-white/75">
+                Note
+              </label>
+              <textarea
+                id="note"
+                value={note}
+                onChange={handleNoteChange}
+                placeholder="Write a note or cover letter..."
+                className="w-full bg-[#111]/5 border border-blue-600 rounded-2xl px-4 py-2 text-white h-32 resize-none"
+              />
+            </div>
+
+           <div className='mx-auto w-fit'>
+             <button
+              type="submit"
+              className="px-6 py-3 bg-dark text-white font-sfth border border-gray-700 font-medium rounded-full transition"
+            >
+              Send Application
+            </button>
+           </div>
+          </form>
+                  </div>
+        </section>
       </main>
     </div>
   );
-};
-
-export default CareersPage;
+}

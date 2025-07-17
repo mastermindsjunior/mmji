@@ -2,8 +2,8 @@ import React from 'react';
 
 const teamMembers = [
   {
-    name: 'Harpreet Lamba',
-    role: 'CEO & Founder',
+    name: 'Tania Luthra',
+    role: 'HR',
     image: '/heading.jpg',
     socials: {
       twitter: '#',
@@ -90,9 +90,7 @@ export const MeetTheTeamSection = () => (
         Meet the Growth Architects
       </h2>
       <p className="mt-4 max-w-2xl mx-auto text-center text-gray-300 leading-relaxed">
-        Our digital strategists, designers, developers, and marketing analysts bring
-        experience, energy, and creativity to every project. Whether it’s website
-        development, app creation, or campaign strategy—we deliver excellence.
+        Our team of digital strategists, designers, developers, and marketing analysts bring experience, energy, and unmatched creativity to every project. Whether you need website development in India, app creation, or campaign strategy—our experts deliver excellence, every time.
       </p>
 
       <div className="mt-12 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
