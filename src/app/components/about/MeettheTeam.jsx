@@ -2,6 +2,15 @@ import React from 'react';
 
 const teamMembers = [
   {
+    name: 'Harpreet Lamba',
+    role: 'CEO & Founder',
+    image: '/harpreet.jpg',
+    socials: {
+      twitter: '#',
+      linkedin: '#',
+    },
+  },
+  {
     name: 'Tania Luthra',
     role: 'HR',
     image: '/heading.jpg',
@@ -13,7 +22,7 @@ const teamMembers = [
   {
     name: 'Sakshi Panwar',
     role: 'Supervisor',
-    image: '/heading.jpg',
+    image: '/sakshi.jpg',
     socials: {
       twitter: '#',
       linkedin: '#',
@@ -22,7 +31,7 @@ const teamMembers = [
   {
     name: 'Sunanda Sharma',
     role: 'Team Lead',
-    image: '/heading.jpg',
+    image: '/sunanda.jpg',
     socials: {
       twitter: '#',
       linkedin: '#',
@@ -31,7 +40,25 @@ const teamMembers = [
   {
     name: 'Vikas Chouhan',
     role: 'Team Lead',
-    image: '/heading.jpg',
+    image: '/vikas.jpg',
+    socials: {
+      twitter: '#',
+      linkedin: '#',
+    },
+  },
+  {
+    name: 'Lavanya',
+    role: 'Team Lead',
+    image: '/lavanya.jpg',
+    socials: {
+      twitter: '#',
+      linkedin: '#',
+    },
+  },
+  {
+    name: 'Zeeshan Ali',
+    role: 'Very Handsome',
+    image: '/zeeshan.png',
     socials: {
       twitter: '#',
       linkedin: '#',

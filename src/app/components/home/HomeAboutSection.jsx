@@ -18,8 +18,8 @@ const HomeAboutSection = () => {
         };
       }, []);
   return (
-    <section className=' w-full h-dvh p-12 py-0  bg-gradient-to-tr from-primary-blue/20 via-transparent to-primary-orange/20 flex justify-center items-center'>
-        <div className={` rounded-[2rem] p-12 ${scrolled ? " pt-10" : " pt-4"} transition-all duration-300 ease-in-out 2xl:pb-20 pb-10 2xl:-translate-y-[8rem] -translate-y-[7rem] bg-darker border border-gray-800 w-full h-[calc(100%-4rem)] relative overflow-hidden flex flex-col gap-14 text-center justify-between items-center`}>
+    <section className=' w-full h-auto p-12 py-0  bg-gradient-to-tr from-primary-blue/20 via-transparent to-primary-orange/20 flex justify-center items-center'>
+        <div className={` rounded-[2rem] p-10 ${scrolled ? " pt-10" : " pt-4"} transition-all duration-300 ease-in-out 2xl:pb-20 pb-10 2xl:-translate-y-[6rem] -translate-y-[5rem] bg-darker border border-gray-800 w-full relative overflow-hidden flex flex-col gap-14 text-center justify-between items-center`}>
 
             <video
                 src={'/vid/contact-form.mp4'}

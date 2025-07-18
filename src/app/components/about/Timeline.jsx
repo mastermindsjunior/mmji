@@ -85,7 +85,7 @@ export default function OurStorySection() {
                         </>
                       ))}
                     </h3>
-                    <ul className="mt-2 font-jost text-sm text-gray-300 text-lg space-y-2">
+                    <ul className="mt-2 font-jost text-sm text-gray-300 space-y-2">
                       {points.map((pt, i) => (
                         <li key={i}>{pt}</li>
                       ))}

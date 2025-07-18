@@ -30,22 +30,22 @@ const CoreCompetencies = () => {
       Icon: Monitor,
     },
     {
-      title: 'Google & Meta Ads',
-      description:
-        'Engage the right audience through Google Ads and Meta Ads management, optimizing every rupee spent.',
-      Icon: Megaphone,
-    },
-    {
       title: 'Graphic & Logo Designing',
       description:
-        'Create a visual identity that resonates. Our top logo designers in India deliver logos with purpose and aesthetics.',
+      'Create a visual identity that resonates. Our top logo designers in India deliver logos with purpose and aesthetics.',
       Icon: Image,
     },
     {
       title: 'Content Writing',
       description:
-        'Content that informs, inspires, and converts—crafted for your ideal audience with clarity and impact.',
+      'Content that informs, inspires, and converts—crafted for your ideal audience with clarity and impact.',
       Icon: FileText,
+    },
+    {
+      title: 'Google & Meta Ads',
+      description:
+        'Engage the right audience through Google Ads and Meta Ads management, optimizing every rupee spent.',
+      Icon: Megaphone,
     },
   ];
 

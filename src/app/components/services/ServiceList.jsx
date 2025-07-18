@@ -3,12 +3,12 @@ import Image from 'next/image'
 import { Scroll, ArrowRight } from 'lucide-react'
 
 const servicesRow1 = [
-  {
-    title: "Content Writing",
+    {
+    title: "Social Media Management",
     num:1,
-    heading:'Compelling Content That Captures & Converts',
+    heading:"Amplify Your Brand’s Voice Across Social Channels",
     description:
-      "Our content specialists create articulate, persuasive copy tailored to your audience and objectives. From web content to digital campaigns, we deliver language that inspires action.",
+      "We craft and manage compelling social media campaigns that foster community, visibility, and increase engagement. Our data-backed strategies ensure your brand relevant and resonant in a dynamic digital landscape.",
   },
   {
     title: "SEO Optimization",
@@ -17,49 +17,51 @@ const servicesRow1 = [
     description:
       "That Works Achieve greater visibility and authority online with our sophisticated SEO techniques. We enhance your digital footprint through strategic keyword targeting, optimized content architecture, and sustainable ranking improvements.",
   },
-  {
-    title: "Social Media Management",
-    num:3,
-    heading:"Amplify Your Brand’s Voice Across Social Channels",
-    description:
-      "We craft and manage compelling social media campaigns that foster community, visibility, and increase engagement. Our data-backed strategies ensure your brand relevant and resonant in a dynamic digital landscape.",
-  },
-]
-const servicesRow2 = [
-  {
+    {
     title: "Web Development",
-    num:4,
+    num:3,
     heading:"Bringing Your Digital Presence to Life",
     description:
       " Our websites blend aesthetic finesse with functional excellence. Each site is custom-developed to reflect your brand’s ethos, engage users effortlessly, and convert visitors into loyal customers.",
   },
+]
+const servicesRow2 = [
+
   {
     title: "Logo Designing",
-    num:5,
+    num:4,
     heading:"Crafting Logos That Speak for Your Brand",
     description:
       " We design distinctive, timeless logos that serve as the cornerstone of your brand identity. Our creative process ensures each design communicates your brand’s values with clarity and character.",
   },
-];
-
-const servicesRow3 = [
-  {
+    {
     title: "App Development",
-    num:6,
+    num:5,
     heading:'Innovative Apps Tailored to Your Needs',
     description:
       "We build intuitive, scalable mobile applications that deliver an exceptional user experience- our apps are engineered for performance, security, and growth.",
   },
+];
+
+const servicesRow3 = [
+
   {
     title: "Graphic Designing",
-    num:7,
+    num:6,
     heading:'Visual Designs That Tell Your Story',
     description:
       "From captivating visuals to cohesive branding elements, our graphic design services bring your narrative to life. Every piece is carefully crafted to engage your audience and strengthen brand recall",
   },
+      {
+    title: "Content Writing",
+    num:7,
+    heading:'Compelling Content That Captures & Converts',
+    description:
+      "Our content specialists create articulate, persuasive copy tailored to your audience and objectives. From web content to digital campaigns, we deliver language that inspires action.",
+  },
   {
     title: "Google & Meta Ads",
-    num:3,
+    num:9,
     heading:'Targeted Advertising with Measurable Results',
     description:
       "Maximize your ROI with precision-targeted ad campaigns on Google and Meta (Facebook & Instagram). We strategize, design, and optimize ads to capture attention, drive conversions, and enhance your online impact with tangible outcomes.",
@@ -87,7 +89,7 @@ function ServiceCard({ service, index }) {
 
   return (
     <div
-      className={` group flex flex-col  rounded-2xl  overflow-hidden bg-gradient-to-b ${index % 2 === 1 ? " from-blue-600/5 from-40% to-blue-600" : " from-primary-orange/5 from-40% to-yellow-300/50"}  shadow-lg  hover:shadow-2xl  transform hover:-translate-y-2  transition-all duration-300  `}
+      className={` group flex flex-col  rounded-2xl  overflow-hidden bg-gradient-to-b ${index % 2 === 1 ? " from-blue-600/5 from-40% to-blue-600" : " from-primary-orange/5 from-40% to-pink-500/40"}  shadow-lg  hover:shadow-2xl  transform hover:-translate-y-2  transition-all duration-300  `}
     >
       {/* {index % 2 === 1 && imageBlock} */}
 

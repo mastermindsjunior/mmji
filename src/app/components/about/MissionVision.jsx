@@ -21,7 +21,7 @@ export const MissionValuesSection = () => {
 
           {/* Values Column */}
           <div className="p-8 rounded-xl bg-gradient-to-br from-primary-orange/20 to-black/80 shadow-2xl border border-primary-orange/30 transform transition-all duration-300 hover:scale-105 hover:shadow-primary-orange/50">
-            <h2 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-primary-orange to-primary-orange/50 text-transparent bg-clip-text">Vision We Live By</h2>
+            <h2 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-primary-orange to-primary-orange/50 text-transparent bg-clip-text">Vision</h2>
 
 
             <p className="text-gray-300 leading-relaxed">
@@ -47,6 +47,23 @@ export const MissionValuesSection = () => {
             </ul> */}
           </div>
         </div>
+
+            <h2 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-white to-white/50 text-transparent bg-clip-text text-center my-5">Values We Live By</h2>
+          <div className=' flex justify-center items-center gap-4 text-sm flex-wrap'>
+              <p className="flex items-center justify-center px-4 py-1 rounded-full border border-gray-600 hover:bg-white hover:text-dark transition-all duration-300 ease-in shadow-blue-600 shadow-2xl">
+                Innovation with Impact
+              </p>
+              <p className="flex items-center justify-center px-4 py-1 rounded-full border border-gray-600 hover:bg-white hover:text-dark transition-all duration-300 ease-in shadow-blue-600 shadow-2xl">
+                Integrity in Execution
+              </p>
+              <p className="flex items-center justify-center px-4 py-1 rounded-full border border-gray-600 hover:bg-white hover:text-dark transition-all duration-300 ease-in shadow-blue-600 shadow-2xl">
+                Collaboration over Competition
+              </p>
+              <p className="flex items-center justify-center px-4 py-1 rounded-full border border-gray-600 hover:bg-white hover:text-dark transition-all duration-300 ease-in shadow-blue-600 shadow-2xl">
+                Performance-Driven Strategies
+              </p>
+          </div>
+
       </div>
     </section>
   );
