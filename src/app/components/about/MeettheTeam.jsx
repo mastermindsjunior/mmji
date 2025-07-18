@@ -75,6 +75,9 @@ const TeamCard = ({ name, role, image, socials }) => (
       className="w-24 h-24 rounded-full object-cover border-4 border-blue-600 transition-transform duration-300 hover:scale-110"
     />
 
+
+
+
     {/* Text content */}
     <div className="flex-1 ml-4">
       <h3 className="text-lg font-jost font-semibold text-white">{name}</h3>
