@@ -19,7 +19,7 @@ export default function Navbar() {
       label: 'Opportunities',
       children: [
         { label: 'Career', href: '/Career' },
-        { label: 'Courses', href: '/Courses' },
+        { label: 'Courses', href: '/courses' },
       ],
     },
     { label: 'Contact', href: '/Contact' },
