@@ -13,7 +13,7 @@ const teamMembers = [
   {
     name: 'Tania Luthra',
     role: 'HR',
-    image: '/heading.jpg',
+    image: '/tania.jpg',
     socials: {
       twitter: '#',
       linkedin: '#',

@@ -1,4 +1,4 @@
-import { Albert_Sans, Alumni_Sans_Pinstripe, Geist, Geist_Mono, Jost, Roboto_Flex } from "next/font/google";
+import { Albert_Sans, Alumni_Sans_Pinstripe, Geist, Geist_Mono, Jost, Quicksand, Roboto_Flex } from "next/font/google";
 import localFont from 'next/font/local';
 import Footer from "./components/common/Footer";
 import Navbar from "./components/common/Navbar_2";
@@ -56,12 +56,18 @@ const alumini = Alumni_Sans_Pinstripe({
   variable:'--font-alumini'
 })
 
+const sand = Quicksand({
+  subsets:['latin'],
+  weight:['300','400','500','600','700'],
+  variable:'--font-sand'
+})
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${robo.variable} ${albert.variable} ${sfThin.variable} ${sfBold.variable} ${jost.variable} ${alumini.variable} heading-albert antialiased bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} ${robo.variable} ${albert.variable} ${sfThin.variable} ${sfBold.variable} ${jost.variable} ${alumini.variable} ${sand.variable} heading-albert antialiased bg-black`}
       > 
       {/* <NavBar/> */}
       <Navbar/>

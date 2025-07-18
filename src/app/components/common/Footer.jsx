@@ -1,4 +1,4 @@
-import { Instagram } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -27,6 +27,9 @@ const Footer = () => {
           <div className=' flex justify-center items-center gap-2 pt-2'>
             <Link href={'https://www.instagram.com/mastermindsjunior_india/'}>
               <Instagram color='#fff' className='' />
+            </Link>
+            <Link href={'https://www.facebook.com/profile.php?id=61563957392798'}>
+              <Facebook color='#fff' className='' />
             </Link>
           </div>
         </div>
