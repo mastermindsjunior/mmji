@@ -89,7 +89,7 @@ function ServiceCard({ service, index }) {
 
   return (
     <div
-      className={` group flex flex-col  rounded-2xl  overflow-hidden bg-gradient-to-b ${index % 2 === 1 ? " from-blue-600/5 from-40% to-blue-600" : " from-primary-orange/5 from-40% to-pink-500/40"}  shadow-lg  hover:shadow-2xl  transform hover:-translate-y-2  transition-all duration-300  `}
+      className={` group flex flex-col  rounded-2xl  overflow-hidden bg-gradient-to-br ${index % 2 === 1 ? " from-blue-600/30 from-40% to-pink-500/30" : " from-blue-600/30 from-40% to-pink-500/30"}  shadow-lg  hover:shadow-2xl  transform hover:-translate-y-2  transition-all duration-300  `}
     >
       {/* {index % 2 === 1 && imageBlock} */}
 
@@ -119,7 +119,7 @@ function ServiceCard({ service, index }) {
         <p className="mt-4 flex-1 text-gray-300 font-sfth">
           {service.description}
         </p>
-        <button className={`my-4 mt-6 inline-flex justify-center items-center ${index % 2 === 1 ? " text-blue-600" : " text-primary-orange"}  bg-white rounded-full w-full py-2 px-4 font-medium text-center font-jost `}>
+        <button className={`my-4 mt-6 inline-flex justify-center items-center ${index % 2 === 1 ? " text-black" : " text-black"}  bg-white rounded-full w-full py-2 px-4 font-medium text-center font-jost `}>
           Read More
         </button>
       </div>

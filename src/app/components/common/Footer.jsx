@@ -1,4 +1,6 @@
+import { Instagram } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 
@@ -22,16 +24,21 @@ const Footer = () => {
           <p className="text-white/70 max-w-xs">
             Building better digital experiences through design, code, and creativity.
           </p>
+          <div className=' flex justify-center items-center gap-2 pt-2'>
+            <Link href={'https://www.instagram.com/mastermindsjunior_india/'}>
+              <Instagram color='#fff' className='' />
+            </Link>
+          </div>
         </div>
 
         {/* right - Navigation */}
         <div className="flex flex-col gap-2 md:items-end">
           <h4 className="text-lg font-semibold mb-2">Navigation</h4>
-          <a href="#" className="hover:underline">Home</a>
-          <a href="#" className="hover:underline">About</a>
-          <a href="#" className="hover:underline">Services</a>
-          <a href="#" className="hover:underline">Blog</a>
-          <a href="#" className="hover:underline">Contact</a>
+          <a href="/" className="hover:underline">Home</a>
+          <a href="/About" className="hover:underline">About</a>
+          <a href="/Services" className="hover:underline">Services</a>
+          <a href="/Careers" className="hover:underline">Blog</a>
+          <a href="/Contact" className="hover:underline">Contact</a>
         </div>
 
         {/* right - Navigation */}
@@ -45,11 +52,11 @@ const Footer = () => {
         </div>
 
         {/* Right - Contact Info */}
-        <div className="flex flex-col gap-2 md:items-end">
+        <div className="flex flex-col gap-2 md:items-end text-right">
           <h4 className="text-lg font-semibold mb-2">Contact</h4>
           <p>Email: hello@example.com</p>
           <p>Phone: +1 234 567 8901</p>
-          <p>Location: San Francisco, CA</p>
+          <p>Location: 1st Floor, Unit# 105, P NO 8, near VPM Classes, B yojna, Radha kunj, Mansarovar, Jaipur, Rajasthan 302020</p>
         </div>
       </div>
 
