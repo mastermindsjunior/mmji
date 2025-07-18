@@ -18,7 +18,7 @@ export default function Navbar() {
     {
       label: 'Opportunities',
       children: [
-        { label: 'Career', href: '/Career' },
+        { label: 'Career', href: '/Careers' },
         { label: 'Courses', href: '/Courses' },
       ],
     },
