@@ -55,15 +55,15 @@ const teamMembers = [
       linkedin: '#',
     },
   },
-  {
-    name: 'Zeeshan Ali',
-    role: 'Very Handsome',
-    image: '/zeeshan.png',
-    socials: {
-      twitter: '#',
-      linkedin: '#',
-    },
-  },
+  // {
+  //   name: 'Zeeshan Ali',
+  //   role: 'Very Handsome',
+  //   image: '/zeeshan.png',
+  //   socials: {
+  //     twitter: '#',
+  //     linkedin: '#',
+  //   },
+  // },
 ];
 
 const TeamCard = ({ name, role, image, socials }) => (
