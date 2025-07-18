@@ -13,16 +13,16 @@ export default function Navbar() {
   // Define your nav structure
   const links = [
     { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Services', href: '/services' },
+    { label: 'About', href: '/About' },
+    { label: 'Services', href: '/Services' },
     {
       label: 'Opportunities',
       children: [
-        { label: 'Career', href: '/career' },
-        { label: 'Courses', href: '/courses' },
+        { label: 'Career', href: '/Career' },
+        { label: 'Courses', href: '/Courses' },
       ],
     },
-    { label: 'Contact', href: '/contact' },
+    { label: 'Contact', href: '/Contact' },
   ];
 
   useEffect(() => {
