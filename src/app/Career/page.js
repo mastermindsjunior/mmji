@@ -221,7 +221,7 @@ export default function CareersPage() {
         </div>
 
         {/* Application Form */}
-        <section className="mb-16 max-w-6xl p-0.5 rounded-3xl bg-gradient-to-b from-blue-600 via-gray-700 to-gray-800 ">
+        <section className="mb-16 max-w-6xl mx-auto p-0.5 rounded-3xl bg-gradient-to-b from-blue-600 via-gray-700 to-gray-800 ">
                   <div className=' w-full h-full relative bg-darker p-6 rounded-3xl'>
                       <div className=' absolute h-0.5 left-1/2 -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-blue-600 to-transparent w-[80%]' />
             <div className='absolute w-[50%] 2xl:h-20 h-14 rounded-t-[100%] opacity-30 bg-blue-600 blur-2xl z-10 bottom-0 left-1/2 -translate-x-1/2' />

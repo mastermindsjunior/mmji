@@ -1,6 +1,10 @@
+'use client';
+
+
 import { Clock, MapPin } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
 import Banner from '../components/common/Banner';
+import toast, { Toaster } from 'react-hot-toast';
 
 const courses = [
     {
@@ -54,11 +58,66 @@ const courses = [
     return acc;
   }, {});
 
-const page = () => {
+
+
+
+    const applItems = courses.filter(o => o.category === 'opening' || o.category === 'course');
+
+const CoursePage = () => {
+
+
+  
+
+    const [position, setPosition] = useState('');
+    const [resume, setResume] = useState(null);
+    const [note, setNote] = useState('');
+  
+    const handlePositionChange = e => {
+      setPosition(e.target.value);
+    };
+  
+    const handleResumeChange = e => {
+      if (e.target.files && e.target.files.length > 0) {
+        setResume(e.target.files[0]);
+      }
+    };
+  
+    const handleNoteChange = e => {
+      setNote(e.target.value);
+    };
+  
+    const handleSubmit = async e => {
+      e.preventDefault();
+      toast('Sending application...');
+      const formData = new FormData();
+      formData.append('position', position);
+      formData.append('note', note);
+      if (resume) formData.append('resume', resume);
+  
+      try {
+        const res = await fetch('/api/application', {
+          method: 'POST',
+          body: formData,
+        });
+        const data = await res.json();
+        console.log(data);
+        toast('Application sent!');
+        // reset form
+        setPosition('');
+        setNote('');
+        setResume(null);
+        const input = document.getElementById('resume');
+        if (input) input.value = '';
+      } catch (err) {
+        console.error(err);
+        toast.error('Failed to send application.');
+      }
+    };
   return (
     <>
           <Banner title="Courses at" sub="MMJ" />
     
+        <Toaster position='top-center'/>
     <div className=' max-w-7xl mx-auto mt-6'>
 
             {/* Learn With Us */}
@@ -111,9 +170,74 @@ const page = () => {
           </section>
         ))}
       
+
+              <section className="mb-16 mx-auto max-w-6xl p-0.5 rounded-3xl bg-gradient-to-b from-blue-600 via-gray-700 to-gray-800 ">
+                  <div className=' w-full h-full relative bg-darker p-6 rounded-3xl'>
+                      <div className=' absolute h-0.5 left-1/2 -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-blue-600 to-transparent w-[80%]' />
+            <div className='absolute w-[50%] 2xl:h-20 h-14 rounded-t-[100%] opacity-30 bg-blue-600 blur-2xl z-10 bottom-0 left-1/2 -translate-x-1/2' />
+          <h2 className="text-3xl font-semibold mb-6 text-white font-jost">Enroll Now</h2>
+          <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+            <div>
+              <label htmlFor="position" className="block mb-2 text-white/75">
+                Course
+              </label>
+              <select
+                id="position"
+                value={position}
+                onChange={handlePositionChange}
+                required
+                className="w-full bg-[#111]/5 border border-blue-600 rounded-full px-4 py-2 text-white"
+              >
+                <option className=' bg-[#111]/5 text-black selection:bg-blue-600' value="">Select a Course</option>
+                {applItems.map((o, i) => (
+                  <option className=' bg-[#111]/5 text-black selection:bg-blue-600' key={i} value={o.designation}>
+                    {o.designation}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* <div>
+              <label htmlFor="resume" className="block mb-2 text-white/75">
+                Resume
+              </label>
+              <input
+                type="file"
+                id="resume"
+                accept=".pdf,.doc,.docx"
+                onChange={handleResumeChange}
+                required
+                className="w-full bg-[#111]/5 border border-blue-600 rounded-full px-4 py-2 text-white"
+              />
+            </div> */}
+
+            <div>
+              <label htmlFor="note" className="block mb-2 text-white/75">
+                Note
+              </label>
+              <textarea
+                id="note"
+                value={note}
+                onChange={handleNoteChange}
+                placeholder="Write a note..."
+                className="w-full bg-[#111]/5 border border-blue-600 rounded-2xl px-4 py-2 text-white h-32 resize-none"
+              />
+            </div>
+
+           <div className='mx-auto w-fit'>
+             <button
+              type="submit"
+              className="px-6 py-3 bg-dark text-white font-sfth border border-gray-700 font-medium rounded-full transition"
+            >
+              Send Application
+            </button>
+           </div>
+          </form>
+                  </div>
+        </section>
     </div>
     </>
   )
 }
 
-export default page
+export default CoursePage

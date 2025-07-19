@@ -47,7 +47,7 @@ const HomeAboutSection = () => {
                     </div>
                 </button>
                </Link>
-               <Link className='/Services'>
+               <Link href='/Services'>
                 <button className=' bg-white/5 rounded-full p-1 group/buttonCTA flex justify-between items-center 2xl:h-10 h-8 gap-4 font-sfbo cursor-pointer ' style={{boxShadow:'0px 0px 1px rgba(255,255,255)'}}>
                     <p className=' text-xs px-4'>Our Services</p>
                     <div className=' rounded-full h-full aspect-square inline-flex justify-center items-center bg-dark p-2' style={{boxShadow:'0px 0px 5px rgba(255,255,255,0.2)'}}>
