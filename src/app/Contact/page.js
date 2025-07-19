@@ -23,7 +23,7 @@ const page = () => {
                     <div style={{boxShadow:'inset 0 0 10px rgba(225,225,225,0.1)'}} className=' h-10 aspect-square shrink-0 rounded-lg border border-gray-800 p-1.5 inline-flex justify-center items-center'><MailIcon color='white'/></div>
                     <div className=' flex-1'>
                         <p className=' text-white font-alum text-xl mb-0'>Email us</p>
-                        <p className=' font-jost text-sm font-medium text-white/40'>mail@mail.com</p>
+                        <p className=' font-jost text-sm font-medium text-white/40'>admin@mastermindsjunior.com</p>
                     </div>
                     <div className=' h-10 aspect-square rounded-full bg-white/10 shrink-0 p-1.5 inline-flex justify-center items-center'> <ArrowUpRight color='white' /> </div>
                 </div>
@@ -41,7 +41,7 @@ const page = () => {
                     <div style={{boxShadow:'inset 0 0 10px rgba(225,225,225,0.1)'}} className=' h-10 aspect-square shrink-0 rounded-lg border border-gray-800 p-1.5 inline-flex justify-center items-center'> <LucideMapPin color='white' /> </div>
                     <div className=' flex-1'>
                         <p className=' text-white font-alum text-xl mb-0'>Our Location</p>
-                        <p className=' font-jost text-sm font-medium text-white/40'>mail@mail.com</p>
+                        <p className=' font-jost text-sm font-medium text-white/40'>1st Floor, Unit# 105, P NO 8, near VPM Classes, B yojna, Radha kunj, Mansarovar, Jaipur, Rajasthan 302020</p>
                     </div>
                     <div className=' h-10 aspect-square rounded-full bg-white/10 shrink-0 p-1.5 inline-flex justify-center items-center'> <ArrowUpRight color='white' /> </div>
                 </div>
