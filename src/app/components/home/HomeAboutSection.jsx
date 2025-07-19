@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowDownIcon } from 'lucide-react'
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
 const HomeAboutSection = () => {
@@ -38,18 +39,22 @@ const HomeAboutSection = () => {
 
             <div className=' w-full flex justify-center items-center gap-4 relative z-10'>
 
-                <button className=' bg-white/5 rounded-full p-1 group/buttonCTA flex justify-between items-center 2xl:h-10 h-8 gap-4 font-sfbo cursor-pointer ' style={{boxShadow:'0px 0px 1px rgba(255,255,255)'}}>
+               <Link href={'/About'}>
+                 <button className=' bg-white/5 rounded-full p-1 group/buttonCTA flex justify-between items-center 2xl:h-10 h-8 gap-4 font-sfbo cursor-pointer ' style={{boxShadow:'0px 0px 1px rgba(255,255,255)'}}>
                     <p className=' text-xs px-4'>Get Started</p>
                     <div className=' rounded-full h-full aspect-square inline-flex justify-center items-center bg-dark p-2' style={{boxShadow:'0px 0px 5px rgba(255,255,255,0.2)'}}>
                         <ArrowDownIcon className=' rotate-[-90deg] group-hover/buttonCTA:rotate-[-135deg] transition-all duration-300 ease-in-out' color='white' size={16} />
                     </div>
                 </button>
+               </Link>
+               <Link className='/Services'>
                 <button className=' bg-white/5 rounded-full p-1 group/buttonCTA flex justify-between items-center 2xl:h-10 h-8 gap-4 font-sfbo cursor-pointer ' style={{boxShadow:'0px 0px 1px rgba(255,255,255)'}}>
                     <p className=' text-xs px-4'>Our Services</p>
                     <div className=' rounded-full h-full aspect-square inline-flex justify-center items-center bg-dark p-2' style={{boxShadow:'0px 0px 5px rgba(255,255,255,0.2)'}}>
                         <ArrowDownIcon className=' rotate-[-90deg] group-hover/buttonCTA:rotate-[-135deg] transition-all duration-300 ease-in-out' color='white' size={16} />
                     </div>
                 </button>
+               </Link>
             </div>
 </div>
         </div>

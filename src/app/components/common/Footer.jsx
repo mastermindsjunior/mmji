@@ -40,7 +40,7 @@ const Footer = () => {
           <a href="/" className="hover:underline">Home</a>
           <a href="/About" className="hover:underline">About</a>
           <a href="/Services" className="hover:underline">Services</a>
-          <a href="/Careers" className="hover:underline">Blog</a>
+          <a href="/Career" className="hover:underline">Career</a>
           <a href="/Contact" className="hover:underline">Contact</a>
         </div>
 
@@ -57,7 +57,7 @@ const Footer = () => {
         {/* Right - Contact Info */}
         <div className="flex flex-col gap-2 md:items-end text-right">
           <h4 className="text-lg font-semibold mb-2">Contact</h4>
-          <p>Email: hello@example.com</p>
+          <p>Email: admin@mastermindsjunior.com</p>
           <p>Phone: +1 234 567 8901</p>
           <p>Location: 1st Floor, Unit# 105, P NO 8, near VPM Classes, B yojna, Radha kunj, Mansarovar, Jaipur, Rajasthan 302020</p>
         </div>
