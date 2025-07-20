@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
 
         {/* Right - Contact Info */}
-        <div className="flex flex-col gap-2 md:items-end text-right">
+        <div className="flex flex-col gap-2 md:items-end items-center xl:text-right text-center">
           <h4 className="text-lg font-semibold mb-2">Contact</h4>
           <p>Email: admin@mastermindsjunior.com</p>
           <p>Phone: +1 234 567 8901</p>

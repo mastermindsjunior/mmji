@@ -45,14 +45,14 @@ const Heading = () => {
             className="w-full h-full object-cover object-bottom"
           />
           <div
-            className={`absolute top-1/2 -translate-y-1/2 p-5 text-white   w-[75%] 
+            className={`absolute top-1/2 -translate-y-1/2 p-5 text-white xl:w-[75%] w-[90%] 
               ${slide.alignment === 'left' ? 'left-5 text-left' : ''}
               ${slide.alignment === 'center' ? 'left-1/2 -translate-x-1/2 text-center' : ''}
               ${slide.alignment === 'right' ? 'right-5 text-right' : ''}
             `}
           >
             <p className='font-jost text-sm text-white/80'>{slide.desc}</p>
-            <h2 className="my-4 font-sand text-4xl pb-2">{slide.title}</h2>
+            <h2 className="my-4 font-sand xl:text-5xl text-2xl pb-2">{slide.title}</h2>
             <button className=' bg-transparent border border-white/50 px-4 py-2 rounded-full font-jost font-light text-white hover:bg-white hover:text-dark transition-all duration-300 ease-in'>Learn More</button>
           </div>
         </div>

@@ -56,7 +56,7 @@ const CoreCompetencies = () => {
 
       <div className="relative 2xl:max-w-7xl max-w-6xl mx-auto px-6 lg:px-8">
         {/* Section Heading */}
-            <h3 className="font-jost text-4xl md:text-5xl font-bold mb-5 pb-2 textMask_br text-center translate-y-[-3rem]">
+            <h3 className="font-jost text-4xl md:text-5xl text-2xl font-bold mb-5 pb-2 textMask_br text-center translate-y-[-3rem]">
               Our Core Competencies That Drive Results
             </h3>
 

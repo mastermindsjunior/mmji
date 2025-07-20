@@ -8,13 +8,13 @@ const AboutSection = () => {
         {/* — Left: Image + Stat Card — */}
         <div className="relative">
           {/* Stat Card */}
-          <div className="absolute top-0 left-0 bg-gray-900/70 border border-primary-orange rounded-xl p-6
+          <div className="absolute top-0 left-0 bg-gray-900/70 border border-primary-orange rounded-xl xl:p-6 p-2
                           shadow-lg ring-4 ring-primary-orange/40">
-            <div className="text-5xl font-jost font-bold text-primary-orange">5+</div>
-            <div className="mt-1 font-sfbo text-sm">
+            <div className=" xl:text-5xl text-2xl font-jost font-bold text-primary-orange">5+</div>
+            <div className="mt-1 font-sfbo xl:text-sm text-xs">
               Years of Experience  
             </div>
-            <div className="font-sfbo text-sm">
+            <div className="font-sfbo xl:text-sm text-xs">
               on Digital Marketing Services
             </div>
           </div>
@@ -38,7 +38,7 @@ const AboutSection = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="font-jost text-4xl md:text-5xl font-bold mb-5 pb-2" style={{maskImage:'linear-gradient(135deg, black 60%, #00000077)'}}>
+          <h2 className="font-jost text-2xl md:text-5xl font-bold mb-5 pb-2" style={{maskImage:'linear-gradient(135deg, black 60%, #00000077)'}}>
             From Vision to Digital Legacy
           </h2>
 

@@ -96,13 +96,13 @@ function ServiceCard({ service, index }) {
       {/* header */}
       <div className="flex items-center p-6">
         {/* <Scroll className="w-6 h-6 text-[#111] flex-shrink-0" /> */}
-        <h3 className="text-3xl fon-jost font-semibold text-white">
+        <h3 className="xl:text-3xl text-2xl font-jost font-semibold text-white">
           {service.title}
         </h3>
         {/* masked big number */}
         <span
           className="
-            ml-auto text-6xl font-bold 
+            ml-auto xl:text-6xl text-4xl font-bold 
             bg-clip-text text-transparent 
             bg-gradient-to-br from-white to-white/30
           "
@@ -113,7 +113,7 @@ function ServiceCard({ service, index }) {
 
       {/* body */}
       <div className="px-6 flex-1 flex flex-col">
-        <h4 className="text-lg fon-jost font-medium text-white">
+        <h4 className="xl:text-lg text-base font-jost font-medium text-white">
           {service.heading}
         </h4>
         <p className="mt-4 flex-1 text-gray-300 font-sfth">
