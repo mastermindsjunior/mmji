@@ -16,7 +16,7 @@ import WhyChooseUs from "./components/home/WhyChooseUs";
 
 export default function Home() {
   return (
-    <div className=" w-full bg-black ">
+    <div className=" w-full  ">
     <h1 className="opacity-0 pointer-events-none w-0 h-0">
           Elevating Brands with Digital Intelligence in India
         </h1>

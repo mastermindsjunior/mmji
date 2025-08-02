@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 ${
-        scrolled ? 'bg-black/50' : 'bg-transparent'
+        scrolled ? 'bg-white/50' : 'bg-transparent'
       } backdrop-blur-md`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 py-4">
@@ -52,7 +52,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex space-x-8 font-jost text-white">
+        <nav className="hidden lg:flex space-x-8 font-jost text-black">
           {links.map((link) =>
             link.children ? (
               <div key={link.label} className="relative group">
@@ -65,7 +65,7 @@ export default function Navbar() {
                     <Link
                       key={child.label}
                       href={child.href}
-                      className="block px-4 py-2 text-white hover:bg-gray-700 transition-colors"
+                      className="block px-4 py-2 text-black hover:bg-gray-700 transition-colors"
                     >
                       {child.label}
                     </Link>
@@ -95,7 +95,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/contact"
-            className="px-6 py-2 bg-primary-orange text-white font-sfth rounded-full hover:opacity-90 transition-opacity"
+            className="px-6 py-2 bg-primary-orange text-black font-sfth rounded-full hover:opacity-90 transition-opacity"
           >
             Contact Us
           </Link>
@@ -104,7 +104,7 @@ export default function Navbar() {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setOpen((o) => !o)}
-          className="lg:hidden p-2 rounded-md text-white hover:bg-white/20 transition"
+          className="lg:hidden p-2 rounded-md text-black hover:bg-white/20 transition"
         >
           {open ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
         </button>
@@ -113,7 +113,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {open && (
         <div className="lg:hidden bg-black/80 backdrop-blur-md">
-          <nav className="flex flex-col space-y-4 px-6 py-6 font-jost text-white">
+          <nav className="flex flex-col space-y-4 px-6 py-6 font-jost text-black">
             {links.map((link) =>
               link.children ? (
                 <div key={link.label}>
@@ -162,7 +162,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/contact"
-              className="mt-2 inline-block px-6 py-2 bg-primary-orange text-white font-jost rounded-full hover:opacity-90 transition-opacity"
+              className="mt-2 inline-block px-6 py-2 bg-primary-orange text-black font-jost rounded-full hover:opacity-90 transition-opacity"
             >
               Contact Us
             </Link>

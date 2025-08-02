@@ -10,7 +10,7 @@ const Heading = () => {
       videoUrl: '/vid/MasterMinds Junior.mp4',
       title: 'Building Your Brand’s Future in the Digital Universe',
       desc: 'Next-gen solutions for next-level success.',
-      alignment: 'left',
+      alignment: 'center',
     },
   ];
 
@@ -36,24 +36,24 @@ const Heading = () => {
             index === currentIndex ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <video
+          {/* <video
             src={slide.videoUrl}
             autoPlay
             loop
             muted
             playsInline
             className="w-full h-full object-cover object-bottom"
-          />
+          /> */}
           <div
-            className={`absolute top-1/2 -translate-y-1/2 xl:p-5 p-2 text-white  xl:w-[75%] w-[90%] 
+            className={`absolute top-1/2 -translate-y-1/2 xl:p-5 p-2 text-black  xl:w-[75%] w-[90%] 
               ${slide.alignment === 'left' ? 'left-5 text-left' : ''}
               ${slide.alignment === 'center' ? 'left-1/2 -translate-x-1/2 text-center' : ''}
               ${slide.alignment === 'right' ? 'right-5 text-right' : ''}
             `}
           >
-            <p className='font-jost text-base text-white/80'>{slide.desc}</p>
-            <h2 className="my-4 font-sand xl:text-5xl text-2xl pb-2">{slide.title}</h2>
-            <button className=' bg-transparent border border-white/50 px-4 py-2 rounded-full font-jost font-light text-white hover:bg-white hover:text-dark transition-all duration-300 ease-in'>Learn More</button>
+            <p className='font-jost text-base text-black/80'>{slide.desc}</p>
+            <h2 className="my-4 font-jost font-bold text-[#001942] xl:text-6xl text-2xl pb-2">{slide.title}</h2>
+            <button className=' bg-transparent border border-[#0556D8]/50 px-4 py-2 rounded-full font-jost font-light text-black hover:bg-white hover:text-dark transition-all duration-300 ease-in'>Learn More</button>
           </div>
         </div>
       ))}

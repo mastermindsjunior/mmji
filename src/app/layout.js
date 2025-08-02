@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${robo.variable} ${albert.variable} ${sfThin.variable} ${sfBold.variable} ${jost.variable} ${alumini.variable} ${sand.variable} heading-albert antialiased bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} ${robo.variable} ${albert.variable} ${sfThin.variable} ${sfBold.variable} ${jost.variable} ${alumini.variable} ${sand.variable} heading-albert antialiased bg-gradient-to-b from-[#D9EDFF] to-white `}
       > 
       {/* <NavBar/> */}
       <Navbar/>
