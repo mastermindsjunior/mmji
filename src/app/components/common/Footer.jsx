@@ -7,7 +7,7 @@ import React from 'react';
 // 
 const Footer = () => {
   return (
-    <footer className="w-[calc(100%-2rem)] mx-auto mb-4 bg-[#000e1a]  z-30 text-white px-[10%] py-12 relative border border-gray-700 border-t-primary-blue rounded-3xl ">
+    <footer className="w-full mx-auto bg-gradient-to-br from-[#00080f] to-[#0032bd]  z-30 text-white px-[10%] py-12 relative border border-gray-700 border-t-primary-blue  ">
       {/* Top Section */}
       <div className="grid grid-cols-1 md:grid-cols-4 items-start text-sm gap-10 text-center md:text-left">
 

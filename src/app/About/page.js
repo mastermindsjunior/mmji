@@ -13,7 +13,7 @@ import { MeetTheTeamSection } from '../components/about/MeettheTeam'
 
 const page = () => {
   return (
-    <main className=' bg-black'>
+    <main className=''>
     {/* <Banner title={"About"} sub={'Us'}/> */}
     <Heading/>
     <AboutSection/>

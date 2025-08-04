@@ -111,15 +111,15 @@ const TeamCard = ({ name, role, image, socials }) => (
 );
 
 export const MeetTheTeamSection = () => (
-  <section className="relative bg-black py-20 overflow-hidden">
+  <section className="relative  py-20 overflow-hidden">
     {/* Background gradient overlay */}
-    <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-primary-orange/50 to-black pointer-events-none" />
+    <div className="absolute inset-0 pointer-events-none" />
 
     <div className="container mx-auto px-6 relative z-10">
-      <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-blue-500 to-primary-orange bg-clip-text text-transparent">
+      <h2 className="text-5xl font-bold text-center text-darker">
         Meet the Growth Architects
       </h2>
-      <p className="mt-4 max-w-2xl mx-auto text-center text-gray-300 leading-relaxed">
+      <p className="mt-4 max-w-2xl mx-auto text-center text-gray-700 leading-relaxed">
         Our team of digital strategists, designers, developers, and marketing analysts bring experience, energy, and unmatched creativity to every project. Whether you need website development in India, app creation, or campaign strategy—our experts deliver excellence, every time.
       </p>
 
