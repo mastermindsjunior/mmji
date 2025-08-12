@@ -38,7 +38,7 @@ const ContactForm = () => {
     {/*  */}
       <div className="relative z-10 2xl:max-w-6xl max-w-5xl mx-auto px-6 lg:px-8">
         {/* Section Heading */}
-        <h3 className="font-jost text-black text-4xl md:text-5xl font-bold mb-5 pb-2 textMask_br">
+        <h3 className="font-jost text-black text-4xl md:text-5xl font-bold mb-5 pb-2 ">
           Let’s Build Something Extraordinary
         </h3>
         <p className="font-jost text-black/80 mb-8">

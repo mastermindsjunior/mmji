@@ -96,7 +96,7 @@ export default function CareersPage() {
   const applItems = opportunities.filter(o => o.category === 'opening' || o.category === 'internship');
 
   return (
-    <div className="relative min-h-screen bg-black text-white overflow-hidden">
+    <div className="relative min-h-screen text-black overflow-hidden">
     <Toaster position='top-center'/>
       {/* seamless marquee keyframes */}
 
@@ -107,7 +107,7 @@ export default function CareersPage() {
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4 font-jost bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-blue-600">
           Where creativity meets opportunity
         </h2>
-        <p className="text-white/75 text-lg mb-8">
+        <p className="text-black/75 text-lg mb-8">
           At MasterMinds Junior, we don’t just hire employees—we welcome collaborators, thinkers, learners, and go-getters. Whether you’re just starting out or bringing years of experience, this is a space where your ideas are heard, your talent is valued, and your growth truly matters.
         </p>
 
@@ -115,7 +115,7 @@ export default function CareersPage() {
                 {/* Opportunities */}
         {Object.entries(grouped).map(([cat, items]) => (
           <section key={cat} className="mb-16">
-            <h2 className="text-4xl font-semibold mb-6 capitalize font-jost text-white">
+            <h2 className="text-4xl font-semibold mb-6 capitalize font-jost text-black">
               {cat}s
             </h2>
 
@@ -125,8 +125,8 @@ export default function CareersPage() {
                   key={idx}
                   className="  p-[1px] rounded-2xl bg-gradient-to-br from-primary-blue to-blue-600  shadow-[0_0_10px_rgba(59,130,246,0.5)]  hover:from-primary-orange hover:to-primary-blue  hover:shadow-[0_0_20px_rgba(255,165,0,0.7)]  transition"
                 >
-                  <div className="bg-[#111] rounded-2xl p-6 backdrop-blur-sm h-full flex flex-col">
-                    <h3 className="text-2xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-blue-600">
+                  <div className="bg-gradient-to-b from-primary-blue hover:to-blue-600  rounded-2xl p-6 backdrop-blur-sm h-full flex flex-col">
+                    <h3 className="text-2xl font-bold mb-3 text-white">
                       {item.designation}
                     </h3>
 
@@ -152,7 +152,7 @@ export default function CareersPage() {
 
 
         {/* Why Work With Us */}
-        <h3 className="text-2xl font-semibold mb-6 text-white font-jost">Why Work With Us?</h3>
+        <h3 className="text-2xl font-semibold mb-6 text-black font-jost">Why Work With Us?</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {[
             {
@@ -176,7 +176,7 @@ export default function CareersPage() {
               key={i}
               className="   p-6 rounded-2xl bg-[#111]   shadow-[0_0_10px_rgba(59,130,246,0.5)]   hover:shadow-[0_0_20px_rgba(59,130,246,0.7)]   hover:bg-gradient-to-br hover:from-primary-blue hover:to-blue-600   transition "
             >
-              <h4 className="text-xl font-bold mb-2">{block.title}</h4>
+              <h4 className="text-xl font-bold mb-2 text-white">{block.title}</h4>
               <p className="text-white/75 text-sm">{block.desc}</p>
             </div>
           ))}
@@ -184,7 +184,7 @@ export default function CareersPage() {
 
 
         {/* Marquee */}
-        <h3 className="text-2xl font-semibold mb-4 text-white font-jost">We’re Always Looking For</h3>
+        <h3 className="text-2xl font-semibold mb-4 text-black font-jost">We’re Always Looking For</h3>
         <div className="overflow-hidden mb-12">
           <div className="">
           <Marquee direction={"right"} className=' pt-3' speed={80}>
@@ -192,7 +192,7 @@ export default function CareersPage() {
             {[...applItems, ...applItems, ...applItems , ...applItems].map((item, i) => (
               <span
                 key={i}
-                className="   inline-block mx-2 px-4 py-2 bg-[#111] rounded-full text-sm   shadow-[0_0_6px_rgba(59,130,246,0.5)] "
+                className="   inline-block mx-2 px-4 py-2 bg-[#c1e2ff] rounded-full text-sm   shadow-[0_0_6px_rgba(59,130,246,0.5)] "
               >
                 {item.designation}
               </span>
@@ -202,7 +202,7 @@ export default function CareersPage() {
         </div>
 
         {/* Perks & Benefits */}
-        <h3 className="text-2xl font-semibold mb-4 text-white font-jost">Perks & Benefits</h3>
+        <h3 className="text-2xl font-semibold mb-4 text-black font-jost">Perks & Benefits</h3>
         <div className="flex flex-wrap gap-4 mb-12">
           {[
             'Flexible work timings',
@@ -213,7 +213,7 @@ export default function CareersPage() {
           ].map((perk, i) => (
             <span
               key={i}
-              className="   inline-block px-4 py-2 bg-[#212121] rounded-lg text-sm   shadow-[0_0_6px_rgba(255,165,0,0.5)] "
+              className="   inline-block px-4 py-2 bg-[#212121] rounded-lg text-sm  text-white shadow-[0_0_6px_rgba(255,165,0,0.5)] "
             >
               {perk}
             </span>

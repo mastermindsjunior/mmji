@@ -121,10 +121,10 @@ const CoursePage = () => {
     <div className=' max-w-7xl mx-4 xl:mx-auto mt-6'>
 
             {/* Learn With Us */}
-        <h3 className="xl:text-5xl text-2xl font-semibold mb-4 text-white font-jost">
+        <h3 className="xl:text-5xl text-2xl font-semibold mb-4 text-black font-jost">
           Learn With Us – Start Your Digital Career
         </h3>
-        <p className="text-white/75 text-lg mb-12">
+        <p className="text-black/75 text-lg mb-12">
           We understand that not everyone walks in with experience—that’s why we’ve built a learning ecosystem for aspiring professionals.
           Our in-house training programs are designed for individuals looking to enter the digital space or upgrade their skills with practical, real-world knowledge.
         </p>
@@ -143,10 +143,10 @@ const CoursePage = () => {
               {items.map((item, idx) => (
                 <div
                   key={idx}
-                  className="  p-[1px] rounded-2xl bg-gradient-to-br from-primary-blue to-blue-600  shadow-[0_0_10px_rgba(59,130,246,0.5)]  hover:from-primary-orange hover:to-primary-blue  hover:shadow-[0_0_20px_rgba(255,165,0,0.7)]  transition"
+                  className="  p-[1px] rounded-2xl bg-gradient-to-br from-primary-blue to-blue-600  shadow-[0_0_10px_rgba(59,130,246,0.5)] hover:shadow-[0_0_20px_rgba(255,165,0,0.7)]  transition"
                 >
-                  <div className="bg-[#111] rounded-2xl p-6 backdrop-blur-sm h-full flex flex-col">
-                    <h3 className="text-2xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-blue-600">
+                  <div className="rounded-2xl p-6 backdrop-blur-sm h-full flex flex-col">
+                    <h3 className="text-2xl font-bold mb-3 text-white">
                       {item.designation}
                     </h3>
 

@@ -89,14 +89,14 @@ function ServiceCard({ service, index }) {
 
   return (
     <div
-      className={` group flex flex-col  rounded-2xl  overflow-hidden bg-gradient-to-br ${index % 2 === 1 ? " from-blue-600/30 from-40% to-pink-500/30" : " from-blue-600/30 from-40% to-pink-500/30"}  shadow-lg  hover:shadow-2xl  transform hover:-translate-y-2  transition-all duration-300  `}
+      className={` group flex flex-col  rounded-2xl  overflow-hidden bg-gradient-to-br from-[#c1e2ff] to-[#57b0ff] shadow-lg  hover:shadow-2xl  transform hover:-translate-y-2  transition-all duration-300  `}
     >
       {/* {index % 2 === 1 && imageBlock} */}
 
       {/* header */}
       <div className="flex items-center p-6">
         {/* <Scroll className="w-6 h-6 text-[#111] flex-shrink-0" /> */}
-        <h3 className="xl:text-3xl text-2xl font-jost font-semibold text-white">
+        <h3 className="xl:text-3xl text-2xl font-jost font-semibold text-black">
           {service.title}
         </h3>
         {/* masked big number */}
@@ -104,7 +104,7 @@ function ServiceCard({ service, index }) {
           className="
             ml-auto xl:text-6xl text-4xl font-bold 
             bg-clip-text text-transparent 
-            bg-gradient-to-br from-white to-white/30
+            bg-gradient-to-br from-black to-black/30
           "
         >
           {number}
@@ -113,10 +113,10 @@ function ServiceCard({ service, index }) {
 
       {/* body */}
       <div className="px-6 flex-1 flex flex-col">
-        <h4 className="xl:text-lg text-base font-jost font-medium text-white">
+        <h4 className="xl:text-lg text-base font-jost font-medium text-black">
           {service.heading}
         </h4>
-        <p className="mt-4 flex-1 text-gray-300 font-sfth">
+        <p className="mt-4 flex-1 text-gray-800 font-sfth">
           {service.description}
         </p>
         <button className={`my-4 mt-6 inline-flex justify-center items-center ${index % 2 === 1 ? " text-black" : " text-black"}  bg-white rounded-full w-full py-2 px-4 font-medium text-center font-jost `}>

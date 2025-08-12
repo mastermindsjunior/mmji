@@ -65,7 +65,7 @@ export default function Navbar() {
                     <Link
                       key={child.label}
                       href={child.href}
-                      className="block px-4 py-2 text-black hover:bg-gray-700 transition-colors"
+                      className="block px-4 py-2 text-white hover:bg-gray-700 transition-colors"
                     >
                       {child.label}
                     </Link>
@@ -131,7 +131,7 @@ export default function Navbar() {
                     />
                   </button>
                   {mobileOpportunitiesOpen && (
-                    <div className="flex flex-col pl-4 space-y-2">
+                    <div className="flex flex-col pl-4 space-y-2 ">
                       {link.children.map((child) => (
                         <Link
                           key={child.label}

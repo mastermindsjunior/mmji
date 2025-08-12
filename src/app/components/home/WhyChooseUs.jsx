@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
             <div className=' w-full bg-[#c1e2ff] shadow-2xl rounded-[15px] flex flex-col justify-center items-center gap-8 p-8 '>
 
            <div className=' flex xl:flex-row flex-col justify-between items-center gap-2 2xl:px-8 relative z-20 '>
-                <h2 className="font-jost text-4xl md:text-5xl font-bold mb-5 pb-2 textMask_br text-black">
+                <h2 className="font-jost text-4xl md:text-5xl font-bold mb-5 pb-2  text-black">
                     Why Choose Us?
                 </h2>
                 <p className="font-sftn text-base text-gray-800 leading-relaxed mb-4 xl:w-[60%] w-[95%] xl:text-left text-center "  style={{maskImage:'linear-gradient(135deg, black 60%, #00000077)'}}>
