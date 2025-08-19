@@ -49,10 +49,10 @@ const page = () => {
         </div>
         {/* RIGHT */}
         <div className=' xl:w-1/2 w-full relative z-20'>
-            <div className=' w-full p-2 space-y-2 bg-[#c1e2ff]/70 rounded-lg '>
-                <input style={{boxShadow:'inset 0 0 10px rgba(255,255,255,0.1)'}} type="text" placeholder='Name' className=' bg-[#c1e2ff]/10 w-full p-2 h-12  outline-none border border-primary-blue rounded-[5px] font-jost font-light text-black' />
-                <input style={{boxShadow:'inset 0 0 10px rgba(255,255,255,0.1)'}} type="email" placeholder='Email' className=' bg-[#c1e2ff]/10 w-full p-2 h-12  outline-none border border-primary-blue rounded-[5px] font-jost font-light text-black' />
-                <textarea style={{boxShadow:'inset 0 0 10px rgba(255,255,255,0.1)'}} type="text" placeholder='Message' draggable={false} rows={6} className=' bg-[#c1e2ff]/10 w-full p-2  outline-none border border-primary-blue rounded-[5px] font-jost font-light text-black h-[250px]' />
+            <div className=' w-full p-2 space-y-2 bg-[#c1e2ff]/50 rounded-lg '>
+                <input style={{boxShadow:'inset 0 0 10px rgba(255,255,255,0.1)'}} type="text" placeholder='Name' className=' bg-[#c1e2ff]/10 w-full p-2 h-12  outline-none border border-primary-blue placeholder:text-black/70 rounded-[5px] font-jost font-light text-black' />
+                <input style={{boxShadow:'inset 0 0 10px rgba(255,255,255,0.1)'}} type="email" placeholder='Email' className=' bg-[#c1e2ff]/10 w-full p-2 h-12  outline-none border border-primary-blue placeholder:text-black/70 rounded-[5px] font-jost font-light text-black' />
+                <textarea style={{boxShadow:'inset 0 0 10px rgba(255,255,255,0.1)'}} type="text" placeholder='Message' draggable={false} rows={6} className=' bg-[#c1e2ff]/10 w-full p-2  outline-none border border-primary-blue placeholder:text-black/70 rounded-[5px] font-jost font-light text-black h-[250px]' />
                 <button className=' w-full p-2 bg-white rounded-[5px] text-darker text-sm'>Submit</button>
             </div>
         </div>

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const ContactForm = () => {
@@ -48,7 +49,8 @@ const ContactForm = () => {
           </a>{' '}
           to see how we can elevate your brand today.
         </p>
-        <div className="max-w-lg mx-auto">
+        <div className=' w-full flex justify-around items-center'>
+        <div className="max-w-lg w-1/2 mx-auto">
           <form
             onSubmit={handleSubmit}
             className="bg-white backdrop-filter backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:shadow-white/10"
@@ -116,6 +118,8 @@ const ContactForm = () => {
               <p className="mt-4 text-center text-sm text-black/80">{status}</p>
             )}
           </form>
+        </div>
+          <Image src={'/digital.png'} alt='digital marketing' width={400} height={500} className=' w-[40%]' />
         </div>
       </div>
     </section>

@@ -27,7 +27,7 @@ const Heading = () => {
 
   // h-[600px]
   return (
-    <section className="relative w-full h-dvh  overflow-hidden">
+    <section className="relative w-full h-dvh  overflow-hidden bg-blue-900">
 
       {slides.map((slide, index) => (
         <div
@@ -55,7 +55,7 @@ const Heading = () => {
           >
             <p className='font-jost text-base text-white/80'>{slide.desc}</p>
             <h2 className="my-4 font-jost font-bold text-white xl:text-6xl text-2xl pb-2">{slide.title}</h2>
-            <button className=' bg-transparent border border-[#0556D8]/50 px-4 py-2 rounded-full font-jost font-light text-black hover:bg-white hover:text-dark transition-all duration-300 ease-in'>Learn More</button>
+            <button className=' bg-transparent border border-white/50 px-4 py-2 rounded-full font-jost font-light text-white hover:bg-white hover:text-white/70 transition-all duration-300 ease-in'>Learn More</button>
           </div>
         </div>
       ))}

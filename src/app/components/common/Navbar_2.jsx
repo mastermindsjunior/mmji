@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 ${
-        scrolled ? 'bg-white/50' : 'bg-transparent'
+        scrolled ? 'bg-white/50' : 'bg-white/20'
       } backdrop-blur-md`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 py-4">
