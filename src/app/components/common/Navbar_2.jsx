@@ -10,6 +10,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpportunitiesOpen, setMobileOpportunitiesOpen] = useState(false);
 
+  
   // Define your nav structure
   const links = [
     { label: 'Home', href: '/' },
