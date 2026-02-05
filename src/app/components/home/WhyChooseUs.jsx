@@ -1,38 +1,57 @@
-import Image from 'next/image'
-import React from 'react'
+import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <section className=" w-full h-auto py-20 pt-16 xl:px-0 px-4 flex justify-center items-center" >
+    <section className="w-full py-24 px-4 flex justify-center items-center">
 
-        <div className=' 2xl:max-w-7xl max-w-6xl p-0.5 rounded-2xl relative overflow-hidden'>
-        {/*  */}
-            {/* <div className=' absolute h-0.5 left-1/2 -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-blue-600 to-transparent w-[80%]' /> */}
-            {/* <div className='absolute w-[50%] 2xl:h-20 h-14 rounded-t-[100%] opacity-30 bg-blue-600 blur-2xl z-10 bottom-0 left-1/2 -translate-x-1/2' /> */}
-        {/*  */}
-            <div className=' w-full bg-[#c1e2ff] shadow-2xl rounded-[15px] flex flex-col justify-center items-center gap-8 p-8 '>
+      <div className="2xl:max-w-7xl max-w-6xl w-full relative">
 
-           <div className=' flex xl:flex-row flex-col justify-between items-center gap-2 2xl:px-8 relative z-20 '>
-                <h2 className="font-jost text-4xl md:text-5xl font-bold mb-5 pb-2  text-black">
-                    Why Choose Us?
-                </h2>
-                <p className="font-sftn text-base text-gray-800 leading-relaxed mb-4 xl:w-[60%] w-[95%] xl:text-left text-center "  style={{maskImage:'linear-gradient(135deg, black 60%, #00000077)'}}>
-                    With a stronghold across India and growing global reach, we are the best digital marketing agency for startups and growing businesses. Clients choose us for:
-                </p>
-           </div>
+        {/* glow */}
+        <div className="absolute inset-0 bg-blue-400/20 blur-3xl rounded-3xl -z-10" />
 
-            <ul className=' w-full text-xs flex justify-center items-center flex-wrap gap-2 relative z-20 '>
-                <li className=' py-2 2xl:px-5 px-3 rounded-full bg-darker hover:bg-white border border-white/30 hover:text-dark transition-all duration-500 ease-in-out'>Personalized & strategic approach.</li>
-                <li className=' py-2 2xl:px-5 px-3 rounded-full bg-darker hover:bg-white border border-white/30 hover:text-dark transition-all duration-500 ease-in-out'>Creative solutions tailored to industry needs.</li>
-                <li className=' py-2 2xl:px-5 px-3 rounded-full bg-darker hover:bg-white border border-white/30 hover:text-dark transition-all duration-500 ease-in-out'>Transparent communication and reporting.</li>
-                <li className=' py-2 2xl:px-5 px-3 rounded-full bg-darker hover:bg-white border border-white/30 hover:text-dark transition-all duration-500 ease-in-out'>Proven results and ROI-focused mindset.</li>
-            </ul>
+        <div className="bg-gradient-to-br from-[#d7ecff] to-[#b8dcff] border border-white/40 shadow-xl rounded-3xl p-10 md:p-14">
+
+          {/* Header */}
+          <div className="flex xl:flex-row flex-col justify-between items-center gap-6 mb-10">
+
+            <h2 className="font-jost text-4xl md:text-5xl font-bold text-black">
+              Why Choose Us?
+            </h2>
+
+            <p className="font-sftn text-gray-700 leading-relaxed xl:w-[55%] text-center xl:text-left">
+              With a stronghold across India and growing global reach, we are the
+              best digital marketing agency for startups and growing businesses.
+              Clients choose us for:
+            </p>
+
+          </div>
+
+          {/* Features */}
+          <ul className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+
+            {[
+              "Personalized & strategic approach",
+              "Creative solutions tailored to industry needs",
+              "Transparent communication and reporting",
+              "Proven results and ROI-focused mindset",
+            ].map((item, i) => (
+              <li
+                key={i}
+                className="group bg-slate-800 backdrop-blur border border-black rounded-xl px-5 py-4 text-xs text-center text-white shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              >
+                <span className="block font-medium group-hover:text-blue-200 transition">
+                  {item}
+                </span>
+              </li>
+            ))}
+
+          </ul>
 
         </div>
-        </div>
+      </div>
 
     </section>
-  )
-}
+  );
+};
 
-export default WhyChooseUs
+export default WhyChooseUs;

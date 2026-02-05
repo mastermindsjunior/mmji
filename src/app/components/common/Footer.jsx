@@ -1,76 +1,110 @@
-import { Facebook, Instagram } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
+import { Facebook, Instagram } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
 
-
-// 
 const Footer = () => {
   return (
-    <footer className="w-full mx-auto bg-gradient-to-br from-[#00080f] to-[#0032bd]  z-30 text-white px-[10%] py-12 relative border border-gray-700 border-t-primary-blue  ">
-      {/* Top Section */}
-      <div className="grid grid-cols-1 md:grid-cols-4 items-start text-sm gap-10 text-center md:text-left">
+    <footer className="relative w-full bg-gradient-to-br from-[#020b14] via-[#04162e] to-[#042c5c] text-white pt-20 pb-10 px-6 overflow-hidden">
 
-        {/* left - Logo & Description */}
+      {/* top glow line */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-60" />
 
-        <div className="flex flex-col items-center justify-center text-center ">
-            <Image
-            src={"/logo-india.png"}
-            width={400}
-            height={200}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm">
+
+        {/* BRAND */}
+        <div className="space-y-4 text-center md:text-left">
+
+          <Image
+            src="/logo-india.png"
+            width={300}
+            height={100}
             alt="logo"
-            className="2xl:h-20 h-16 w-auto object-contain"
+            className="h-20 w-auto object-left"
           />
-          <p className="text-white/70 max-w-xs">
+
+          <p className="text-white/60 max-w-xs">
             Building better digital experiences through design, code, and creativity.
           </p>
-          <div className=' flex justify-center items-center gap-2 pt-2'>
-            <Link href={'https://www.instagram.com/mastermindsjunior_india/'}>
-              <Instagram color='#fff' className='' />
+
+          <div className="flex gap-4 justify-center md:justify-start">
+
+            <Link href="https://www.instagram.com/mastermindsjunior_india/">
+              <Instagram className="w-5 h-5 text-white/70 hover:text-white transition" />
             </Link>
-            <Link href={'https://www.facebook.com/profile.php?id=61563957392798'}>
-              <Facebook color='#fff' className='' />
+
+            <Link href="https://www.facebook.com/profile.php?id=61563957392798">
+              <Facebook className="w-5 h-5 text-white/70 hover:text-white transition" />
             </Link>
+
           </div>
+
         </div>
 
-        {/* right - Navigation */}
-        <div className="flex flex-col gap-2 md:items-end">
-          <h4 className="text-lg font-semibold mb-2">Navigation</h4>
-          <a href="/" className="hover:underline">Home</a>
-          <a href="/About" className="hover:underline">About</a>
-          <a href="/Services" className="hover:underline">Services</a>
-          <a href="/Career" className="hover:underline">Career</a>
-          <a href="/Contact" className="hover:underline">Contact</a>
+        {/* NAVIGATION */}
+        <div className="space-y-3 md:text-right text-center">
+
+          <h4 className="font-semibold text-base mb-3">Navigation</h4>
+
+          {['Home','About','Services','Career','Contact'].map((item) => (
+            <Link
+              key={item}
+              href={`/${item === 'Home' ? '' : item}`}
+              className="block text-white/60 hover:text-white transition"
+            >
+              {item}
+            </Link>
+          ))}
+
         </div>
 
-        {/* right - Navigation */}
-        <div className="flex flex-col gap-2 md:items-end">
-          <h4 className="text-lg font-semibold mb-2">Services</h4>
-          <a href="#" className="hover:underline">SEO Optimization</a>
-          <a href="#" className="hover:underline">Graphic Designing</a>
-          <a href="#" className="hover:underline">Content Writing</a>
-          <a href="#" className="hover:underline">Web Development</a>
-          <a href="#" className="hover:underline">Social Media Marketing</a>
+        {/* SERVICES */}
+        <div className="space-y-3 md:text-right text-center">
+
+          <h4 className="font-semibold text-base mb-3">Locations</h4>
+
+          {[
+            {label:'Jaipur',link:"/jaipur"}
+
+
+          ].map((item) => (
+            <Link key={item.link} href={item.link}>
+            <span className="block text-white/60">
+              {item.label}
+            </span>
+            </Link>
+          ))}
+
         </div>
 
-        {/* Right - Contact Info */}
-        <div className="flex flex-col gap-2 md:items-end items-center xl:text-right text-center">
-          <h4 className="text-lg font-semibold mb-2">Contact</h4>
-          <p>Email: admin@mastermindsjunior.com</p>
-          <p>Phone: +1 234 567 8901</p>
-          <p>Location: 1st Floor, Unit# 105, P NO 8, near VPM Classes, B yojna, Radha kunj, Mansarovar, Jaipur, Rajasthan 302020</p>
+        {/* CONTACT */}
+        <div className="space-y-3 md:text-right text-center">
+
+          <h4 className="font-semibold text-base mb-3">Contact</h4>
+
+          <p className="text-white/60">admin@mastermindsjunior.com</p>
+          <p className="text-white/60">+1 234 567 8901</p>
+
+          <p className="text-white/60 text-xs leading-relaxed">
+            1st Floor, Unit#105, near VPM Classes, Mansarovar, Jaipur, Rajasthan 302020
+          </p>
+
         </div>
+
       </div>
 
-      {/* Bottom - Copyright */}
-      <div className="mt-12 pt-4 border-t border-white/20 text-center text-xs text-white/50">
+      {/* divider */}
+      <div className="mt-16 border-t border-white/10 pt-6 text-center text-xs text-white/40">
+
         © {new Date().getFullYear()} Masterminds Junior. All rights reserved.
+
       </div>
 
-      <div className=' absolute z-0 bottom-0 left-1/2 -translate-x-1/2 w-[60%] h-24 bg-blue-600 rounded-t-[100%] blur-3xl opacity-20' />
-    </footer>
-  );
-};
+      {/* bottom ambient glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60%] h-32 bg-blue-500 rounded-t-full blur-3xl opacity-20" />
 
-export default Footer;
+    </footer>
+  )
+}
+
+export default Footer

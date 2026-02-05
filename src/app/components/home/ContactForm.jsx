@@ -1,129 +1,145 @@
 'use client'
 
-import Image from 'next/image';
-import React, { useState } from 'react';
+import Image from 'next/image'
+import React, { useState } from 'react'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    service: '',
     message: '',
-  });
-  const [status, setStatus] = useState('');
+  })
+
+  const [status, setStatus] = useState('')
 
   const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData((prev) => ({ ...prev, [id]: value }));
-  };
+    const { id, value } = e.target
+    setFormData((prev) => ({ ...prev, [id]: value }))
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus('Sending...');
+    e.preventDefault()
+    setStatus('Sending...')
 
-    // Simulated form submission (replace with actual API call, e.g., to Formspree or your backend)
     try {
-      // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) });
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate delay
-      setStatus('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      setStatus('Failed to send message. Please try again.');
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+      setStatus('Message sent!')
+      setFormData({ name: '', email: '', service: '', message: '' })
+    } catch {
+      setStatus('Failed.')
     }
-  };
+  }
 
   return (
-    // bg-gradient-to-bl from-black via-transparent to-blue-600/20 style={{maskImage:'linear-gradient(180deg, transparent, black 20%, black 90%, transparent)'}}
-    <section className=" bg-white py-20 relative">
-    {/*  aspect-video w-auto h-[calc(100%-7rem)] */}
-    <video src="/vid/3.mp4" muted autoPlay loop playsInline className=' absolute bottom-[0rem] left-1/2 -translate-x-1/2  w-full h-full object-cover object-center'></video>
-    {/*  */}
-      <div className="relative z-10 2xl:max-w-6xl max-w-5xl mx-auto px-6 lg:px-8">
-        {/* Section Heading */}
-        <h3 className="font-jost text-black text-4xl md:text-5xl font-bold mb-5 pb-2 ">
-          Let’s Build Something Extraordinary
-        </h3>
-        <p className="font-jost text-black/80 mb-8">
-          At MasterMinds Junior, we’re not just creating digital assets—we’re building business success stories. Explore our{' '}
-          <a href="/services" className="text-primary-blue hover:underline">
-            Services Page
-          </a>{' '}
-          to see how we can elevate your brand today.
-        </p>
-        <div className=' w-full flex justify-around items-center'>
-        <div className="max-w-lg w-1/2 mx-auto">
-          <form
-            onSubmit={handleSubmit}
-            className="bg-white backdrop-filter backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:shadow-white/10"
-          >
-            {/* Glassmorphism container with subtle hover effect for "liquid" feel */}
+    <section className="bg-[#6ad3c7] py-28 px-6">
 
-            {/* Name Input */}
-            <div className="mb-6 relative">
-              <label htmlFor="name" className="block text-black/80 text-sm font-medium mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-transparent border border-white/20 rounded-full text-black placeholder-black/50 focus:outline-none focus:border-primary-blue/50 backdrop-filter backdrop-blur-sm transition-all duration-200 focus:scale-[1.02]"
-                placeholder="Your Name"
-              />
-            </div>
+      <h3 className="font-jost text-black text-4xl md:text-5xl font-bold mb-5">
+        Let’s Build Something Extraordinary
+      </h3>
 
-            {/* Email Input */}
-            <div className="mb-6 relative">
-              <label htmlFor="email" className="block text-black/80 text-sm font-medium mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-transparent border border-white/20 rounded-full text-black placeholder-black/50 focus:outline-none focus:border-primary-blue/50 backdrop-filter backdrop-blur-sm transition-all duration-200 focus:scale-[1.02]"
-                placeholder="your.email@example.com"
-              />
-            </div>
+      <p className="font-jost text-black/80 mb-10 max-w-2xl">
+        At MasterMinds Junior, we’re not just creating digital assets—we’re building business success stories.
+      </p>
 
-            {/* Message Input */}
-            <div className="mb-6 relative">
-              <label htmlFor="message" className="block text-black/80 text-sm font-medium mb-2">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                value={formData.message}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-transparent border border-white/20 rounded-xl text-black placeholder-black/50 focus:outline-none focus:border-primary-blue/50 backdrop-filter backdrop-blur-sm transition-all duration-200 focus:scale-[1.02]"
-                placeholder="Your message here..."
-              />
-            </div>
+      <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden grid xl:grid-cols-2">
 
-            {/* Submit Button */}
+        {/* LEFT PANEL */}
+        <div className="bg-[#0f2f3a] text-white p-12 flex flex-col justify-between">
+
+          <Image
+            src="/contact.png"
+            alt="digital marketing"
+            width={400}
+            height={500}
+            className="w-[80%] mx-auto -scale-x-100"
+          />
+
+          <div className="flex gap-6 text-white/60 text-sm mt-10">
+            <span>Facebook</span>
+            <span>LinkedIn</span>
+            <span>Twitter</span>
+          </div>
+
+        </div>
+
+        {/* RIGHT FORM */}
+        <div className="p-12 text-slate-900 flex flex-col w-full justify-center">
+
+          <h4 className="text-xl font-semibold mb-6">
+            Get in touch
+          </h4>
+
+          <form onSubmit={handleSubmit} className="space-y-5 w-full">
+
+            <input
+              id="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your name"
+              required
+              className="w-full border rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#0f2f3a]"
+            />
+
+            <input
+              id="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Email address"
+              required
+              className="w-full border rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#0f2f3a]"
+            />
+
+            {/* SERVICE SELECT */}
+            <select
+              id="service"
+              value={formData.service}
+              onChange={handleChange}
+              required
+              className="w-full border rounded-lg px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#0f2f3a]"
+            >
+              <option value="">Select service</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Social Media Management">Social Media Management</option>
+              <option value="App development">App Development</option>
+              <option value="Search Engine Optimization">Search Engine Optimization</option>
+              <option value="Graphic & Logo Designing">Graphic & Logo Designing</option>
+              <option value="Content Writing">Content Writing</option>
+              <option value="Google & Meta Ads">Google & Meta Ads</option>
+            </select>
+
+            <textarea
+              id="message"
+              rows="4"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Tell us about your project"
+              required
+              className="w-full border rounded-lg px-4 py-3 text-sm resize-none focus:outline-none focus:border-[#0f2f3a]"
+            />
+
             <button
               type="submit"
-              className="w-full py-3 bg-primary-blue/20 border border-white/20 text-black font-medium rounded-full hover:bg-white hover:text-dark transition duration-300 backdrop-filter backdrop-blur-sm hover:scale-105 active:scale-95"
+              className="w-full bg-[#0f2f3a] text-white rounded-lg py-3 hover:opacity-90 transition"
             >
-              Send Message
+              Send message
             </button>
 
-            {/* Status Message */}
             {status && (
-              <p className="mt-4 text-center text-sm text-black/80">{status}</p>
+              <p className="text-sm text-gray-500 text-center">
+                {status}
+              </p>
             )}
-          </form>
-        </div>
-          <Image src={'/digital.png'} alt='digital marketing' width={400} height={500} className=' w-[40%]' />
-        </div>
-      </div>
-    </section>
-  );
-};
 
-export default ContactForm;
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+  )
+}
+
+export default ContactForm

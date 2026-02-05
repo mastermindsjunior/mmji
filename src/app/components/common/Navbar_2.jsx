@@ -22,6 +22,12 @@ export default function Navbar() {
         { label: 'Courses', href: '/courses' },
       ],
     },
+    {
+      label: 'Locations',
+      children: [
+        { label: 'Jaipur', href: '/jaipur' },
+      ],
+    },
     { label: 'Contact', href: '/Contact' },
   ];
 

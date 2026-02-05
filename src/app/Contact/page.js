@@ -3,60 +3,106 @@ import { ArrowUpRight, LucideMapPin, MailIcon, PhoneIcon } from 'lucide-react'
 const page = () => {
   return (
     <main>
-      
 
-      <section className=' 2xl:max-w-7xl max-w-6xl lg:mx-auto mx-4 flex gap-4 xl:flex-row flex-col justify-center items-end mt-32 py-20 pt-32 relative'>
+      <section className="relative max-w-7xl mx-auto px-6 pt-56 pb-28">
 
-        {/* TITLE */}
-        <div style={{background:'radial-gradient( circle at top, #155dfc 5%, #155dfc80 30%, transparent 60%)'}} className='  absolute top-0 left-1/2 -translate-x-1/2 h-[500px] w-[70%] rounded-b-[100%] blur-2xl' />
-        <h2 className=' absolute z-10 top-4 left-1/2 -translate-x-1/2 font-jost font-bold xl:text-8xl text-[15vw] bg-gradient-to-b from-black/50 via-black/30 to-black/10 bg-clip-text text-transparent'>CONTACT</h2>
+        {/* background glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[420px] bg-blue-500/30 rounded-b-full blur-3xl" />
 
+        {/* BIG TITLE */}
+        <h2 className="absolute top-28 left-1/2 -translate-x-1/2 font-jost font-bold text-[14vw] xl:text-8xl bg-gradient-to-b from-black/90 to-black/30 bg-clip-text text-transparent">
+          CONTACT
+        </h2>
 
-        <div className=' xl:w-1/2 w-full flex flex-col justify-between items-center relative z-20'>
+        <div className="relative grid xl:grid-cols-2 gap-16 items-start">
+
+          {/* LEFT */}
+          <div className="space-y-10">
+
             <div>
-            <h2 className=' font-jost font-medium text-3xl mb-3 text-black'>Get in Touch</h2>
-            <p className=' font-jost text-sm w-[80%] text-gray-800 mb-5'>Let&apos;s Connect and Create Something Extraordinary. Let&apos;s bring your vision to life through expertly crafted digital solutions. At MasterMinds Junior, we’re not just service providers—we’re growth partners. Ready to collaborate?</p>
+              <h3 className="font-jost text-3xl mb-4">Get in Touch</h3>
+              <p className="text-gray-700 max-w-md text-sm">
+                Let’s connect and create something extraordinary. At MasterMinds Junior,
+                we don’t just deliver services — we build partnerships.
+              </p>
             </div>
-            <div className=' w-full space-y-2'>
-            {/* EMAIL */}
-                <div style={{boxShadow:'inset 0 0 20px rgba(225,225,225,0.1)'}} className=' w-full h-20 border border-primary-blue bg-[#c1e2ff] rounded-xl py-1 px-4 flex gap-2 justify-start items-center'>
-                    <div style={{boxShadow:'inset 0 0 10px rgba(225,225,225,0.1)'}} className=' h-10 aspect-square shrink-0 rounded-lg border border-primary-blue p-1.5 inline-flex justify-center items-center'><MailIcon color='black'/></div>
-                    <div className=' flex-1'>
-                        <p className=' text-black font-jost text-xl mb-0'>Email us</p>
-                        <p className=' font-jost text-sm font-medium text-black/40'>admin@mastermindsjunior.com</p>
-                    </div>
-                    <div className=' h-10 aspect-square rounded-full bg-white/10 shrink-0 p-1.5 inline-flex justify-center items-center'> <ArrowUpRight color='white' /> </div>
+
+            {/* INFO CARDS */}
+            <div className="space-y-4">
+
+              {[{
+                title: 'Email us',
+                value: 'admin@mastermindsjunior.com',
+                icon: <MailIcon />
+              },{
+                title: 'Call us',
+                value: '9999999999',
+                icon: <PhoneIcon />
+              },{
+                title: 'Our Location',
+                value: '1st Floor, Unit#105, Mansarovar, Jaipur, Rajasthan 302020',
+                icon: <LucideMapPin />
+              }].map((item, i) => (
+
+                <div
+                  key={i}
+                  className="group bg-[#c1e2ff] rounded-xl px-6 py-5 flex items-center gap-4 hover:shadow-md transition"
+                >
+
+                  <div className="h-11 w-11 rounded-lg bg-white flex items-center justify-center text-black">
+                    {item.icon}
+                  </div>
+
+                  <div className="flex-1">
+                    <p className="font-jost text-lg">{item.title}</p>
+                    <p className="text-sm text-black/50">{item.value}</p>
+                  </div>
+
+                  <ArrowUpRight className="opacity-40 group-hover:opacity-100 transition" />
+
                 </div>
-            {/* PHONE */}
-                <div style={{boxShadow:'inset 0 0 20px rgba(225,225,225,0.1)'}} className=' w-full h-20 border border-primary-blue bg-[#c1e2ff] rounded-xl py-1 px-4 flex gap-2 justify-start items-center'>
-                    <div style={{boxShadow:'inset 0 0 10px rgba(225,225,225,0.1)'}} className=' h-10 aspect-square shrink-0 rounded-lg border border-primary-blue p-1.5 inline-flex justify-center items-center'><PhoneIcon color='black' /> </div>
-                    <div className=' flex-1'>
-                        <p className=' text-black font-jost text-xl mb-0'>Call us</p>
-                        <p className=' font-jost text-sm font-medium text-black/40'>9999999999</p>
-                    </div>
-                    <div className=' h-10 aspect-square rounded-full bg-white/10 shrink-0 p-1.5 inline-flex justify-center items-center'> <ArrowUpRight color='white' /> </div>
-                </div>
-            {/* ADDRESS */}
-                <div style={{boxShadow:'inset 0 0 20px rgba(225,225,225,0.1)'}} className=' w-full xl:h-20 h-32 border border-primary-blue bg-[#c1e2ff] rounded-xl py-1 px-4 flex gap-2 justify-start items-center'>
-                    <div style={{boxShadow:'inset 0 0 10px rgba(225,225,225,0.1)'}} className=' h-10 aspect-square shrink-0 rounded-lg border border-primary-blue p-1.5 inline-flex justify-center items-center'> <LucideMapPin color='black' /> </div>
-                    <div className=' flex-1'>
-                        <p className=' text-black font-jost text-xl mb-0'>Our Location</p>
-                        <p className=' font-jost text-sm font-medium text-black/40'>1st Floor, Unit# 105, P NO 8, near VPM Classes, B yojna, Radha kunj, Mansarovar, Jaipur, Rajasthan 302020</p>
-                    </div>
-                    <div className=' h-10 aspect-square rounded-full bg-white/10 shrink-0 p-1.5 inline-flex justify-center items-center'> <ArrowUpRight color='white' /> </div>
-                </div>
+
+              ))}
+
             </div>
+
+          </div>
+
+          {/* RIGHT FORM */}
+          <div className="bg-[#c1e2ff]/50 text-slate-900 rounded-2xl p-8">
+
+            <div className="space-y-4">
+
+              <input
+                type="text"
+                placeholder="Name"
+                className="w-full h-12 px-4 rounded-lg border border-primary-blue bg-white/40 outline-none"
+              />
+
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full h-12 px-4 rounded-lg border border-primary-blue bg-white/40 outline-none"
+              />
+
+              <textarea
+                rows={6}
+                placeholder="Message"
+                className="w-full px-4 py-3 rounded-lg border border-primary-blue bg-white/40 outline-none resize-none"
+              />
+
+              <button className="w-full h-12 bg-white rounded-lg font-medium hover:shadow transition">
+                Submit
+              </button>
+
+            </div>
+
+          </div>
+
         </div>
-        {/* RIGHT */}
-        <div className=' xl:w-1/2 w-full relative z-20'>
-            <div className=' w-full p-2 space-y-2 bg-[#c1e2ff]/50 rounded-lg '>
-                <input style={{boxShadow:'inset 0 0 10px rgba(255,255,255,0.1)'}} type="text" placeholder='Name' className=' bg-[#c1e2ff]/10 w-full p-2 h-12  outline-none border border-primary-blue placeholder:text-black/70 rounded-[5px] font-jost font-light text-black' />
-                <input style={{boxShadow:'inset 0 0 10px rgba(255,255,255,0.1)'}} type="email" placeholder='Email' className=' bg-[#c1e2ff]/10 w-full p-2 h-12  outline-none border border-primary-blue placeholder:text-black/70 rounded-[5px] font-jost font-light text-black' />
-                <textarea style={{boxShadow:'inset 0 0 10px rgba(255,255,255,0.1)'}} type="text" placeholder='Message' draggable={false} rows={6} className=' bg-[#c1e2ff]/10 w-full p-2  outline-none border border-primary-blue placeholder:text-black/70 rounded-[5px] font-jost font-light text-black h-[250px]' />
-                <button className=' w-full p-2 bg-white rounded-[5px] text-darker text-sm'>Submit</button>
-            </div>
-        </div>
+
       </section>
+
     </main>
   )
 }
