@@ -54,7 +54,7 @@ const page = () => {
                   </div>
 
                   <div className="flex-1">
-                    <p className="font-jost text-lg">{item.title}</p>
+                    <p className="font-jost text-lg text-slate-800">{item.title}</p>
                     <p className="text-sm text-black/50">{item.value}</p>
                   </div>
 
