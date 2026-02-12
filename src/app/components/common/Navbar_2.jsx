@@ -27,6 +27,8 @@ export default function Navbar() {
       label: 'Locations',
       children: [
         { label: 'Jaipur', href: '/jaipur' },
+        { label: 'Nashik', href: '/nashik' },
+        { label: 'Chandigarh', href: '/chandigarh' },
       ],
     },
     { label: 'Contact', href: '/Contact' },

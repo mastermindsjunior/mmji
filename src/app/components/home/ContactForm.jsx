@@ -32,7 +32,7 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="bg-[#6ad3c7] py-28 px-6">
+    <section className="bg-cyan-600 py-28 px-6">
 
       <h3 className="font-jost text-black text-4xl md:text-5xl font-bold mb-5">
         Let’s Build Something Extraordinary

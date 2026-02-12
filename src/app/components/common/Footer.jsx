@@ -64,7 +64,9 @@ const Footer = () => {
           <h4 className="font-semibold text-base mb-3">Locations</h4>
 
           {[
-            {label:'Jaipur',link:"/jaipur"}
+            {label:'Jaipur',link:"/jaipur"},
+            {label:'Nashik',link:"/nashik"},
+            {label:'Chandigarh',link:"/chandigarh"},
 
 
           ].map((item) => (
