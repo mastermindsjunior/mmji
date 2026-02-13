@@ -24,7 +24,7 @@ const ChandigarhPage = () => {
             </p>
 
             <p className="text-gray-700 max-w-xl">
-              We function as strategic growth consultants rather than transactional service providers. As a trusted partner for online marketing services Chandigarh, we deliver integrated solutions tailored to each brand's market position. Whether you require a data-driven social media marketing agency Chandigarh, a results-focused PPC company in Chandigarh, or a certified Google Ads agency Chandigarh, our execution is supported by competitive analysis, audience intelligence, and continuous optimization. Organizations seeking a reliable website development company in Chandigarh rely on us for scalable, high-converting platforms built on modern technologies including React, WordPress, Wix, and Shopify. Our objective is long-term brand authority and predictable lead generation.
+              We function as strategic growth consultants rather than transactional service providers. As a trusted partner for online marketing services Chandigarh, we deliver integrated solutions tailored to each brand&apos;s market position. Whether you require a data-driven social media marketing agency Chandigarh, a results-focused PPC company in Chandigarh, or a certified Google Ads agency Chandigarh, our execution is supported by competitive analysis, audience intelligence, and continuous optimization. Organizations seeking a reliable website development company in Chandigarh rely on us for scalable, high-converting platforms built on modern technologies including React, WordPress, Wix, and Shopify. Our objective is long-term brand authority and predictable lead generation.
             </p>
           </div>
 
