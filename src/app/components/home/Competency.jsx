@@ -26,11 +26,18 @@ const CoreCompetencies = () => {
       gradient: 'from-purple-500 to-pink-500',
     },
     {
-      title: 'Website & App Development',
+      title: 'Website Development',
       description:
-        'Experience high-performance websites and scalable mobile apps custom-built to reflect your brand DNA.',
+        'Modern, responsive, and high-performance websites built to elevate your brand and convert visitors into customers.',
       Icon: Monitor,
       gradient: 'from-orange-500 to-red-500',
+    },
+    {
+      title: 'App Development',
+      description:
+        'Custom iOS and Android applications designed for speed, scalability, and seamless user experiences across devices.',
+      Icon: Monitor,
+      gradient: 'from-yellow-400 to-yellow-600',
     },
     {
       title: 'Graphic & Logo Designing',
