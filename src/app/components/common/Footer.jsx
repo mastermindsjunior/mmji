@@ -67,6 +67,10 @@ const Footer = () => {
             {label:'Jaipur',link:"/jaipur"},
             {label:'Nashik',link:"/nashik"},
             {label:'Chandigarh',link:"/chandigarh"},
+            { label: 'Mumbai', link: '/mumbai' },
+            { label: 'Delhi', link: '/delhi' },
+            { label: 'Hyderabad', link: '/hyderabad' },
+            { label: 'Bengaluru', link: '/bengaluru' },
 
 
           ].map((item) => (
