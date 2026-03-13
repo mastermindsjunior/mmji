@@ -56,11 +56,11 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="/logo-india.png"
+            src="/logo-new.png"
             alt="MasterMinds Junior"
             width={160}
             height={40}
-            className="h-16 w-auto"
+            className="h-24 w-auto"
           />
         </Link>
 

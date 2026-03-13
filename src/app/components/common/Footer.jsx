@@ -16,11 +16,11 @@ const Footer = () => {
         <div className="space-y-4 text-center md:text-left">
 
           <Image
-            src="/logo-india.png"
+            src="/logo-new.png"
             width={300}
             height={100}
             alt="logo"
-            className="h-20 w-auto object-left"
+            className="h-44 w-auto object-left"
           />
 
           <p className="text-white/60 max-w-xs">
