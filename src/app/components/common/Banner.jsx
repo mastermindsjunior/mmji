@@ -4,7 +4,7 @@ export default function Banner({ title, sub }) {
   return (
 <div className=' pt-[120px] w-full'>
       <section
-      className="relative isolate w-[calc(100%-40px)] mx-auto bg-[#111]
+      className="relative isolate w-[calc(100%-40px)] mx-auto bg-primary-darker
                  flex items-center justify-center rounded-3xl shadow-inner
                  px-6 h-[300px] overflow-hidden"
     >
@@ -13,7 +13,7 @@ export default function Banner({ title, sub }) {
         className="absolute inset-0 pointer-events-none blur-xl opacity-50"
         style={{
           background:
-            'radial-gradient(ellipse at bottom center, var(--color-primary-blue) 0%, transparent 60%)',
+            'radial-gradient(ellipse at bottom center, var(--color-primary) 0%, transparent 60%)',
         }}
       />
 
@@ -31,16 +31,16 @@ export default function Banner({ title, sub }) {
       <div className="relative z-10 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-sfth text-white">
           {title}{' '}
-          <span className="font-sfbo text-[var(--color-primary-blue)]">{sub}</span>
+          <span className="font-sfbo text-[var(--color-sec)]">{sub}</span>
         </h1>
 
         <p className="mt-4 text-sm sm:text-base">
-          <span className="text-[var(--color-primary-blue)] font-semibold">Home</span>{' '}
+          <span className="text-[var(--color-sec)] font-semibold">Home</span>{' '}
           <span className="text-gray-400">/ {title} {sub}</span>
         </p>
       </div>
     </section>
-    <div className=' w-full h-0.5 bg-primary-blue' style={{maskImage:'linear-gradient(90deg, transparent, black, transparent)'}} />
+    <div className=' w-full h-0.5 bg-primary' style={{maskImage:'linear-gradient(90deg, transparent, black, transparent)'}} />
 </div>
   );
 }

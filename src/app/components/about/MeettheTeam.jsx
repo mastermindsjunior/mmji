@@ -67,12 +67,12 @@ const teamMembers = [
 ];
 
 const TeamCard = ({ name, role, image, socials }) => (
-  <div className="flex items-center justify-between p-4 bg-darker rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:bg-gray-700">
+  <div className="flex items-center justify-between p-4 bg-primary rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:bg-primary-dark">
     {/* Circular profile image with hover scale */}
     <img
       src={image}
       alt={`Photo of ${name}`}
-      className="w-24 h-24 rounded-full object-cover border-4 border-blue-600 transition-transform duration-300 hover:scale-110"
+      className="w-24 h-24 rounded-full object-cover border-4 border-primary-darker transition-transform duration-300 hover:scale-110"
     />
 
 

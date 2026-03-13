@@ -104,7 +104,7 @@ export default function CareersPage() {
 
       <main className="relative z-10 max-w-7xl mx-auto px-6 py-12">
         {/* Hero */}
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 font-jost bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-blue-600">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 font-jost bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark">
           Where creativity meets opportunity
         </h2>
         <p className="text-black/75 text-lg mb-8">
@@ -123,9 +123,9 @@ export default function CareersPage() {
               {items.map((item, idx) => (
                 <div
                   key={idx}
-                  className="  p-[1px] rounded-2xl bg-gradient-to-br from-primary-blue to-blue-600  shadow-[0_0_10px_rgba(59,130,246,0.5)]  hover:from-primary-orange hover:to-primary-blue  hover:shadow-[0_0_20px_rgba(255,165,0,0.7)]  transition"
+                  className="  p-[1px] rounded-2xl bg-gradient-to-br from-primary to-primary-dark  shadow-[0_0_10px_rgba(59,130,246,0.5)]  hover:from-primary-orange hover:to-primary  hover:shadow-[0_0_20px_rgba(255,165,0,0.7)]  transition"
                 >
-                  <div className="bg-gradient-to-b from-primary-blue hover:to-blue-600  rounded-2xl p-6 backdrop-blur-sm h-full flex flex-col">
+                  <div className="bg-gradient-to-b from-primary hover:to-primary-dark  rounded-2xl p-6 backdrop-blur-sm h-full flex flex-col">
                     <h3 className="text-2xl font-bold mb-3 text-white">
                       {item.designation}
                     </h3>
@@ -174,7 +174,7 @@ export default function CareersPage() {
           ].map((block, i) => (
             <div
               key={i}
-              className="   p-6 rounded-2xl bg-[#111]   shadow-[0_0_10px_rgba(59,130,246,0.5)]   hover:shadow-[0_0_20px_rgba(59,130,246,0.7)]   hover:bg-gradient-to-br hover:from-primary-blue hover:to-blue-600   transition "
+              className="   p-6 rounded-2xl bg-[#111]   shadow-[0_0_10px_rgba(59,130,246,0.5)]   hover:shadow-[0_0_20px_rgba(59,130,246,0.7)]   hover:bg-gradient-to-br hover:from-primary hover:to-primary-dark   transition "
             >
               <h4 className="text-xl font-bold mb-2 text-white">{block.title}</h4>
               <p className="text-white/75 text-sm">{block.desc}</p>
@@ -192,7 +192,7 @@ export default function CareersPage() {
             {[...applItems, ...applItems, ...applItems , ...applItems].map((item, i) => (
               <span
                 key={i}
-                className="   inline-block mx-2 px-4 py-2 bg-[#c1e2ff] rounded-full text-sm   shadow-[0_0_6px_rgba(59,130,246,0.5)] "
+                className="   inline-block mx-2 px-4 py-2 bg-primary text-sec rounded-full text-sm   shadow-[0_0_6px_rgba(59,130,246,0.5)] "
               >
                 {item.designation}
               </span>
@@ -221,10 +221,10 @@ export default function CareersPage() {
         </div>
 
         {/* Application Form */}
-        <section className="mb-16 max-w-6xl mx-auto p-0.5 rounded-3xl bg-gradient-to-b from-blue-600 via-gray-700 to-gray-800 ">
+        <section className="mb-16 max-w-6xl mx-auto p-0.5 rounded-3xl bg-gradient-to-b from-primary-dark via-gray-700 to-gray-800 ">
                   <div className=' w-full h-full relative bg-darker p-6 rounded-3xl'>
-                      <div className=' absolute h-0.5 left-1/2 -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-blue-600 to-transparent w-[80%]' />
-            <div className='absolute w-[50%] 2xl:h-20 h-14 rounded-t-[100%] opacity-30 bg-blue-600 blur-2xl z-10 bottom-0 left-1/2 -translate-x-1/2' />
+                      <div className=' absolute h-0.5 left-1/2 -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-primary-dark to-transparent w-[80%]' />
+            <div className='absolute w-[50%] 2xl:h-20 h-14 rounded-t-[100%] opacity-30 bg-primary-dark blur-2xl z-10 bottom-0 left-1/2 -translate-x-1/2' />
           <h2 className="text-3xl font-semibold mb-6 text-white font-jost">Apply Now</h2>
           <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
             <div>
@@ -236,11 +236,11 @@ export default function CareersPage() {
                 value={position}
                 onChange={handlePositionChange}
                 required
-                className="w-full bg-[#111]/5 border border-blue-600 rounded-full px-4 py-2 text-white"
+                className="w-full bg-[#111]/5 border border-primary-dark rounded-full px-4 py-2 text-white"
               >
-                <option className=' bg-[#111]/5 text-black selection:bg-blue-600' value="">Select a position</option>
+                <option className=' bg-[#111]/5 text-black selection:bg-primary-dark' value="">Select a position</option>
                 {applItems.map((o, i) => (
-                  <option className=' bg-[#111]/5 text-black selection:bg-blue-600' key={i} value={o.designation}>
+                  <option className=' bg-[#111]/5 text-black selection:bg-primary-dark' key={i} value={o.designation}>
                     {o.designation}
                   </option>
                 ))}
@@ -257,7 +257,7 @@ export default function CareersPage() {
                 accept=".pdf,.doc,.docx"
                 onChange={handleResumeChange}
                 required
-                className="w-full bg-[#111]/5 border border-blue-600 rounded-full px-4 py-2 text-white"
+                className="w-full bg-[#111]/5 border border-primary-dark rounded-full px-4 py-2 text-white"
               />
             </div>
 
@@ -270,7 +270,7 @@ export default function CareersPage() {
                 value={note}
                 onChange={handleNoteChange}
                 placeholder="Write a note or cover letter..."
-                className="w-full bg-[#111]/5 border border-blue-600 rounded-2xl px-4 py-2 text-white h-32 resize-none"
+                className="w-full bg-[#111]/5 border border-primary-dark rounded-2xl px-4 py-2 text-white h-32 resize-none"
               />
             </div>
 

@@ -27,7 +27,7 @@ const Heading = () => {
 
   // h-[600px]
   return (
-    <section className="relative w-full h-dvh  overflow-hidden bg-blue-900">
+    <section className="relative w-full h-dvh  overflow-hidden bg-primary">
 
       {slides.map((slide, index) => (
         <div

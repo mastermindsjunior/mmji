@@ -32,20 +32,20 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="bg-cyan-600 py-28 px-6">
+    <section className=" py-28 px-6">
 
-      <h3 className="font-jost text-black text-4xl md:text-5xl font-bold mb-5">
+      <h3 className="font-jost text-primary text-4xl md:text-5xl font-bold mb-5">
         Let’s Build Something Extraordinary
       </h3>
 
-      <p className="font-jost text-black/80 mb-10 max-w-2xl">
+      <p className="font-jost text-primary/90 mb-10 max-w-2xl">
         At MasterMinds Junior, we’re not just creating digital assets—we’re building business success stories.
       </p>
 
       <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden grid xl:grid-cols-2">
 
         {/* LEFT PANEL */}
-        <div className="bg-[#0f2f3a] text-white p-12 flex flex-col justify-between">
+        <div className="bg-primary text-white p-12 flex flex-col justify-between">
 
           <Image
             src="/contact.png"
@@ -78,7 +78,7 @@ const ContactForm = () => {
               onChange={handleChange}
               placeholder="Your name"
               required
-              className="w-full border rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#0f2f3a]"
+              className="w-full border rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-primary"
             />
 
             <input
@@ -88,7 +88,7 @@ const ContactForm = () => {
               onChange={handleChange}
               placeholder="Email address"
               required
-              className="w-full border rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#0f2f3a]"
+              className="w-full border rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-primary"
             />
 
             {/* SERVICE SELECT */}
@@ -97,7 +97,7 @@ const ContactForm = () => {
               value={formData.service}
               onChange={handleChange}
               required
-              className="w-full border rounded-lg px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#0f2f3a]"
+              className="w-full border rounded-lg px-4 py-3 text-sm bg-white focus:outline-none focus:border-primary"
             >
               <option value="">Select service</option>
               <option value="Web Development">Web Development</option>
@@ -116,12 +116,12 @@ const ContactForm = () => {
               onChange={handleChange}
               placeholder="Tell us about your project"
               required
-              className="w-full border rounded-lg px-4 py-3 text-sm resize-none focus:outline-none focus:border-[#0f2f3a]"
+              className="w-full border rounded-lg px-4 py-3 text-sm resize-none focus:outline-none focus:border-primary"
             />
 
             <button
               type="submit"
-              className="w-full bg-[#0f2f3a] text-white rounded-lg py-3 hover:opacity-90 transition"
+              className="w-full bg-primary text-white rounded-lg py-3 hover:opacity-90 transition"
             >
               Send message
             </button>

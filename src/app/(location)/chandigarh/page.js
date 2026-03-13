@@ -134,23 +134,23 @@ const ChandigarhPage = () => {
 
         <ul className="space-y-3 text-gray-700">
           <li className="flex items-start">
-            <span className="text-blue-600 mr-3 text-xl">✓</span>
+            <span className="text-primary-dark mr-3 text-xl">✓</span>
             <span>Recognized as a top SEO expert in Chandigarh for small businesses</span>
           </li>
           <li className="flex items-start">
-            <span className="text-blue-600 mr-3 text-xl">✓</span>
+            <span className="text-primary-dark mr-3 text-xl">✓</span>
             <span>Transparent performance reporting and analytics dashboards</span>
           </li>
           <li className="flex items-start">
-            <span className="text-blue-600 mr-3 text-xl">✓</span>
+            <span className="text-primary-dark mr-3 text-xl">✓</span>
             <span>Dedicated strategic account management</span>
           </li>
           <li className="flex items-start">
-            <span className="text-blue-600 mr-3 text-xl">✓</span>
+            <span className="text-primary-dark mr-3 text-xl">✓</span>
             <span>Customized marketing frameworks aligned with industry dynamics</span>
           </li>
           <li className="flex items-start">
-            <span className="text-blue-600 mr-3 text-xl">✓</span>
+            <span className="text-primary-dark mr-3 text-xl">✓</span>
             <span>Proven track record across Chandigarh and North India markets</span>
           </li>
         </ul>
@@ -217,12 +217,12 @@ const ChandigarhPage = () => {
 
       {/* CLOSING CTA */}
       <section className="max-w-5xl mx-auto px-6">
-        <div className="bg-gradient-to-r from-blue-600 to-[#020b14] rounded-2xl p-8 md:p-12 text-center text-white">
+        <div className="bg-gradient-to-r from-primary-dark to-[#020b14] rounded-2xl p-8 md:p-12 text-center text-white">
           <p className="text-lg md:text-xl leading-relaxed mb-4">
             Partner with a digital marketing agency in Chandigarh committed to strategic execution and measurable business growth.
           </p>
             <button>
-            <Link href={'/contact'} className=" px-4 py-2 bg-white text-blue-600 font-semibold">
+            <Link href={'/contact'} className=" px-4 py-2 bg-white text-primary-dark font-semibold">
                 Lets start!
             </Link>
           </button>

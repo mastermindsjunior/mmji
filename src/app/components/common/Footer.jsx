@@ -5,10 +5,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="relative w-full bg-gradient-to-br from-[#020b14] via-[#04162e] to-[#042c5c] text-white pt-20 pb-10 px-6 overflow-hidden">
+    <footer className="relative w-full bg-gradient-to-br from-primary-dark to-primary text-white pt-20 pb-10 px-6 overflow-hidden">
 
       {/* top glow line */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-60" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-px bg-gradient-to-r from-transparent via-parimary to-transparent opacity-60" />
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm">
 

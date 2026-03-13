@@ -130,23 +130,23 @@ const HyderabadPage = () => {
 
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-start">
-              <span className="text-blue-600 mr-3 text-xl">✓</span>
+              <span className="text-primary-dark mr-3 text-xl">✓</span>
               <span>Recognized as a top SEO expert in Hyderabad for small businesses</span>
             </li>
             <li className="flex items-start">
-              <span className="text-blue-600 mr-3 text-xl">✓</span>
+              <span className="text-primary-dark mr-3 text-xl">✓</span>
               <span>Transparent reporting with actionable performance insights</span>
             </li>
             <li className="flex items-start">
-              <span className="text-blue-600 mr-3 text-xl">✓</span>
+              <span className="text-primary-dark mr-3 text-xl">✓</span>
               <span>Dedicated strategic account management</span>
             </li>
             <li className="flex items-start">
-              <span className="text-blue-600 mr-3 text-xl">✓</span>
+              <span className="text-primary-dark mr-3 text-xl">✓</span>
               <span>Industry-specific digital marketing frameworks</span>
             </li>
             <li className="flex items-start">
-              <span className="text-blue-600 mr-3 text-xl">✓</span>
+              <span className="text-primary-dark mr-3 text-xl">✓</span>
               <span>Proven success across Hyderabad and Telangana markets</span>
             </li>
           </ul>
@@ -222,12 +222,12 @@ const HyderabadPage = () => {
 
       {/* CTA */}
       <section className="max-w-5xl mx-auto px-6">
-        <div className="bg-gradient-to-r from-blue-600 to-[#020b14] rounded-2xl p-8 md:p-12 text-center text-white">
+        <div className="bg-gradient-to-r from-primary-dark to-[#020b14] rounded-2xl p-8 md:p-12 text-center text-white">
           <p className="text-lg md:text-xl leading-relaxed mb-4">
             Ready to work with a digital marketing agency in Hyderabad that focuses on revenue, not noise? Let’s build a system that scales consistently and delivers measurable growth.
           </p>
           <button>
-            <Link href={"/contact"} className="px-4 py-2 bg-white text-blue-600 font-semibold">
+            <Link href={"/contact"} className="px-4 py-2 bg-white text-primary-dark font-semibold">
               Lets start!
             </Link>
           </button>

@@ -7,7 +7,7 @@ const page = () => {
       <section className="relative max-w-7xl mx-auto px-6 pt-56 pb-28">
 
         {/* background glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[420px] bg-blue-500/30 rounded-b-full blur-3xl" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[420px] bg-primary/30 rounded-b-full blur-3xl" />
 
         {/* BIG TITLE */}
         <h2 className="absolute top-28 left-1/2 -translate-x-1/2 font-jost font-bold text-[14vw] xl:text-8xl bg-gradient-to-b from-black/90 to-black/30 bg-clip-text text-transparent">
@@ -46,16 +46,16 @@ const page = () => {
 
                 <div
                   key={i}
-                  className="group bg-[#c1e2ff] rounded-xl px-6 py-5 flex items-center gap-4 hover:shadow-md transition"
+                  className="group bg-primary rounded-xl px-6 py-5 flex items-center gap-4 hover:shadow-md transition"
                 >
 
-                  <div className="h-11 w-11 rounded-lg bg-white flex items-center justify-center text-black">
+                  <div className="h-11 w-11 rounded-lg bg-white flex items-center justify-center text-sec">
                     {item.icon}
                   </div>
 
                   <div className="flex-1">
-                    <p className="font-jost text-lg text-slate-800">{item.title}</p>
-                    <p className="text-sm text-black/50">{item.value}</p>
+                    <p className="font-jost text-lg text-slate-200">{item.title}</p>
+                    <p className="text-sm text-sec/70">{item.value}</p>
                   </div>
 
                   <ArrowUpRight className="opacity-40 group-hover:opacity-100 transition" />
@@ -69,26 +69,26 @@ const page = () => {
           </div>
 
           {/* RIGHT FORM */}
-          <div className="bg-[#c1e2ff]/50 text-slate-900 rounded-2xl p-8">
+          <div className="bg-primary text-sec rounded-2xl p-8">
 
             <div className="space-y-4">
 
               <input
                 type="text"
                 placeholder="Name"
-                className="w-full h-12 px-4 rounded-lg border border-primary-blue bg-white/40 outline-none"
+                className="w-full h-12 px-4 rounded-lg border border-primary bg-white/40 outline-none"
               />
 
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full h-12 px-4 rounded-lg border border-primary-blue bg-white/40 outline-none"
+                className="w-full h-12 px-4 rounded-lg border border-primary bg-white/40 outline-none"
               />
 
               <textarea
                 rows={6}
                 placeholder="Message"
-                className="w-full px-4 py-3 rounded-lg border border-primary-blue bg-white/40 outline-none resize-none"
+                className="w-full px-4 py-3 rounded-lg border border-primary bg-white/40 outline-none resize-none"
               />
 
               <button className="w-full h-12 bg-white rounded-lg font-medium hover:shadow transition">

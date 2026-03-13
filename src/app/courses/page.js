@@ -143,7 +143,7 @@ const CoursePage = () => {
               {items.map((item, idx) => (
                 <div
                   key={idx}
-                  className="  p-[1px] rounded-2xl bg-gradient-to-br from-primary-blue to-blue-600  shadow-[0_0_10px_rgba(59,130,246,0.5)] hover:shadow-[0_0_20px_rgba(255,165,0,0.7)]  transition"
+                  className="  p-[1px] rounded-2xl bg-gradient-to-br from-primary to-primary-dark  shadow-[0_0_10px_rgba(59,130,246,0.5)] hover:shadow-[0_0_20px_rgba(255,165,0,0.7)]  transition"
                 >
                   <div className="rounded-2xl p-6 backdrop-blur-sm h-full flex flex-col">
                     <h3 className="text-2xl font-bold mb-3 text-white">
@@ -171,10 +171,10 @@ const CoursePage = () => {
         ))}
       
 
-              <section className="mb-16 mx-auto max-w-6xl p-0.5 rounded-3xl bg-gradient-to-b from-blue-600 via-gray-700 to-gray-800 ">
+              <section className="mb-16 mx-auto max-w-6xl p-0.5 rounded-3xl bg-gradient-to-b from-primary-dark via-gray-700 to-gray-800 ">
                   <div className=' w-full h-full relative bg-darker p-6 rounded-3xl'>
-                      <div className=' absolute h-0.5 left-1/2 -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-blue-600 to-transparent w-[80%]' />
-            <div className='absolute w-[50%] 2xl:h-20 h-14 rounded-t-[100%] opacity-30 bg-blue-600 blur-2xl z-10 bottom-0 left-1/2 -translate-x-1/2' />
+                      <div className=' absolute h-0.5 left-1/2 -translate-x-1/2 bottom-0 bg-gradient-to-r from-transparent via-primary-dark to-transparent w-[80%]' />
+            <div className='absolute w-[50%] 2xl:h-20 h-14 rounded-t-[100%] opacity-30 bg-primary-dark blur-2xl z-10 bottom-0 left-1/2 -translate-x-1/2' />
           <h2 className="text-3xl font-semibold mb-6 text-white font-jost">Enroll Now</h2>
           <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
             <div>
@@ -186,11 +186,11 @@ const CoursePage = () => {
                 value={position}
                 onChange={handlePositionChange}
                 required
-                className="w-full bg-[#111]/5 border border-blue-600 rounded-full px-4 py-2 text-white"
+                className="w-full bg-[#111]/5 border border-primary-dark rounded-full px-4 py-2 text-white"
               >
-                <option className=' bg-[#111]/5 text-black selection:bg-blue-600' value="">Select a Course</option>
+                <option className=' bg-[#111]/5 text-black selection:bg-primary-dark' value="">Select a Course</option>
                 {applItems.map((o, i) => (
-                  <option className=' bg-[#111]/5 text-black selection:bg-blue-600' key={i} value={o.designation}>
+                  <option className=' bg-[#111]/5 text-black selection:bg-primary-dark' key={i} value={o.designation}>
                     {o.designation}
                   </option>
                 ))}
@@ -207,7 +207,7 @@ const CoursePage = () => {
                 accept=".pdf,.doc,.docx"
                 onChange={handleResumeChange}
                 required
-                className="w-full bg-[#111]/5 border border-blue-600 rounded-full px-4 py-2 text-white"
+                className="w-full bg-[#111]/5 border border-primary-dark rounded-full px-4 py-2 text-white"
               />
             </div> */}
 
@@ -220,7 +220,7 @@ const CoursePage = () => {
                 value={note}
                 onChange={handleNoteChange}
                 placeholder="Write a note..."
-                className="w-full bg-[#111]/5 border border-blue-600 rounded-2xl px-4 py-2 text-white h-32 resize-none"
+                className="w-full bg-[#111]/5 border border-primary-dark rounded-2xl px-4 py-2 text-white h-32 resize-none"
               />
             </div>
 

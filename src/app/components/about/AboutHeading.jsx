@@ -8,8 +8,8 @@ const AboutSection = () => {
         {/* — Left: Image + Stat Card — */}
         <div className="relative">
           {/* Stat Card */}
-          <div className="absolute -top-4 -left-4 bg-white border border-[#5bb2ff] rounded-xl xl:p-6 p-2
-                          shadow-lg ring-4 ring-[#3aa3ff]">
+          <div className="absolute -top-4 -left-4 bg-white rounded-xl xl:p-6 p-2
+                          shadow-lg ring-4 ring-primary">
             <div className=" xl:text-5xl text-2xl font-jost font-bold text-black">5+</div>
             <div className="mt-1 font-sfbo xl:text-sm text-xs">
               Years of Experience  
@@ -31,8 +31,8 @@ const AboutSection = () => {
         <div className="flex flex-col justify-center">
           {/* Badge */}
           <div className="flex items-center mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#40a6ff] mr-2" />
-            <span className="uppercase text-sm font-semibold text-[#40a6ff] tracking-wider">
+            <span className="w-2 h-2 rounded-full bg-primary mr-2" />
+            <span className="uppercase text-sm font-semibold text-primary tracking-wider">
               About Us
             </span>
           </div>

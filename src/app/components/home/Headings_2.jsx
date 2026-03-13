@@ -108,7 +108,7 @@ const Headings_2 = () => {
           {/* this inner span gets the words and is animated */}
           <span
             ref={wordRef}
-            className='headingPara opacity-0 font-jost text-[#0e96cc] 2xl:text-[67px] text-6xl font-semibold inline-block whitespace-nowrap'
+            className='headingPara opacity-0 font-jost text-sec 2xl:text-[67px] text-6xl font-semibold inline-block whitespace-nowrap'
           />
         </span>
       </h1>

@@ -16,49 +16,49 @@ const CoreCompetencies = () => {
       description:
         'Maximize your brand visibility and engagement across platforms with tailored, data-driven campaigns.',
       Icon: Share2,
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-primary to-primary-dark',
     },
     {
       title: 'Search Engine Optimization (SEO)',
       description:
         'Rise in Google rankings with professional SEO services for Indian businesses, driven by research and on-page excellence.',
       Icon: Search,
-      gradient: 'from-purple-500 to-pink-500',
+      gradient: 'from-primary to-primary-dark',
     },
     {
       title: 'Website Development',
       description:
         'Modern, responsive, and high-performance websites built to elevate your brand and convert visitors into customers.',
       Icon: Monitor,
-      gradient: 'from-orange-500 to-red-500',
+      gradient: 'from-primary to-primary-dark',
     },
     {
       title: 'App Development',
       description:
         'Custom iOS and Android applications designed for speed, scalability, and seamless user experiences across devices.',
       Icon: Monitor,
-      gradient: 'from-yellow-400 to-yellow-600',
+      gradient: 'from-primary to-primary-dark',
     },
     {
       title: 'Graphic & Logo Designing',
       description:
         'Create a visual identity that resonates. Our top logo designers in India deliver logos with purpose and aesthetics.',
       Icon: Image,
-      gradient: 'from-green-500 to-emerald-500',
+      gradient: 'from-primary to-primary-dark',
     },
     {
       title: 'Content Writing',
       description:
         'Content that informs, inspires, and converts—crafted for your ideal audience with clarity and impact.',
       Icon: FileText,
-      gradient: 'from-indigo-500 to-blue-500',
+      gradient: 'from-primary to-primary-dark',
     },
     {
       title: 'Google & Meta Ads',
       description:
         'Engage the right audience through Google Ads and Meta Ads management, optimizing every rupee spent.',
       Icon: Megaphone,
-      gradient: 'from-pink-500 to-rose-500',
+      gradient: 'from-primary to-primary-dark',
     },
   ];
 

@@ -47,12 +47,12 @@ const milestones = [
 
 export default function OurStorySection() {
   return (
-    <section className="relative py-16 bg-black text-white font-sfth">
+    <section className="relative py-16 bg-primary-dark text-sec font-sfth">
       <div className=" w-full mx-auto px-6 lg:px-8">
         {/* Heading */}
         <h2 className="text-center text-3xl md:text-4xl font-jost font-semibold mb-6">
           <span className="text-white">Milestones That Define</span>{' '}
-          <span className="text-primary-blue">Us</span>
+          <span className="text-sec">Us</span>
           <span className="text-gray-400">.</span>
         </h2>
 
@@ -70,14 +70,14 @@ export default function OurStorySection() {
                   className="flex-shrink-0 flex xl:flex-col flex-row items-center 2xl:w-52 xl:w-44 w-[300px] xl:mr-0 mr-4"
                 >
                   {/* Dot */}
-                  <div className="relative z-10 w-3 h-3 shrink-0 xl:-translate-y-1 xl:translate-x-0 -translate-x-[5px] bg-primary-blue rounded-full border-2 border-gray-800" />
+                  <div className="relative z-10 w-3 h-3 shrink-0 xl:-translate-y-1 xl:translate-x-0 -translate-x-[5px] bg-sec d-full border-2 border-gray-800" />
 
                   {/* Connector line */}
                   <div className="xl:w-px w-8 xl:h-8 h-px bg-gray-700 xl:mt-1 mt-0 xl:ml-0 ml-1" />
 
                   {/* Card */}
-                  <div className="mt-4 bg-gray-900 p-4 rounded-lg shadow-lg text-center">
-                    <h3 className="text-xl font-jost font-bold text-primary-blue">
+                  <div className="mt-4 bg-primary p-4 rounded-lg shadow-lg text-center">
+                    <h3 className="text-xl font-jost font-bold text-sec">
                       {year.split("-").map((text, i) => (
                         <>
                         <span key={i}>{text}</span>

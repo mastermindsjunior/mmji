@@ -69,7 +69,7 @@ export default function Navbar() {
           {links.map((link) =>
             link.children ? (
               <div key={link.label} className="relative group">
-                <button className="flex items-center px-1 text-lg hover:text-primary-blue transition-colors">
+                <button className="flex items-center px-1 text-lg hover:text-primary transition-colors">
                   {link.label}
                   <ChevronDownIcon className="w-4 h-4 ml-1" />
                 </button>
@@ -89,10 +89,10 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="relative group px-1 text-lg hover:text-primary-blue transition-colors"
+                className="relative group px-1 text-lg hover:text-primary transition-colors"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
               </Link>
             )
           )}
@@ -102,13 +102,13 @@ export default function Navbar() {
         <div className="hidden lg:block space-x-2">
           <Link
             href="/quote"
-            className="px-6 py-2 bg-primary-blue text-black font-sfth rounded-full hover:opacity-90 transition-opacity"
+            className="px-6 py-2 bg-primary text-sec font-sfth rounded-full hover:opacity-90 transition-opacity"
           >
             Get a Quote
           </Link>
           <Link
             href="/contact"
-            className="px-6 py-2 bg-primary-orange text-black font-sfth rounded-full hover:opacity-90 transition-opacity"
+            className="px-6 py-2 bg-primary text-sec font-sfth rounded-full hover:opacity-90 transition-opacity"
           >
             Contact Us
           </Link>
@@ -134,7 +134,7 @@ export default function Navbar() {
                     onClick={() =>
                       setMobileOpportunitiesOpen((o) => !o)
                     }
-                    className="w-full flex justify-between items-center py-2 text-left hover:text-primary-blue transition-colors"
+                    className="w-full flex justify-between items-center py-2 text-left hover:text-primary transition-colors"
                   >
                     {link.label}
                     <ChevronDownIcon
@@ -149,7 +149,7 @@ export default function Navbar() {
                         <Link
                           key={child.label}
                           href={child.href}
-                          className="py-1 hover:text-primary-blue transition-colors"
+                          className="py-1 hover:text-primary transition-colors"
                         >
                           {child.label}
                         </Link>
@@ -161,7 +161,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="py-2 hover:text-primary-blue transition-colors"
+                  className="py-2 hover:text-primary transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -169,13 +169,13 @@ export default function Navbar() {
             )}
             <Link
               href="/quote"
-              className="mt-2 inline-block px-6 py-2 bg-primary-blue text-black font-jost rounded-full hover:opacity-90 transition-opacity"
+              className="mt-2 inline-block px-6 py-2 bg-primary text-sec font-jost rounded-full hover:opacity-90 transition-opacity"
             >
               Get a Quote
             </Link>
             <Link
               href="/contact"
-              className="mt-2 inline-block px-6 py-2 bg-primary-orange text-black font-jost rounded-full hover:opacity-90 transition-opacity"
+              className="mt-2 inline-block px-6 py-2 bg-primary text-sec font-jost rounded-full hover:opacity-90 transition-opacity"
             >
               Contact Us
             </Link>
