@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const ChandigarhPage = () => {
   return (
-    <main className="pt-32 pb-24">
+    <main className="pt-44 pb-24">
 
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-6 mb-20">
@@ -11,7 +11,7 @@ const ChandigarhPage = () => {
         <div className="grid xl:grid-cols-2 gap-16 items-center">
 
           <div>
-            <h1 className="font-jost text-4xl md:text-5xl xl:text-6xl font-bold mb-6 text-slate-900">
+            <h1 className="font-jost text-3xl md:text-4xl xl:text-5xl font-bold mb-6 text-slate-900">
               Digital Marketing Agency in Chandigarh Focused on Sustainable Growth
             </h1>
 
@@ -58,65 +58,65 @@ const ChandigarhPage = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Search Engine Optimization (SEO)
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Advanced SEO services in Chandigarh designed to enhance visibility and organic acquisition.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Local SEO Services Chandigarh
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Strengthening local search presence and optimizing Google Business Profile performance.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Google Ads & PPC Campaign Management
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               ROI-focused campaigns managed by an experienced PPC company in Chandigarh.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Social Media Marketing (SMM)
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Structured brand growth strategies from a leading social media marketing agency Chandigarh.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Website Development
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Conversion-optimized websites delivered by a professional website development company in Chandigarh.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Performance Marketing
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Data-backed growth strategies executed by a results-driven performance marketing agency Chandigarh.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Content & Creative Strategy
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Strategic communication designed to increase engagement and conversion rates.
             </p>
           </div>
@@ -126,13 +126,13 @@ const ChandigarhPage = () => {
       </section>
 
       {/* WHY WORK WITH US */}
-      <section className="max-w-5xl mx-auto px-6 mb-20">
+      <section className=" py-16 bg-primary mx-auto px-6 mb-20">
 
-        <h2 className="font-jost text-3xl font-bold mb-6 text-slate-900">
+        <h2 className="font-jost text-3xl font-bold mb-6 text-sec">
           Why Work With Us?
         </h2>
 
-        <ul className="space-y-3 text-gray-700">
+        <ul className="space-y-3 text-gray-400">
           <li className="flex items-start">
             <span className="text-primary-dark mr-3 text-xl">✓</span>
             <span>Recognized as a top SEO expert in Chandigarh for small businesses</span>

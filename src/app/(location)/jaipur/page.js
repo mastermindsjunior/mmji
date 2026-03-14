@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const JaipurPage = () => {
   return (
-    <main className="pt-32 pb-24">
+    <main className="pt-44 pb-24">
 
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-6 mb-20">
@@ -12,7 +12,7 @@ const JaipurPage = () => {
         <div className="grid xl:grid-cols-2 gap-16 items-center">
 
           <div>
-            <h1 className="font-jost text-4xl md:text-5xl xl:text-6xl font-bold mb-6 text-slate-900">
+            <h1 className="font-jost text-3xl md:text-4xl xl:text-5xl font-bold mb-6 text-slate-900">
               Digital Marketing Agency in Jaipur That Delivers Real Growth
             </h1>
 
@@ -59,65 +59,65 @@ const JaipurPage = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Search Engine Optimization (SEO)
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Advanced SEO services in Jaipur designed to rank high-intent keywords and establish authority.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Local SEO Services Jaipur
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Optimizing Google Business Profile and Maps rankings for local dominance.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Google Ads & PPC Campaigns
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Performance-focused campaigns from a trusted PPC company in Jaipur.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Social Media Marketing (SMM)
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Strategic brand positioning by a leading social media marketing agency Jaipur.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Website Development
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Conversion-optimized builds from a modern website development company in Jaipur.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Performance Marketing
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Data-driven scaling strategies from a top performance marketing agency Jaipur.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Content & Creative Strategy
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Messaging crafted to convert and retain customers.
             </p>
           </div>
@@ -127,14 +127,14 @@ const JaipurPage = () => {
       </section>
 
       {/* WHY CHOOSE US */}
-<section className=" flex justify-between items-center gap-4 max-w-7xl  mx-auto px-6 mb-20">
+<section className=" flex justify-between items-center gap-4 bg-primary py-16 mx-auto px-6 mb-20">
         <div className=" ">
 
-        <h2 className="font-jost text-3xl font-bold mb-6 text-slate-900">
+        <h2 className="font-jost text-3xl font-bold mb-6 text-sec">
           Why Choose Us?
         </h2>
 
-        <ul className="space-y-3 text-gray-700">
+        <ul className="space-y-3 text-gray-300">
           <li className="flex items-start">
             <span className="text-primary-dark mr-3 text-xl">✓</span>
             <span>Recognized as a top SEO expert in Jaipur for small businesses</span>

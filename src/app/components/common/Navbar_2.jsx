@@ -48,8 +48,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 ${
-        scrolled ? 'bg-white/50' : 'bg-white/20'
+      className={`fixed top-0 left-0 shadow shadow-sec w-full z-50 ${
+        scrolled ? 'bg-primary' : 'bg-primary/80'
       } backdrop-blur-md`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 py-4">
@@ -65,7 +65,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex space-x-8 font-jost text-black">
+        <nav className="hidden lg:flex space-x-8 font-jost text-white">
           {links.map((link) =>
             link.children ? (
               <div key={link.label} className="relative group">
@@ -89,7 +89,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="relative group px-1 text-lg hover:text-primary transition-colors"
+                className="relative group px-1 text-lg hover:text-white transition-colors"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
@@ -102,13 +102,13 @@ export default function Navbar() {
         <div className="hidden lg:block space-x-2">
           <Link
             href="/quote"
-            className="px-6 py-2 bg-primary text-sec font-sfth rounded-full hover:opacity-90 transition-opacity"
+            className="px-6 py-2 bg-sec text-primary font-sfth rounded-full hover:opacity-90 transition-opacity"
           >
             Get a Quote
           </Link>
           <Link
             href="/contact"
-            className="px-6 py-2 bg-primary text-sec font-sfth rounded-full hover:opacity-90 transition-opacity"
+            className="px-6 py-2 bg-sec text-primary font-sfth rounded-full hover:opacity-90 transition-opacity"
           >
             Contact Us
           </Link>

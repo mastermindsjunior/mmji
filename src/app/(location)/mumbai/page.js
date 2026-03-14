@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const MumbaiPage = () => {
   return (
-    <main className="pt-32 pb-24">
+    <main className="pt-44 pb-24">
 
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-6 mb-20">
@@ -11,7 +11,7 @@ const MumbaiPage = () => {
         <div className="grid xl:grid-cols-2 gap-16 items-center">
 
           <div>
-            <h1 className="font-jost text-4xl md:text-5xl xl:text-6xl font-bold mb-6 text-slate-900">
+            <h1 className="font-jost text-3xl md:text-4xl xl:text-5xl font-bold mb-6 text-slate-900">
               Digital Marketing Agency in Mumbai Committed to Strategic Growth
             </h1>
 
@@ -57,65 +57,65 @@ const MumbaiPage = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Search Engine Optimization (SEO)
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Comprehensive SEO services in Mumbai designed to improve rankings, authority, and organic acquisition.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Local SEO Services Mumbai
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Strengthening visibility across local search results and optimizing Google Business Profile performance.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Google Ads & PPC Campaign Management
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Performance-oriented campaigns managed by an experienced PPC company in Mumbai.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Social Media Marketing (SMM)
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Structured brand positioning strategies delivered by a professional social media marketing agency Mumbai.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Website Development
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Conversion-focused websites created by a trusted website development company in Mumbai.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Performance Marketing
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Scalable, data-driven campaigns executed by a results-focused performance marketing agency Mumbai.
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <h3 className="font-jost text-xl font-semibold mb-3 text-slate-900">
+          <div className="bg-primary hover:scale-105 transition-all duration-300 ease-in-out p-6 rounded-lg shadow-md border border-gray-100">
+            <h3 className="font-jost text-xl font-semibold mb-3 text-sec">
               Content & Creative Strategy
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-300">
               Strategic messaging frameworks designed to enhance engagement and improve conversion rates.
             </p>
           </div>
@@ -125,14 +125,14 @@ const MumbaiPage = () => {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="flex justify-between items-center gap-4 max-w-7xl mx-auto px-6 mb-20">
+      <section className="flex justify-between items-center gap-4 bg-primary py-16 mx-auto px-6 mb-20">
         <div>
 
-          <h2 className="font-jost text-3xl font-bold mb-6 text-slate-900">
+          <h2 className="font-jost text-3xl font-bold mb-6 text-sec">
             Why Partner With Us?
           </h2>
 
-          <ul className="space-y-3 text-gray-700">
+          <ul className="space-y-3 text-gray-300">
             <li className="flex items-start">
               <span className="text-primary-dark mr-3 text-xl">✓</span>
               <span>Recognized as a top SEO expert in Mumbai for small businesses</span>

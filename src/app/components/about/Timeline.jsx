@@ -67,7 +67,7 @@ export default function OurStorySection() {
               {milestones.map(({ year, points }) => (
                 <div
                   key={year}
-                  className="flex-shrink-0 flex xl:flex-col flex-row items-center 2xl:w-52 xl:w-44 w-[300px] xl:mr-0 mr-4"
+                  className="flex-shrink-0 flex xl:flex-col flex-row items-center 2xl:w-56 xl:w-48 w-[300px] xl:mr-0 mr-4 pb-2"
                 >
                   {/* Dot */}
                   <div className="relative z-10 w-3 h-3 shrink-0 xl:-translate-y-1 xl:translate-x-0 -translate-x-[5px] bg-sec d-full border-2 border-gray-800" />
@@ -76,7 +76,7 @@ export default function OurStorySection() {
                   <div className="xl:w-px w-8 xl:h-8 h-px bg-gray-700 xl:mt-1 mt-0 xl:ml-0 ml-1" />
 
                   {/* Card */}
-                  <div className="mt-4 bg-primary p-4 rounded-lg shadow-lg text-center">
+                  <div className="mt-4 bg-primary p-4 rounded-lg shadow shadow-sec hover:scale-105 hover:-translate-y-2 transition-all duration-300 ease-in-out text-center">
                     <h3 className="text-xl font-jost font-bold text-sec">
                       {year.split("-").map((text, i) => (
                         <>

@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
             ].map((item, i) => (
               <li
                 key={i}
-                className="group bg-sec backdrop-blur border border-white rounded-xl px-5 py-4 text-xs text-center text-primary shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                className="group bg-sec backdrop-blur border hover:scale-105 shadow-md shadow-sec border-white rounded-xl px-5 py-4 text-xs text-center text-primary hover:shadow hover:-translate-y-1 transition-all duration-300"
               >
                 <span className="block font-medium group-hover:text-black transition">
                   {item}

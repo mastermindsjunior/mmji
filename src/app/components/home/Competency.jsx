@@ -84,7 +84,7 @@ const CoreCompetencies = () => {
           {competencies.map(({ title, description, Icon, gradient }, index) => (
             <div
               key={title}
-              className="group bg-white/80 backdrop-blur-sm p-7 rounded-2xl shadow-lg hover:shadow-2xl relative hover:scale-[1.02] hover:-translate-y-1 ease-out duration-300 transition-all border border-gray-100/50 overflow-hidden"
+              className="group bg-white/80 backdrop-blur-sm p-7 rounded-2xl shadow hover:shadow-2xl shadow-primary relative hover:scale-[1.02] hover:-translate-y-1 ease-out duration-300 transition-all border border-gray-100/50 overflow-hidden"
               style={{
                 animationDelay: `${index * 100}ms`,
               }}
@@ -109,12 +109,12 @@ const CoreCompetencies = () => {
               </p>
 
               {/* View Details button */}
-              <button className="mt-auto w-full inline-flex items-center justify-between border-2 border-gray-200 group-hover:border-gray-900 rounded-full py-2.5 pr-2 pl-5 overflow-hidden transition-all duration-300 group-hover:bg-gray-900">
+              <button className="mt-auto w-full inline-flex items-center justify-between border-2 border-gray-200 group-hover:border-gray-900 rounded-full py-2.5 pr-2 pl-5 overflow-hidden transition-all duration-300 group-hover:bg-primary">
                 <span className="font-sfbo text-gray-900 group-hover:text-white 2xl:text-base text-sm transition-colors duration-300">
                   View Details
                 </span>
-                <span className={`ml-3 inline-flex items-center justify-center bg-gradient-to-br ${gradient} w-9 h-9 rounded-full shadow-md group-hover:scale-110 group-hover:rotate-45 transition-all duration-300`}>
-                  <ArrowRight className="w-4 h-4 text-white" />
+                <span className={`ml-3 inline-flex items-center justify-center bg-primary group-hover:bg-sec w-9 h-9 rounded-full shadow-md group-hover:scale-110 group-hover:rotate-45 transition-all duration-300`}>
+                  <ArrowRight className="w-4 h-4 group-hover:text-primary text-white" />
                 </span>
               </button>
             </div>
