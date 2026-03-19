@@ -7,7 +7,7 @@ const Heading = () => {
   // Each slide has videoUrl, title, desc, and alignment ('left', 'center', 'right')
   const slides = [
     {
-      videoUrl: '/vid/home page website .mp4',
+      videoUrl: '/vid/home-banner.mp4',
       // title: 'Building Your Brand’s Future in the Digital Universe',
       title: '',
       // desc: 'Next-gen solutions for next-level success.',
