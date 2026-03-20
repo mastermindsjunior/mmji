@@ -21,7 +21,7 @@ const AboutSection = () => {
 
           {/* Hero Image */}
           <img
-            src="/heading.jpg"
+            src="/harpreet-new.png"
             alt="MasterMinds Junior Team"
             className=" w-full rounded-2xl shadow-2xl object-cover aspect-square"
           />
