@@ -10,7 +10,7 @@ const page = () => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[420px] bg-primary/30 rounded-b-full blur-3xl" />
 
         {/* BIG TITLE */}
-        <h2 className="absolute top-28 left-1/2 -translate-x-1/2 font-jost font-bold text-[14vw] xl:text-8xl bg-gradient-to-b from-black/90 to-black/30 bg-clip-text text-transparent">
+        <h2 className="absolute top-36 left-1/2 -translate-x-1/2 font-jost font-bold text-[14vw] xl:text-8xl bg-gradient-to-b from-black/90 to-black/30 bg-clip-text text-transparent">
           CONTACT
         </h2>
 
@@ -49,7 +49,7 @@ const page = () => {
                   className="group bg-primary rounded-xl px-6 py-5 flex items-center gap-4 hover:shadow-md transition"
                 >
 
-                  <div className="h-11 w-11 rounded-lg bg-white flex items-center justify-center text-sec">
+                  <div className="h-11 w-11 rounded-lg bg-white flex items-center justify-center text-primary">
                     {item.icon}
                   </div>
 
@@ -91,7 +91,7 @@ const page = () => {
                 className="w-full px-4 py-3 rounded-lg border border-primary bg-white/40 outline-none resize-none"
               />
 
-              <button className="w-full h-12 bg-white rounded-lg font-medium hover:shadow transition">
+              <button className="w-full h-12 bg-white rounded-lg text-primary-dark font-medium hover:shadow transition">
                 Submit
               </button>
 

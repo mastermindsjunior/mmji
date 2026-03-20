@@ -121,7 +121,7 @@ const CoursePage = () => {
     <div className=' max-w-7xl mx-4 xl:mx-auto mt-6'>
 
             {/* Learn With Us */}
-        <h3 className="xl:text-5xl text-2xl font-semibold mb-4 text-black font-jost">
+        <h3 className="xl:text-5xl text-2xl font-semibold mb-4 text-primary-dark font-jost">
           Learn With Us – Start Your Digital Career
         </h3>
         <p className="text-black/75 text-lg mb-12">

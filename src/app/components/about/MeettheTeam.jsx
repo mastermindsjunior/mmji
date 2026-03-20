@@ -116,7 +116,7 @@ export const MeetTheTeamSection = () => (
     <div className="absolute inset-0 pointer-events-none" />
 
     <div className="container mx-auto px-6 relative z-10">
-      <h2 className="text-5xl font-bold text-center text-darker">
+      <h2 className="text-5xl font-bold text-center text-primary-dark">
         Meet the Growth Architects
       </h2>
       <p className="mt-4 max-w-2xl mx-auto text-center text-gray-700 leading-relaxed">

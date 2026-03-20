@@ -39,7 +39,7 @@ const AboutSection = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="font-jost text-2xl md:text-5xl font-bold mb-5 pb-2" style={{maskImage:'linear-gradient(135deg, black 60%, #00000077)'}}>
+          <h2 className="font-jost text-2xl md:text-5xl font-bold mb-5 pb-2 text-primary-dark" style={{maskImage:'linear-gradient(135deg, black 60%, #00000077)'}}>
             From Vision to Digital Legacy
           </h2>
 
