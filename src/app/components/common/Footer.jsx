@@ -107,7 +107,7 @@ const Footer = () => {
       </div>
 
       {/* bottom ambient glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60%] h-32 bg-blue-500 rounded-t-full blur-3xl opacity-20" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60%] h-32 bg-primary-dark rounded-t-full blur-3xl opacity-20" />
 
     </footer>
   )

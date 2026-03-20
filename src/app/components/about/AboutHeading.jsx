@@ -1,6 +1,7 @@
 import React from 'react';
 
 const AboutSection = () => {
+  const yearSince = new Date().getFullYear() - 2020;
   return (
     <section className="relative  text-black py-16 font-sfth">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 md:px-12 place-content-center items-center">
@@ -10,7 +11,7 @@ const AboutSection = () => {
           {/* Stat Card */}
           <div className="absolute -top-6 -left-8 bg-white rounded-xl xl:p-4 p-2
                           shadow-lg ring-2 ring-primary">
-            <div className=" xl:text-5xl text-2xl font-jost font-bold text-black">5+</div>
+            <div className=" xl:text-5xl text-2xl font-jost font-bold text-black">{yearSince}+</div>
             <div className="mt-1 font-sfbo xl:text-sm text-xs">
               Years of Experience  
             </div>
