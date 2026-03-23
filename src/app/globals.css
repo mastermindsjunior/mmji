@@ -59,3 +59,53 @@ body {
   box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.226);
   border-bottom: 2px solid rgba(255, 255, 255, 0.616);
 }
+
+
+.upDown {
+  /* Initial setup */
+  display: inline-block;
+  
+  /* Animation properties */
+  animation-name: upDown;
+  animation-duration: 3s;        /* Speed of the float */
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; /* Smooth transitions at the top/bottom */
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Moves up by 20 pixels */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.rocket {
+  display: inline-block;
+  font-size: 50px; /* Or use an SVG/Image */
+  
+  /* Animation properties */
+  animation: patrol 6s linear infinite;
+}
+
+@keyframes patrol {
+  0% {
+    transform: translateX(0) scaleX(1); /* Facing Right */
+  }
+  45% {
+    transform: translateX(300px) scaleX(1); /* Moving Right */
+  }
+  50% {
+    transform: translateX(300px) scaleX(-1); /* Flip to face Left */
+  }
+  95% {
+    transform: translateX(0) scaleX(-1); /* Moving Left */
+  }
+  100% {
+    transform: translateX(0) scaleX(1); /* Flip back to face Right */
+  }
+}

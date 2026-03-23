@@ -101,7 +101,7 @@ export default function Navbar() {
         {/* CTA Button (desktop) */}
         <div className="hidden lg:block space-x-2">
           <Link
-            href="/quote"
+            href="https://mmjlanding.onrender.com"
             className="px-6 py-2 bg-sec text-primary font-sfth rounded-full hover:opacity-90 transition-opacity"
           >
             Get a Quote

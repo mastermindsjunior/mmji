@@ -126,7 +126,8 @@ const ChandigarhPage = () => {
       </section>
 
       {/* WHY WORK WITH US */}
-      <section className=" py-16 bg-primary mx-auto px-6 mb-20">
+      <section className=" py-16 bg-primary mx-auto px-6 mb-20 relative">
+          <Image src={'/astro/2.png'} alt="astro" width={700} height={700} className=" size-20 object-contain object-center absolute -top-12 left-0 rocket"  />
 
         <h2 className="font-jost text-3xl font-bold mb-6 text-sec">
           Why Work With Us?

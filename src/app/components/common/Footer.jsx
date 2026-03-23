@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
+
 const Footer = () => {
   return (
     <footer className="relative w-full bg-gradient-to-br from-primary-dark to-primary text-white pt-20 pb-10 px-6 overflow-hidden">
@@ -10,7 +11,7 @@ const Footer = () => {
       {/* top glow line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-px bg-gradient-to-r from-transparent via-parimary to-transparent opacity-60" />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm relative">
 
         {/* BRAND */}
         <div className="space-y-4 text-center md:text-left">
@@ -96,6 +97,14 @@ const Footer = () => {
           </p>
 
         </div>
+
+          <Image
+            src="/astro/1.png"
+            width={700}
+            height={700}
+            alt="logo"
+            className="size-20  object-contain object-center absolute -bottom-4 2xl-right-8 right-0 upDown "
+          />
 
       </div>
 

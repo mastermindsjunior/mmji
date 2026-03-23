@@ -4,7 +4,7 @@ const page = () => {
   return (
     <main>
 
-      <section className="relative max-w-7xl mx-auto px-6 pt-56 pb-28">
+      <section className="relative max-w-7xl mx-auto px-6 pt-64 pb-28">
 
         {/* background glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[420px] bg-primary/30 rounded-b-full blur-3xl" />

@@ -127,7 +127,9 @@ const JaipurPage = () => {
       </section>
 
       {/* WHY CHOOSE US */}
-<section className=" flex justify-between items-center gap-4 bg-primary py-16 mx-auto px-6 mb-20">
+<section className=" flex justify-between items-center gap-4 bg-primary py-16 mx-auto px-6 mb-20 relative">
+          <Image src={'/astro/2.png'} alt="astro" width={700} height={700} className=" size-20 object-contain object-center absolute -top-12 left-0 rocket"  />
+
         <div className=" ">
 
         <h2 className="font-jost text-3xl font-bold mb-6 text-sec">

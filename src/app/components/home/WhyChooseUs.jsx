@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const WhyChooseUs = () => {
@@ -5,6 +6,7 @@ const WhyChooseUs = () => {
     <section className="w-full py-24 px-4 flex justify-center items-center">
 
       <div className="2xl:max-w-7xl max-w-6xl w-full relative">
+    <Image src={'/astro/2.png'} width={700} height={700} className=" size-20 object-contain object-center absolute -top-12 left-0 rocket"  />
 
         {/* glow */}
         <div className="absolute inset-0 bg- blur-3xl rounded-3xl -z-10" />
