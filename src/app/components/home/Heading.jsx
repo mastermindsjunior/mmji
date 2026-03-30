@@ -1,64 +1,103 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const Heading = () => {
-  // Sample data for the carousel slides
-  // Each slide has videoUrl, title, desc, and alignment ('left', 'center', 'right')
-  const slides = [
+  const container = useRef(null);
+  
+  // The constant background video
+  const videoUrl = '/mmj home page.mp4';
+
+  const textSlides = [
     {
-      videoUrl: '/vid/home-banner.mp4',
-      // title: 'Building Your Brand’s Future in the Digital Universe',
-      title: '',
-      // desc: 'Next-gen solutions for next-level success.',
-      desc: '',
-      alignment: 'center',
+      title: 'Welcome to MasterMinds Junior',
+      desc: 'Building Your Brand’s Future',
+    },
+    {
+      title: 'Global Reach, Local Stronghold',
+      desc: 'We are the best digital marketing agency for startups and growing businesses across India.',
+    },
+    {
+      title: 'Visionary Leadership',
+      desc: 'A testament to what’s possible when leadership meets relentless passion.',
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Autoplay functionality
+  // Cycle through text every 4.5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 3000); // Change slide every 3 seconds
+      setCurrentIndex((prev) => (prev + 1) % textSlides.length);
+    }, 4500);
+    return () => clearInterval(interval);
+  }, [textSlides.length]);
 
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, [slides.length]);
+  useGSAP(() => {
+    const tl = gsap.timeline();
 
-  // h-[600px]
+    // 1. Reset state (invisible and shifted down)
+    gsap.set(".animate-item", { 
+      y: 40, 
+      opacity: 0, 
+      filter: 'blur(10px)' 
+    });
+
+    // 2. Entrance Animation
+    tl.to(".animate-item", {
+      y: 0,
+      opacity: 1,
+      filter: 'blur(0px)',
+      duration: 1.2,
+      stagger: 0.2,
+      ease: "power4.out",
+    })
+    // 3. Wait and then Exit Animation (occurs right before next state change)
+    .to(".animate-item", {
+      y: -20,
+      opacity: 0,
+      filter: 'blur(5px)',
+      duration: 0.8,
+      delay: 2.2, // Time text stays still
+      ease: "power2.in"
+    });
+
+  }, { scope: container, dependencies: [currentIndex] });
+
   return (
-    <section className="relative w-full h-dvh  overflow-hidden">
+    <section ref={container} className="relative w-full h-dvh overflow-hidden bg-black">
+      
+      {/* Constant Background Video - Only one instance */}
+      <video
+        src={videoUrl}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover object-bottom transition-opacity duration-1000"
+      />
+      
+      {/* Darker Overlay for Text Contrast */}
+      <div className="absolute inset-0 bg-black/30" />
 
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${
-            index === currentIndex ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <video
-            src={slide.videoUrl}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover object-bottom"
-          />
-          <div
-            className={`absolute top-1/2 -translate-y-1/2 xl:p-5 p-2 text-black  xl:w-[75%] w-[90%] 
-              ${slide.alignment === 'left' ? 'left-5 text-left' : ''}
-              ${slide.alignment === 'center' ? 'left-1/2 -translate-x-1/2 text-center' : ''}
-              ${slide.alignment === 'right' ? 'right-5 text-right' : ''}
-            `}
-          >
-            <p className='font-jost text-base text-black/80'>{slide.desc}</p>
-            <h2 className="my-4 font-jost font-bold text-[#001942] xl:text-6xl text-2xl pb-2">{slide.title}</h2>
-            {/* <button className=' bg-transparent border border-[#0556D8]/50 px-4 py-2 rounded-full font-jost font-light text-black hover:bg-white hover:text-dark transition-all duration-300 ease-in'>Learn More</button> */}
-          </div>
+      {/* Animated Text Container */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="xl:w-[75%] w-[90%] text-center px-4">
+          
+          <p className="animate-item font-jost text-white/90 text-lg md:text-2xl uppercase tracking-widest mb-4">
+            {textSlides[currentIndex].desc}
+          </p>
+          
+          <h2 className="animate-item font-jost font-bold text-white xl:text-8xl text-4xl leading-tight">
+            {textSlides[currentIndex].title}
+          </h2>
+
+          <div className="animate-item mt-8 h-1 w-24 bg-primary mx-auto rounded-full" />
         </div>
-      ))}
+      </div>
+
     </section>
   );
 };

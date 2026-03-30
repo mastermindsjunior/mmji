@@ -52,7 +52,7 @@ export default function Navbar() {
         scrolled ? 'bg-primary' : 'bg-primary/80'
       } backdrop-blur-md`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 py-1">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image

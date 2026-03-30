@@ -19,10 +19,10 @@ const HomeAboutSection = () => {
   }, []);
 
   return (
-    <section className='w-full h-auto xl:p-12 p-4 xl:py-0 py-0 flex justify-center items-center'>
+    <section className='w-full h-auto xl:p-12 p-4 py-4 flex justify-center items-center'>
       <div 
         style={{boxShadow:'0 20px 40px rgba(0,0,0,0.08)'}} 
-        className={`rounded-[2rem] xl:p-10 p-0 ${scrolled ? "xl:pt-10 p-6" : "xl:pt-4 pt-4"} transition-all duration-500 ease-out 2xl:pb-20 pb-10 2xl:-translate-y-[6rem] xl:-translate-y-[5rem] -translate-y-[6rem] bg-primary border border-white/50 w-full relative overflow-hidden flex flex-col gap-14 text-center justify-between items-center backdrop-blur-sm`}
+        className={`rounded-[2rem] xl:pt-10 p-6 transition-all duration-500 ease-out 2xl:pb-20 pb-10 bg-primary border border-white/50 w-full relative overflow-hidden flex flex-col gap-14 text-center justify-between items-center backdrop-blur-sm`}
       >
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.4),transparent_50%)]" />
