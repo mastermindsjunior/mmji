@@ -117,7 +117,7 @@ export default function Navbar() {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setOpen((o) => !o)}
-          className="lg:hidden p-2 rounded-md text-black hover:bg-white/20 transition"
+          className="lg:hidden p-2 rounded-md text-sec hover:bg-white/20 transition"
         >
           {open ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
         </button>
@@ -125,8 +125,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="lg:hidden bg-black/80 backdrop-blur-md">
-          <nav className="flex flex-col space-y-4 px-6 py-6 font-jost text-black">
+        <div className="lg:hidden bg-primary backdrop-blur-md">
+          <nav className="flex flex-col space-y-4 px-6 py-6 font-jost text-sec">
             {links.map((link) =>
               link.children ? (
                 <div key={link.label}>
@@ -169,13 +169,13 @@ export default function Navbar() {
             )}
             <Link
               href="/quote"
-              className="mt-2 inline-block px-6 py-2 bg-primary text-sec font-jost rounded-full hover:opacity-90 transition-opacity"
+              className="mt-2 inline-block px-6 py-2 bg-sec text-primary font-jost rounded-full hover:opacity-90 transition-opacity"
             >
               Get a Quote
             </Link>
             <Link
               href="/contact"
-              className="mt-2 inline-block px-6 py-2 bg-primary text-sec font-jost rounded-full hover:opacity-90 transition-opacity"
+              className="mt-2 inline-block px-6 py-2 bg-sec text-primary font-jost rounded-full hover:opacity-90 transition-opacity"
             >
               Contact Us
             </Link>
