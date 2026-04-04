@@ -113,6 +113,7 @@ const CoursePage = () => {
         toast.error('Failed to send application.');
       }
     };
+
   return (
     <>
           <Banner title="Courses at" sub="MMJ" />
@@ -197,7 +198,7 @@ const CoursePage = () => {
               </select>
             </div>
 
-            {/* <div>
+            <div>
               <label htmlFor="resume" className="block mb-2 text-white/75">
                 Resume
               </label>
@@ -209,7 +210,7 @@ const CoursePage = () => {
                 required
                 className="w-full bg-[#111]/5 border border-primary-dark rounded-full px-4 py-2 text-white"
               />
-            </div> */}
+            </div>
 
             <div>
               <label htmlFor="note" className="block mb-2 text-white/75">

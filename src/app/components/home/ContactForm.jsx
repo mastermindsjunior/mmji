@@ -1,52 +1,56 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import React, { useState } from 'react'
+import Image from "next/image";
+import React, { useState } from "react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    service: '',
-    message: '',
-  })
+    name: "",
+    email: "",
+    service: "",
+    message: "",
+  });
 
-  const [status, setStatus] = useState('')
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
-    const { id, value } = e.target
-    setFormData((prev) => ({ ...prev, [id]: value }))
-  }
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setStatus('Sending...')
+    e.preventDefault();
+    setStatus("Sending...");
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      setStatus('Message sent!')
-      setFormData({ name: '', email: '', service: '', message: '' })
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message);
+      setStatus("Message sent!");
+      setFormData({ name: "", email: "", service: "", message: "" });
     } catch {
-      setStatus('Failed.')
+      setStatus("Failed.");
     }
-  }
+  };
 
   return (
     <section className=" py-28 px-6">
-
       <h3 className="font-jost text-primary text-4xl md:text-5xl font-bold mb-5">
         Let’s Build Something Extraordinary
       </h3>
 
       <p className="font-jost text-primary/90 mb-10 max-w-2xl">
-        At MasterMinds Junior, we’re not just creating digital assets—we’re building business success stories.
+        At MasterMinds Junior, we’re not just creating digital assets—we’re
+        building business success stories.
       </p>
 
       <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden grid xl:grid-cols-2">
-
         {/* LEFT PANEL */}
         <div className="bg-primary text-white p-12 flex flex-col justify-between">
-
           <Image
             src="/contact.png"
             alt="digital marketing"
@@ -60,18 +64,13 @@ const ContactForm = () => {
             <span>LinkedIn</span>
             <span>Twitter</span>
           </div>
-
         </div>
 
         {/* RIGHT FORM */}
         <div className="p-12 text-slate-900 flex flex-col w-full justify-center">
-
-          <h4 className="text-xl font-semibold mb-6">
-            Get in touch
-          </h4>
+          <h4 className="text-xl font-semibold mb-6">Get in touch</h4>
 
           <form onSubmit={handleSubmit} className="space-y-5 w-full">
-
             <input
               id="name"
               value={formData.name}
@@ -101,10 +100,16 @@ const ContactForm = () => {
             >
               <option value="">Select service</option>
               <option value="Web Development">Web Development</option>
-              <option value="Social Media Management">Social Media Management</option>
+              <option value="Social Media Management">
+                Social Media Management
+              </option>
               <option value="App development">App Development</option>
-              <option value="Search Engine Optimization">Search Engine Optimization</option>
-              <option value="Graphic & Logo Designing">Graphic & Logo Designing</option>
+              <option value="Search Engine Optimization">
+                Search Engine Optimization
+              </option>
+              <option value="Graphic & Logo Designing">
+                Graphic & Logo Designing
+              </option>
               <option value="Content Writing">Content Writing</option>
               <option value="Google & Meta Ads">Google & Meta Ads</option>
             </select>
@@ -127,19 +132,13 @@ const ContactForm = () => {
             </button>
 
             {status && (
-              <p className="text-sm text-gray-500 text-center">
-                {status}
-              </p>
+              <p className="text-sm text-gray-500 text-center">{status}</p>
             )}
-
           </form>
-
         </div>
-
       </div>
-
     </section>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;
