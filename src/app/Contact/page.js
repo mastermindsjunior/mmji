@@ -33,10 +33,12 @@ const page = () => {
               {[{
                 title: 'Email us',
                 value: 'marketing@mastermindsjunior.com',
+                link:"mailto:marketing@mastermindsjunior.com",
                 icon: <MailIcon />
               },{
                 title: 'Call us',
                 value: '9423526131',
+                link:"tel:9423526131",
                 icon: <PhoneIcon />
               },{
                 title: 'Our Location',
@@ -55,7 +57,13 @@ const page = () => {
 
                   <div className="flex-1">
                     <p className="font-jost text-lg text-slate-200">{item.title}</p>
-                    <p className="text-sm text-sec/70">{item.value}</p>
+                    <p className="text-sm text-sec/70">
+                    {item.link ?
+                    <a href={item.link}>{item.value}</a>
+                    :
+                    item.value
+                    }
+                    </p>
                   </div>
 
                   <ArrowUpRight className="opacity-40 group-hover:opacity-100 transition" />
