@@ -32,11 +32,11 @@ const page = () => {
 
               {[{
                 title: 'Email us',
-                value: 'admin@mastermindsjunior.com',
+                value: 'marketing@mastermindsjunior.com',
                 icon: <MailIcon />
               },{
                 title: 'Call us',
-                value: '9999999999',
+                value: '9423526131',
                 icon: <PhoneIcon />
               },{
                 title: 'Our Location',

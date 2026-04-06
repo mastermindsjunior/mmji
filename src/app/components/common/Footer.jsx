@@ -89,8 +89,8 @@ const Footer = () => {
 
           <h4 className="font-semibold text-base mb-3">Contact</h4>
 
-          <p className="text-white/60">admin@mastermindsjunior.com</p>
-          <p className="text-white/60">+1 234 567 8901</p>
+          <p className="text-white/60">marketing@mastermindsjunior.com</p>
+          <p className="text-white/60">9423526131</p>
 
           <p className="text-white/60 text-xs leading-relaxed">
             1st Floor, Unit#105, near VPM Classes, Mansarovar, Jaipur, Rajasthan 302020
