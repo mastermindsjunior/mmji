@@ -19,7 +19,7 @@ const page = () => {
     <AboutSection/>
     <TimelineSection/>
     <MissionValuesSection/>
-    <MeetTheTeamSection/>
+    {/* <MeetTheTeamSection/> */}
     {/* <Stats /> */}
     {/* <WhyChooseUs/> */}
     {/* <HistorySection/> */}

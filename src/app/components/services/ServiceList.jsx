@@ -27,13 +27,13 @@ const servicesRow1 = [
 ]
 const servicesRow2 = [
 
-  {
-    title: "Logo Designing",
-    num:4,
-    heading:"Crafting Logos That Speak for Your Brand",
-    description:
-      " We design distinctive, timeless logos that serve as the cornerstone of your brand identity. Our creative process ensures each design communicates your brand’s values with clarity and character.",
-  },
+{
+  title: "Branding",
+  num: 4,
+  heading: "Building Brands That Leave a Lasting Impression",
+  description:
+    "We create cohesive brand identities that go beyond logos, including visual identity, brand strategy, color palettes, typography, and brand guidelines. Our branding solutions ensure your business stands out with a consistent and memorable presence across every touchpoint.",
+},
     {
     title: "App Development",
     num:5,
@@ -45,13 +45,13 @@ const servicesRow2 = [
 
 const servicesRow3 = [
 
-  {
-    title: "Graphic Designing",
-    num:6,
-    heading:'Visual Designs That Tell Your Story',
-    description:
-      "From captivating visuals to cohesive branding elements, our graphic design services bring your narrative to life. Every piece is carefully crafted to engage your audience and strengthen brand recall",
-  },
+{
+  title: "Graphic & Logo Designing",
+  num: 6,
+  heading: "Visual Designs That Tell Your Story",
+  description:
+    "Create a visual identity that resonates with your audience and strengthens your brand presence. Our expert graphic and logo designers in India craft unique, visually appealing designs that combine creativity with purpose, ensuring your brand stands out across digital and print platforms while leaving a lasting impression.",
+},
       {
     title: "Content Writing",
     num:7,

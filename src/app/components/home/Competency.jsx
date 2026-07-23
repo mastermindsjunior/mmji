@@ -7,6 +7,7 @@ import {
   Image,
   FileText,
   ArrowRight,
+  Palette,
 } from 'lucide-react';
 
 const CoreCompetencies = () => {
@@ -59,6 +60,13 @@ const CoreCompetencies = () => {
         'Engage the right audience through Google Ads and Meta Ads management, optimizing every rupee spent.',
       Icon: Megaphone,
       gradient: 'from-primary to-primary-dark',
+    },
+        {
+      title: "Branding",
+      description:
+        "Build a powerful and memorable brand identity with strategic branding solutions. From brand strategy and visual identity to brand guidelines.",
+      Icon: Palette,
+      gradient: "from-primary to-primary-dark",
     },
   ];
 
