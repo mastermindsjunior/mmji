@@ -69,7 +69,7 @@ export default function Navbar() {
           {links.map((link) =>
             link.children ? (
               <div key={link.label} className="relative group">
-                <button className="flex items-center px-1 text-lg hover:text-primary transition-colors">
+                <button className="flex items-center px-1 text-lg hover:text-amber-100 transition-colors">
                   {link.label}
                   <ChevronDownIcon className="w-4 h-4 ml-1" />
                 </button>
@@ -105,12 +105,6 @@ export default function Navbar() {
             className="px-6 py-2 bg-sec text-primary font-sfth rounded-full hover:opacity-90 transition-opacity"
           >
             Get a Quote
-          </Link>
-          <Link
-            href="/contact"
-            className="px-6 py-2 bg-sec text-primary font-sfth rounded-full hover:opacity-90 transition-opacity"
-          >
-            Contact Us
           </Link>
         </div>
 
