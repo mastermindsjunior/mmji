@@ -30,6 +30,7 @@ export default function Navbar() {
         { label: 'Nashik', href: '/nashik' },
         { label: 'Chandigarh', href: '/chandigarh' },
         { label: 'Mumbai', href: '/mumbai' },
+        { label: 'Pune', href: '/pune' },
         { label: 'Delhi', href: '/delhi' },
         { label: 'Hyderabad', href: '/hyderabad' },
         { label: 'Bengaluru', href: '/bengaluru' },

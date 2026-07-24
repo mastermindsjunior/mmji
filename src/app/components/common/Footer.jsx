@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from 'lucide-react'
+import { Facebook, Instagram, Linkedin } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -38,6 +38,10 @@ const Footer = () => {
               <Facebook className="w-5 h-5 text-white/70 hover:text-white transition" />
             </Link>
 
+            <Link href="https://www.linkedin.com/company/76493188/">
+              <Linkedin className="w-5 h-5 text-white/70 hover:text-white transition" />
+            </Link>
+
           </div>
 
         </div>
@@ -69,6 +73,7 @@ const Footer = () => {
             {label:'Nashik',link:"/nashik"},
             {label:'Chandigarh',link:"/chandigarh"},
             { label: 'Mumbai', link: '/mumbai' },
+            { label: 'Pune', link: '/pune' },
             { label: 'Delhi', link: '/delhi' },
             { label: 'Hyderabad', link: '/hyderabad' },
             { label: 'Bengaluru', link: '/bengaluru' },
@@ -89,7 +94,7 @@ const Footer = () => {
 
           <h4 className="font-semibold text-base mb-3">Contact</h4>
 
-          <p className="text-white/60"><a href="mailto:marketing@mastermindsjunior.com">marketing@mastermindsjunior.com</a></p>
+          <p className="text-white/60"><a href="mailto:marketing@mastermindsjuniorindia.com">marketing@mastermindsjuniorindia.com</a></p>
           <p className="text-white/60"><a href="tel:9423526131">9423526131</a></p>
 
           <p className="text-white/60 text-xs leading-relaxed">

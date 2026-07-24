@@ -14,7 +14,7 @@ export async function POST(request) {
 
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
-      to: 'marketing@mastermindsjunior.com',
+      to: 'marketing@mastermindsjuniorindia.com',
     //   to: 'ayush.patel.code@gmail.com',
       subject: `New Contact Form Message — ${service || 'General'}`,
       html: `

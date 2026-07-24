@@ -32,8 +32,8 @@ const page = () => {
 
               {[{
                 title: 'Email us',
-                value: 'marketing@mastermindsjunior.com',
-                link:"mailto:marketing@mastermindsjunior.com",
+                value: 'marketing@mastermindsjuniorindia.com',
+                link:"mailto:marketing@mastermindsjuniorindia.com",
                 icon: <MailIcon />
               },{
                 title: 'Call us',

@@ -1,117 +1,36 @@
-// pages/index.jsx
-import Image from 'next/image'
-import { Scroll, ArrowRight } from 'lucide-react'
+import Link from 'next/link';
+import { services } from '../../data/services';
 
-const servicesRow1 = [
-    {
-    title: "Social Media Management",
-    num:1,
-    heading:"Amplify Your Brand’s Voice Across Social Channels",
-    description:
-      "We craft and manage compelling social media campaigns that foster community, visibility, and increase engagement. Our data-backed strategies ensure your brand relevant and resonant in a dynamic digital landscape.",
-  },
-  {
-    title: "SEO Optimization",
-    num:2,
-    heading:"Rise to the Top with SEO",
-    description:
-      "That Works Achieve greater visibility and authority online with our sophisticated SEO techniques. We enhance your digital footprint through strategic keyword targeting, optimized content architecture, and sustainable ranking improvements.",
-  },
-    {
-    title: "Web Development",
-    num:3,
-    heading:"Bringing Your Digital Presence to Life",
-    description:
-      " Our websites blend aesthetic finesse with functional excellence. Each site is custom-developed to reflect your brand’s ethos, engage users effortlessly, and convert visitors into loyal customers.",
-  },
-]
-const servicesRow2 = [
+const row1Slugs = ['social-media-marketing', 'seo-optimization', 'web-development'];
+const row2Slugs = ['branding', 'app-development'];
+const row3Slugs = ['graphic-logo-designing', 'content-writing', 'google-meta-ads'];
 
-{
-  title: "Branding",
-  num: 4,
-  heading: "Building Brands That Leave a Lasting Impression",
-  description:
-    "We create cohesive brand identities that go beyond logos, including visual identity, brand strategy, color palettes, typography, and brand guidelines. Our branding solutions ensure your business stands out with a consistent and memorable presence across every touchpoint.",
-},
-    {
-    title: "App Development",
-    num:5,
-    heading:'Innovative Apps Tailored to Your Needs',
-    description:
-      "We build intuitive, scalable mobile applications that deliver an exceptional user experience- our apps are engineered for performance, security, and growth.",
-  },
-];
+function bySlug(slug) {
+  return services.find((s) => s.slug === slug);
+}
 
-const servicesRow3 = [
-
-{
-  title: "Graphic & Logo Designing",
-  num: 6,
-  heading: "Visual Designs That Tell Your Story",
-  description:
-    "Create a visual identity that resonates with your audience and strengthens your brand presence. Our expert graphic and logo designers in India craft unique, visually appealing designs that combine creativity with purpose, ensuring your brand stands out across digital and print platforms while leaving a lasting impression.",
-},
-      {
-    title: "Content Writing",
-    num:7,
-    heading:'Compelling Content That Captures & Converts',
-    description:
-      "Our content specialists create articulate, persuasive copy tailored to your audience and objectives. From web content to digital campaigns, we deliver language that inspires action.",
-  },
-  {
-    title: "Google & Meta Ads",
-    num:9,
-    heading:'Targeted Advertising with Measurable Results',
-    description:
-      "Maximize your ROI with precision-targeted ad campaigns on Google and Meta (Facebook & Instagram). We strategize, design, and optimize ads to capture attention, drive conversions, and enhance your online impact with tangible outcomes.",
-  },
-]
+const servicesRow1 = row1Slugs.map(bySlug);
+const servicesRow2 = row2Slugs.map(bySlug);
+const servicesRow3 = row3Slugs.map(bySlug);
 
 function ServiceCard({ service, index }) {
-  const number = (service.num).toString().padStart(2, "0")
-
-  // const imageBlock = (
-  //   <div className="p-4">
-  //     <div className="relative h-48 w-full rounded-md overflow-hidden">
-  //       <Image
-  //         src="/heading.jpg"
-  //         alt={service.title}
-  //         layout="fill"
-  //         objectFit="cover"
-  //         className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-300"
-  //       />
-  //       {/* dark overlay on image */}
-  //       <div className="absolute inset-0 bg-gradient-to-t from-[#111]/70 to-transparent" />
-  //     </div>
-  //   </div>
-  // )
+  const number = service.num.toString().padStart(2, '0');
 
   return (
     <div
-      className={` group flex flex-col  rounded-2xl  overflow-hidden bg-gradient-to-br from-primary to-primary-dark shadow-lg  hover:shadow-2xl  transform hover:-translate-y-2  transition-all duration-300  `}
+      className="group flex flex-col rounded-2xl overflow-hidden bg-gradient-to-br from-primary to-primary-dark shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
     >
-      {/* {index % 2 === 1 && imageBlock} */}
-
-      {/* header */}
       <div className="flex items-center p-6">
-        {/* <Scroll className="w-6 h-6 text-[#111] flex-shrink-0" /> */}
         <h3 className="xl:text-3xl text-2xl font-jost font-semibold text-sec">
           {service.title}
         </h3>
-        {/* masked big number */}
         <span
-          className="
-            ml-auto xl:text-6xl text-4xl font-bold 
-            bg-clip-text text-transparent 
-            bg-gradient-to-br from-sec to-white
-          "
+          className="ml-auto xl:text-6xl text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-sec to-white"
         >
           {number}
         </span>
       </div>
 
-      {/* body */}
       <div className="px-6 flex-1 flex flex-col">
         <h4 className="xl:text-lg text-base font-jost font-medium text-white">
           {service.heading}
@@ -119,36 +38,37 @@ function ServiceCard({ service, index }) {
         <p className="mt-4 flex-1 text-grey-200 font-sfth">
           {service.description}
         </p>
-        <button className={`my-4 mt-6 inline-flex justify-center items-center ${index % 2 === 1 ? " text-black" : " text-black"}  bg-white rounded-full w-full py-2 px-4 font-medium text-center font-jost `}>
+        <Link
+          href={`/Services/${service.slug}`}
+          className={`my-4 mt-6 inline-flex justify-center items-center ${index % 2 === 1 ? ' text-black' : ' text-black'} bg-white rounded-full w-full py-2 px-4 font-medium text-center font-jost hover:bg-sec transition-colors`}
+        >
           Read More
-        </button>
+        </Link>
       </div>
-
-      {/* {index % 2 === 0 && imageBlock} */}
     </div>
-  )
+  );
 }
 
 export default function ServiceList() {
   return (
-    <section className=" py-16 min-h-screen">
-      <div className=" max-w-6xl mx-auto px-4">
+    <section className="py-16 min-h-screen">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {servicesRow1.map((svc, i) => (
-            <ServiceCard key={i} service={svc} index={i} />
+            <ServiceCard key={svc.slug} service={svc} index={i} />
           ))}
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-3">
           {servicesRow2.map((svc, i) => (
-            <ServiceCard key={i} service={svc} index={i} />
+            <ServiceCard key={svc.slug} service={svc} index={i} />
           ))}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-3">
           {servicesRow3.map((svc, i) => (
-            <ServiceCard key={i} service={svc} index={i+1} />
+            <ServiceCard key={svc.slug} service={svc} index={i + 1} />
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
