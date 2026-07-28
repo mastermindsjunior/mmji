@@ -51,7 +51,7 @@ const HomeAboutSection = () => {
 
           <div className='w-full flex flex-wrap justify-center items-center gap-4 relative z-10'>
 
-            <Link href='/about'>
+            <Link href='/About'>
               <button 
                 className='bg-white/80 backdrop-blur-sm text-primary rounded-full p-1 group/buttonCTA flex justify-between items-center 2xl:h-12 h-10 gap-4 font-sfbo cursor-pointer hover:bg-white hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 ease-out border border-gray-200/50' 
                 style={{boxShadow:'0px 4px 12px rgba(0,0,0,0.08)'}}
