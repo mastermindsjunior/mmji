@@ -168,12 +168,6 @@ export default function Navbar() {
             >
               Get a Quote
             </Link>
-            <Link
-              href="/contact"
-              className="mt-2 inline-block px-6 py-2 bg-sec text-primary font-jost rounded-full hover:opacity-90 transition-opacity"
-            >
-              Contact Us
-            </Link>
           </nav>
         </div>
       )}

@@ -47,51 +47,109 @@ const milestones = [
       'Advancing with purpose, precision, and performance.',
     ],
   },
+  {
+    year: '2026 - Building the Future',
+    points: [
+      'Strengthening global partnerships and market presence.',
+      'Innovating new solutions to drive lasting client impact.',
+    ],
+  },
 ];
+
+const XL_BREAKPOINT = 1280;
 
 export default function OurStorySection() {
   const rocketRef = useRef(null);
-  const containerRef = useRef(null);
+  const trackRef = useRef(null);
+  const scrollRef = useRef(null);
 
   useEffect(() => {
-    // 1. Grab all the dots we created in the loop
-    const dots = containerRef.current.querySelectorAll('.milestone-dot');
+    const track = trackRef.current;
+    const scrollEl = scrollRef.current;
     const rocket = rocketRef.current;
 
-    if (!dots.length || !rocket) return;
+    if (!track || !rocket || !scrollEl) return;
 
-    // 2. Create a GSAP Timeline
+    const dots = track.querySelectorAll('.milestone-dot');
+    if (!dots.length) return;
+
     const tl = gsap.timeline({ repeat: -1 });
 
-    dots.forEach((dot, index) => {
-      // Calculate the X position of the dot relative to the container
+    const getTargetX = (dot) => {
       const dotRect = dot.getBoundingClientRect();
-      const containerRect = containerRef.current.getBoundingClientRect();
-      
-      // Calculate center: (Dot Left - Container Left) - (Rocket Width / 2) + (Dot Width / 2)
-      const targetX = (dotRect.left - containerRect.left) - ((rocket.offsetWidth) + (dotRect.width/2));
+      const trackRect = track.getBoundingClientRect();
+      // Content-space X so positions stay correct even when the track is scrolled
+      return (
+        dotRect.left -
+        trackRect.left +
+        scrollEl.scrollLeft -
+        (rocket.offsetWidth / 2.5 + dotRect.width / 2)
+      );
+    };
 
-      tl.to(rocket, {
-        x: targetX,
-        duration: 2,
-        ease: "power2.inOut",
-      })
-      .to(rocket, {
-        // Optional: Add a little "wobble" while it pauses
-        y: "-=5", 
-        repeat: 1, 
-        yoyo: true, 
-        duration: 0.5 
-      }, "+=0") 
-      .to({}, { duration: 1.5 }); // This is our 1.5 second pause at each dot
-    });
+    const keepRocketInView = () => {
+      if (window.innerWidth < XL_BREAKPOINT) return;
 
-    return () => tl.kill(); // Cleanup on unmount
+      const x = Number(gsap.getProperty(rocket, 'x')) || 0;
+      const rocketCenter = x + rocket.offsetWidth / 2;
+      const maxScroll = scrollEl.scrollWidth - scrollEl.clientWidth;
+      if (maxScroll <= 0) return;
+
+      const desired = rocketCenter - scrollEl.clientWidth / 2;
+      scrollEl.scrollLeft = Math.min(maxScroll, Math.max(0, desired));
+    };
+
+    const buildTimeline = () => {
+      tl.clear();
+      scrollEl.scrollLeft = 0;
+      gsap.set(rocket, { x: 0, y: 0 });
+
+      // Only animate horizontally when the timeline is in row layout
+      if (window.innerWidth < XL_BREAKPOINT) return;
+
+      dots.forEach((dot) => {
+        const targetX = getTargetX(dot);
+
+        tl.to(rocket, {
+          x: targetX,
+          duration: 2,
+          ease: 'power2.inOut',
+          onUpdate: keepRocketInView,
+        })
+          .to(
+            rocket,
+            {
+              y: '-=5',
+              repeat: 1,
+              yoyo: true,
+              duration: 0.5,
+            },
+            '+=0'
+          )
+          .to({}, { duration: 1.5 });
+      });
+    };
+
+    buildTimeline();
+
+    let resizeTimer;
+    const onResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(buildTimeline, 150);
+    };
+
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      clearTimeout(resizeTimer);
+      tl.kill();
+      window.removeEventListener('resize', onResize);
+    };
   }, []);
 
   return (
     <section className="relative py-16 bg-primary-dark text-sec font-sfth">
-      <div className=" w-full mx-auto px-6 lg:px-8" ref={containerRef}>
+      <div className="w-full mx-auto px-6 lg:px-8">
         {/* Heading */}
         <h2 className="text-center text-3xl md:text-4xl font-jost font-semibold mb-6">
           <span className="text-white">Milestones That Define</span>{' '}
@@ -99,29 +157,39 @@ export default function OurStorySection() {
           <span className="text-gray-400">.</span>
         </h2>
 
-        {/* Timeline */}
-        <div className="relative mt-12">
-          {/* Horizontal line */}
-          <div className="absolute top-8 xl:left-0 left-8 xl:right-0 xl:h-0.5 h-full xl:w-full w-0.5  bg-gray-700" />
+        {/* Timeline — scrollable on xl+ so extra years fit without clipping */}
+        <div
+          ref={scrollRef}
+          className="relative mt-12 overflow-x-auto overflow-y-visible pb-4 pt-4 [scrollbar-width:thin] [scrollbar-color:var(--color-sec)_#1f2937] [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-800 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-sec/70"
+        >
+          <div ref={trackRef} className="relative xl:min-w-max xl:w-max w-full">
+            {/* Horizontal / vertical line — spans full track width */}
+            <div className="absolute top-8 xl:left-4 left-8 xl:right-4 xl:h-0.5 h-full xl:w-auto w-0.5 bg-gray-700" />
 
-{/* The Rocket */}
-          <div 
-            ref={rocketRef} 
-            className="absolute z-20 pointer-events-none"
-            style={{ top: '-10px' }} // Adjust based on your line height
-          >
-            <Image src={'/astro/4.png'} width={60} height={60} alt="rocket" className="w-12 h-12 object-contain -scale-x-100" />
-          </div>
-          {/* Dots + cards */}
-          <div className="relative pt-8 overflow-hidden">
-            <div className="flex xl:flex-row flex-col xl:items-start items-end justify-between min-w-max px-4 2xl:space-x-8 xl:space-x-4 ">
-                        {milestones.map(({ year, points }, i) => (
+            {/* Rocket travels in track space so it stays aligned with dots while scrolling */}
+            <div
+              ref={rocketRef}
+              className="absolute z-20 pointer-events-none hidden xl:block"
+              style={{ top: '-10px', left: 0 }}
+            >
+              <Image
+                src="/astro/4.png"
+                width={60}
+                height={60}
+                alt="rocket"
+                className="w-12 h-12 object-contain -scale-x-100"
+              />
+            </div>
+
+            {/* Dots + cards */}
+            <div className="relative pt-8 flex xl:flex-row flex-col xl:items-start items-end xl:justify-start justify-between xl:gap-8 2xl:gap-10 px-4">
+              {milestones.map(({ year, points }) => (
                 <div
-                  key={1}
+                  key={year}
                   className="flex-shrink-0 flex xl:flex-col flex-row items-center 2xl:w-56 xl:w-48 w-[300px] xl:mr-0 mr-4 pb-2"
                 >
                   {/* Dot */}
-                  <div className={` milestone-dot relative z-10 w-3 h-3 shrink-0 xl:-translate-y-1 xl:translate-x-0 -translate-x-[5px] bg-sec d-full border-2 border-gray-800 dot-${year} `} />
+                  <div className="milestone-dot relative z-10 w-3 h-3 shrink-0 xl:-translate-y-1 xl:translate-x-0 -translate-x-[5px] bg-sec rounded-full border-2 border-gray-800" />
 
                   {/* Connector line */}
                   <div className="xl:w-px w-8 xl:h-8 h-px bg-gray-700 xl:mt-1 mt-0 xl:ml-0 ml-1" />
@@ -129,11 +197,11 @@ export default function OurStorySection() {
                   {/* Card */}
                   <div className="mt-4 bg-primary p-4 rounded-lg shadow shadow-sec hover:scale-105 hover:-translate-y-2 transition-all duration-300 ease-in-out text-center">
                     <h3 className="text-xl font-jost font-bold text-sec">
-                      {year.split("-").map((text, i) => (
-                        <>
-                        <span key={i}>{text}</span>
-                        {i < 1 && <br/>}
-                        </>
+                      {year.split('-').map((text, i) => (
+                        <React.Fragment key={i}>
+                          <span>{text.trim()}</span>
+                          {i < 1 && <br />}
+                        </React.Fragment>
                       ))}
                     </h3>
                     <ul className="mt-2 font-jost text-sm text-gray-300 space-y-2">
