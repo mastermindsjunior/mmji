@@ -11,6 +11,7 @@ import localFont from "next/font/local";
 import Footer from "./components/common/Footer";
 import Navbar from "./components/common/Navbar_2";
 import "./globals.css";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -75,6 +76,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${robo.variable} ${albert.variable} ${sfThin.variable} ${sfBold.variable} ${jost.variable} ${alumini.variable} ${sand.variable} heading-albert antialiased bg-sec `}
       >
+      <GoogleTagManager gtmId="G-CEV90C3B4G" />
+      <GoogleAnalytics gaId="G-CEV90C3B4G" />
         {/* <NavBar/> */}
         <Navbar />
         {children}
@@ -84,11 +87,7 @@ export default function RootLayout({ children }) {
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-CEV90C3B4G"
       ></script>
-      <script>
-        window.dataLayer = window.dataLayer || []; function gtag()
-        {dataLayer.push(arguments)}
-        gtag('js', new Date()); gtag('config', 'G-CEV90C3B4G');
-      </script>
+
     </html>
   );
 }
