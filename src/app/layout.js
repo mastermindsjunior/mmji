@@ -1,9 +1,16 @@
-import { Albert_Sans, Alumni_Sans_Pinstripe, Geist, Geist_Mono, Jost, Quicksand, Roboto_Flex } from "next/font/google";
-import localFont from 'next/font/local';
+import {
+  Albert_Sans,
+  Alumni_Sans_Pinstripe,
+  Geist,
+  Geist_Mono,
+  Jost,
+  Quicksand,
+  Roboto_Flex,
+} from "next/font/google";
+import localFont from "next/font/local";
 import Footer from "./components/common/Footer";
 import Navbar from "./components/common/Navbar_2";
 import "./globals.css";
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,59 +28,67 @@ export const metadata = {
 };
 
 const robo = Roboto_Flex({
-  subsets:["cyrillic"],
-  weight:['100', '200','300','400','500','600','700','800','900'],
-  variable:'--font-roboto'
-})
+  subsets: ["cyrillic"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-roboto",
+});
 
 const albert = Albert_Sans({
-  subsets:['latin'],
-  weight:['100','200','300','400','500','600','700','800','900'],
-  variable:'--font-albert'
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-albert",
 });
 
 export const sfThin = localFont({
-  src:'./font/SFPRODISPLAYREGULAR.otf',
-  variable: '--font-sfThin',
-  display: 'swap',
-})
+  src: "./font/SFPRODISPLAYREGULAR.otf",
+  variable: "--font-sfThin",
+  display: "swap",
+});
 export const sfBold = localFont({
-  src:'./font/SFPRODISPLAYBOLD.otf',
-  variable: '--font-sfBold',
-  display: 'swap',
-})
+  src: "./font/SFPRODISPLAYBOLD.otf",
+  variable: "--font-sfBold",
+  display: "swap",
+});
 
 const jost = Jost({
-  subsets:['latin'],
-  weight:['100','200','300','400','500','600','700','800','900'],
-  variable:'--font-jost',
-  display:'swap',
-})
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-jost",
+  display: "swap",
+});
 
 const alumini = Alumni_Sans_Pinstripe({
-  subsets:['cyrillic'],
-  weight:['400'],
-  variable:'--font-alumini'
-})
+  subsets: ["cyrillic"],
+  weight: ["400"],
+  variable: "--font-alumini",
+});
 
 const sand = Quicksand({
-  subsets:['latin'],
-  weight:['300','400','500','600','700'],
-  variable:'--font-sand'
-})
-
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-sand",
+});
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${robo.variable} ${albert.variable} ${sfThin.variable} ${sfBold.variable} ${jost.variable} ${alumini.variable} ${sand.variable} heading-albert antialiased bg-sec `}
-      > 
-      {/* <NavBar/> */}
-      <Navbar/>
+      >
+        {/* <NavBar/> */}
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-CEV90C3B4G"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || []; function gtag()
+        {dataLayer.push(arguments)}
+        gtag('js', new Date()); gtag('config', 'G-CEV90C3B4G');
+      </script>
     </html>
   );
 }
