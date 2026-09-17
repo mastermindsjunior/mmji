@@ -38,7 +38,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className=" py-28 px-6">
+    <section className=" py-28 px-6 max-w-7xl mx-auto w-full">
       <h3 className="font-jost text-primary text-4xl md:text-5xl font-bold mb-5">
         Let’s Build Something Extraordinary
       </h3>
@@ -48,7 +48,7 @@ const ContactForm = () => {
         building business success stories.
       </p>
 
-      <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden grid xl:grid-cols-2">
+      <div className=" bg-white rounded-3xl shadow-xl overflow-hidden grid xl:grid-cols-2">
         {/* LEFT PANEL */}
         <div className="bg-primary text-white p-12 flex flex-col justify-between">
           <Image

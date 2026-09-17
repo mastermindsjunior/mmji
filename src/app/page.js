@@ -12,6 +12,7 @@ import HomeAboutSection from "./components/home/HomeAboutSection";
 import Roadmap from "./components/home/Roadmap";
 import Solutions from "./components/home/Solutions";
 import Strength from "./components/home/Strength";
+import Testimonials from "./components/home/Testimonials";
 import WhyChooseUs from "./components/home/WhyChooseUs";
 export const metadata = {
   title: "Digital Marketing Agency in India | MasterMinds Junior India",
@@ -40,6 +41,7 @@ export default function Home() {
       <HomeAboutSection/>
       <CoreCompetencies/>
       <WhyChooseUs/>
+      <Testimonials/>
       <ContactForm/>
       {/* <CTASection/> */}
     </div>
