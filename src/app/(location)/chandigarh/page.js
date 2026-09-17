@@ -1,6 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 
+
+export const metadata = {
+  title: "Digital Marketing Agency Chandigarh | MasterMinds Junior India",
+  description: "Choose a Digital Marketing Agency Chandigarh businesses can trust for SEO, Google Ads, social media, PPC, web development and performance-driven growth.",
+};
+
+
 const ChandigarhPage = () => {
   return (
     <main className="pt-44 pb-24">

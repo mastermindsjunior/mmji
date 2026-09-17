@@ -3,6 +3,8 @@ export const services = [
     slug: 'social-media-marketing',
     title: 'Social Media Management',
     shortTitle: 'Social Media Marketing (SSM)',
+    metaT:"Social Media Marketing Services | MasterMinds Junior India",
+    metaD:"Grow your brand with the best social media marketing agency offering social media management, content creation, Instagram, Facebook, paid social and strategy.",
     num: 1,
     heading: 'Amplify Your Brand’s Voice Across Social Channels',
     description:
@@ -42,6 +44,8 @@ overview:
     slug: 'seo-optimization',
     title: 'SEO Optimization',
     shortTitle: 'Search Engine Optimization (SEO)',
+    metaT:"SEO Services in India | MasterMinds Junior India",
+    metaD:"Grow organic traffic with an SEO agency in Indiaoffering technical SEO, on-page SEO, keyword research, local SEO, content strategy, link building and SEO optimization.",
     num: 2,
     heading: 'Rise to the Top with SEO That Works',
    description:
@@ -81,6 +85,8 @@ overview:
     slug: 'web-development',
     title: 'Web Development',
     shortTitle: 'Website Development',
+    metaT:"Web Development Company in India | MasterMinds Junior India",
+    metaD:"Build a website with a web development company offering website design, responsive development, eCommerce, WordPress, Shopify, React and SEO-ready sites.",
     num: 3,
     heading: 'Bringing Your Digital Presence to Life',
     description:
@@ -120,6 +126,8 @@ overview:
     slug: 'branding',
     title: 'Branding',
     shortTitle: 'Branding',
+    metaT:"Branding Services in India | MasterMinds Junior India",
+    metaD:"Build a powerful brand with a great branding agency in India offering brand strategy, brand identity design, logo design, visual identity, messaging and brand guidelines.",
     num: 4,
     heading: 'Building Brands That Leave a Lasting Impression',
     description:
@@ -159,6 +167,8 @@ overview:
     slug: 'app-development',
     title: 'App Development',
     shortTitle: 'App Development',
+    metaT:"Mobile App Development Services | MasterMinds Junior India",
+    metaD:"Choose an app development company in India for iOS and Android app development, UI/UX design, eCommerce apps, MVP development, API integration and scalable solutions.",
     num: 5,
     heading: 'Innovative Apps Tailored to Your Needs',
    description:
@@ -198,6 +208,8 @@ overview:
     slug: 'graphic-logo-designing',
     title: 'Graphic & Logo Designing',
     shortTitle: 'Graphic & Logo Designing',
+        metaT:"Graphic & Logo Design Services | MasterMinds Junior India",
+    metaD:"Work with a best graphic and logo design agency in India for professional logos, social media creatives, marketing graphics, brochures, packaging and visual identity design.",
     num: 6,
     heading: 'Visual Designs That Tell Your Story',
     description:
@@ -237,6 +249,8 @@ overview:
     slug: 'content-writing',
     title: 'Content Writing',
     shortTitle: 'Content Writing',
+        metaT:"SEO Content Writing Services | MasterMinds Junior India",
+    metaD:"Hire a best content writing agency in India for SEO content, website copy, blog writing, landing pages, product descriptions, email copy and social media content.",
     num: 7,
     heading: 'Compelling Content That Captures & Converts',
     description:
@@ -275,6 +289,8 @@ overview:
   {
     slug: 'google-meta-ads',
     title: 'Google & Meta Ads',
+    metaT:"Google & Meta Ads Agency | MasterMinds Junior India",
+    metaD:"Get results with a Google Ads and Meta Ads agency in India offering PPC management, Facebook and Instagram advertising, paid search, remarketing and optimization.",
     shortTitle: 'Google & Meta Ads',
     num: 9,
     heading: 'Targeted Advertising with Measurable Results',

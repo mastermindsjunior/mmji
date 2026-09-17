@@ -1,6 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
 
+
+export const metadata = {
+  title: "Best Digital Marketing Agency in Pune | MasterMinds Junior India",
+  description: "Choose the best digital marketing agency in Pune for SEO, Google Ads, social media marketing, PPC, web development and performance-driven campaigns.",
+};
+
 const PunePage = () => {
   return (
     <main className="pt-44 pb-24">

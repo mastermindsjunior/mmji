@@ -11,6 +11,10 @@ import TimelineSection from '../components/about/Timeline'
 import Heading from '../components/about/Heading'
 import { MeetTheTeamSection } from '../components/about/MeettheTeam'
 
+export const metadata = {
+  title: "About MasterMinds Junior India | Digital Marketing Agency",
+  description: "Learn about MasterMinds Junior India, a digital agency offering SEO, social media marketing, web development, branding, content writing, Google Ads and Meta Ads.",
+};
 const page = () => {
   return (
     <main className=''>

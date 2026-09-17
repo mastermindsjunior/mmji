@@ -6,6 +6,7 @@ export function generateStaticParams() {
   return getAllServiceSlugs().map((slug) => ({ slug }));
 }
 
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const service = getServiceBySlug(slug);
@@ -13,8 +14,8 @@ export async function generateMetadata({ params }) {
     return { title: 'Service Not Found' };
   }
   return {
-    title: `${service.title} | MasterMinds Junior`,
-    description: service.description,
+    title: `${service.metaT} | MasterMinds Junior`,
+    description: service.metaD,
   };
 }
 

@@ -1,6 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 
+
+export const metadata = {
+  title: "Digital Marketing Agency Nashik | MasterMinds Junior India",
+  description: "Find a Digital Marketing Agency Nashik businesses can trust for SEO, Google Ads, social media, PPC, web development and performance marketing.",
+};
+
+
 const NashikPage = () => {
   return (
     <main className="pt-44 pb-24">

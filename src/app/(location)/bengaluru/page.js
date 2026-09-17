@@ -1,6 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
 
+
+export const metadata = {
+  title: "Digital Marketing Agency Bengaluru | MasterMinds Junior India",
+  description: "Choose a Digital Marketing Agency Bengaluru businesses can rely on for SEO, Google Ads, social media, PPC, web development and performance marketing.",
+};
+
 const BengaluruPage = () => {
   return (
     <main className="pt-44 pb-24">

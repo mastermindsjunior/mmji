@@ -13,6 +13,10 @@ import Roadmap from "./components/home/Roadmap";
 import Solutions from "./components/home/Solutions";
 import Strength from "./components/home/Strength";
 import WhyChooseUs from "./components/home/WhyChooseUs";
+export const metadata = {
+  title: "Digital Marketing Agency in India | MasterMinds Junior India",
+  description: "Grow with the best digital marketing agency in India offering SEO, social media marketing, web development, Google Ads, Meta Ads, branding and content marketing.",
+};
 
 export default function Home() {
   return (

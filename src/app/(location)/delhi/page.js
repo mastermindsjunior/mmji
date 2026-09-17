@@ -1,6 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 
+
+
+export const metadata = {
+  title: "Best Digital Marketing Agency in Delhi | MasterMinds Junior India",
+  description: "Work with the best digital marketing agency in Delhi for SEO, Google Ads, social media, PPC, web development and conversion-focused digital marketing.",
+};
+
 const DelhiPage = () => {
   return (
     <main className="pt-44 pb-24">

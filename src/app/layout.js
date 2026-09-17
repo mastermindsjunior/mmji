@@ -24,8 +24,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Masterminds junior India",
-  description: "MMJI",
+  title: "Digital Marketing Agency in India | MasterMinds Junior India",
+  description: "Grow with the best digital marketing agency in India offering SEO, social media marketing, web development, Google Ads, Meta Ads, branding and content marketing.",
 };
 
 const robo = Roboto_Flex({

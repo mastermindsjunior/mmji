@@ -39,6 +39,11 @@ const opportunities = [
   },
 ];
 
+export const metadata = {
+  title: "Digital Marketing Careers & Internships | MasterMinds Junior India",
+  description: "Explore digital marketing jobs and internships at MasterMinds Junior India in digital marketing, SEO, social media marketing, content writing, design and UI/UX.",
+};
+
 export default function CareersPage() {
   const [position, setPosition] = useState('');
   const [resume, setResume] = useState(null);
