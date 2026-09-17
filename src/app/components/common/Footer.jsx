@@ -63,7 +63,7 @@ const Footer = () => {
             { label: "Jaipur", link: "/jaipur" },
             { label: "Nashik", link: "/nashik" },
             { label: "Chandigarh", link: "/chandigarh" },
-            { label: "Chennai", href: "/chennai" },
+            { label: "Chennai", link: "/chennai" },
             { label: "Mumbai", link: "/mumbai" },
             { label: "Pune", link: "/pune" },
             { label: "Delhi", link: "/delhi" },
