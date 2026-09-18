@@ -1,6 +1,17 @@
 import Image from "next/image"
 import Link from "next/link"
 
+
+export const metadata = {
+  title: "Best Digital Marketing Agency in Chennai | MasterMinds Junior Indiaa",
+  description: "Choose a digital marketing agency in Chennai for SEO, local SEO, Google Ads, PPC, social media marketing, web development and performance marketing.",
+  keywords: [
+  "best digital marketing agency in Chennai",
+  "digital marketing company in Chennai",
+  "best SEO services in Chennai"
+]
+};
+
 const ChennaiPage = () => {
   return (
     <main className="pt-44 pb-24">

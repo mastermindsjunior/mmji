@@ -1,0 +1,15 @@
+# Allow all search engine crawlers full access by default
+User-agent: *
+Allow: /
+
+# Block access to private, administrative, or dynamic utility pages
+Disallow: /admin/
+Disallow: /login/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /account/
+Disallow: /search/
+Disallow: /tmp/
+
+# Specify the XML Sitemap location (crucial for SEO)
+Sitemap: https://www.mastermindsjuniorindia.com/sitemap.xml

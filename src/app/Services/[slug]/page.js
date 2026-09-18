@@ -16,6 +16,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `${service.metaT} | MasterMinds Junior`,
     description: service.metaD,
+    keywords: metaK,
   };
 }
 

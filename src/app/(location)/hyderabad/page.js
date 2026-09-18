@@ -5,6 +5,11 @@ import Link from "next/link"
 export const metadata = {
   title: "Best Digital Marketing Agency in Hyderabad | MasterMinds Junior India",
   description: "Find the best digital marketing agency in Hyderabad for SEO, Google Ads, social media marketing, PPC, web development and data-driven growth campaigns.",
+  keywords: [
+  "best digital marketing agency in Hyderabad",
+  "digital marketing company in Hyderabad",
+  "best SEO services in Hyderabad"
+],
 };
 
 const HyderabadPage = () => {

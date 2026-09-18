@@ -5,6 +5,11 @@ import Link from "next/link"
 export const metadata = {
   title: "Digital Marketing Agency Bengaluru | MasterMinds Junior India",
   description: "Choose a Digital Marketing Agency Bengaluru businesses can rely on for SEO, Google Ads, social media, PPC, web development and performance marketing.",
+  keywords: [
+  "best digital marketing agency in Bangalore",
+  "digital marketing company in Bangalore",
+  "best SEO services in Bangalore"
+],
 };
 
 const BengaluruPage = () => {

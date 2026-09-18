@@ -7,6 +7,11 @@ import Link from "next/link"
 export const metadata = {
   title: "Best Digital Marketing Agency in Jaipur | MasterMinds Junior India",
   description: "Looking for the best digital marketing agency in Jaipur? Get SEO, Google Ads, social media, PPC, web development and performance marketing focused on growth.",
+  keywords: [
+  "best digital marketing agency in Jaipur",
+  "digital marketing company in Jaipur",
+  "best SEO services in Jaipur"
+],
 };
 
 const JaipurPage = () => {

@@ -5,6 +5,11 @@ import Link from "next/link"
 export const metadata = {
   title: "Digital Marketing Agency Nashik | MasterMinds Junior India",
   description: "Find a Digital Marketing Agency Nashik businesses can trust for SEO, Google Ads, social media, PPC, web development and performance marketing.",
+  keywords: [
+  "best digital marketing agency in Nashik",
+  "digital marketing company in Nashik",
+  "best SEO services in Nashik"
+],
 };
 
 

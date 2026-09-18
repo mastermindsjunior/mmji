@@ -44,7 +44,7 @@ const ContactForm = () => {
       </h3>
 
       <p className="font-jost text-primary/90 mb-10 max-w-2xl">
-        At MasterMinds Junior, we’re not just creating digital assets—we’re
+        At MasterMinds Junior, we’re not just creating digital assets—we're
         building business success stories.
       </p>
 

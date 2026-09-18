@@ -6,6 +6,11 @@ import Link from "next/link"
 export const metadata = {
   title: "Best Digital Marketing Agency in Mumbai | MasterMinds Junior India",
   description: "Find the best digital marketing agency in Mumbai for SEO, Google Ads, social media marketing, PPC, web development and measurable business growth.",
+  keywords: [
+  "best digital marketing agency in Mumbai",
+  "digital marketing company in Mumbai",
+  "best SEO services in Mumbai"
+],
 };
 
 const MumbaiPage = () => {

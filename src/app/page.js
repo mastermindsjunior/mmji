@@ -17,6 +17,13 @@ import WhyChooseUs from "./components/home/WhyChooseUs";
 export const metadata = {
   title: "Digital Marketing Agency in India | MasterMinds Junior India",
   description: "Grow with the best digital marketing agency in India offering SEO, social media marketing, web development, Google Ads, Meta Ads, branding and content marketing.",
+    keywords: [
+  "best digital marketing agency in Mumbai",
+  "best digital marketing agency in Delhi",
+  "best digital marketing agency in Bangalore",
+  "best digital marketing agency in Hyderabad",
+  "best digital marketing agency in Chennai"
+],
 };
 
 export default function Home() {

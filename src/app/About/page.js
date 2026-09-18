@@ -14,6 +14,13 @@ import { MeetTheTeamSection } from '../components/about/MeettheTeam'
 export const metadata = {
   title: "About MasterMinds Junior India | Digital Marketing Agency",
   description: "Learn about MasterMinds Junior India, a digital agency offering SEO, social media marketing, web development, branding, content writing, Google Ads and Meta Ads.",
+  keywords: [
+  "best digital marketing agency in Mumbai",
+  "best digital marketing agency in Delhi",
+  "best digital marketing agency in Bangalore",
+  "best digital marketing agency in Hyderabad",
+  "best digital marketing agency in Chennai"
+],
 };
 const page = () => {
   return (

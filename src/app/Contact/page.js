@@ -6,6 +6,11 @@ import { ArrowUpRight, LucideMapPin, MailIcon, PhoneIcon } from 'lucide-react'
 export const metadata = {
   title: "Contact MasterMinds Junior India | Digital Marketing Agency",
   description: "Contact MasterMinds Junior India for digital marketing services, SEO, social media marketing, web development, branding, content writing, Google Ads and Meta Ads.",
+  keywords: [
+  "Digital Marketing Agency in India",
+  "Digital Marketing Services in India",
+  "SEO Services in India"
+],
 };
 
 const page = () => {

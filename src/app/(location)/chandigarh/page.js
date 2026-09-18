@@ -5,6 +5,11 @@ import Link from "next/link"
 export const metadata = {
   title: "Digital Marketing Agency Chandigarh | MasterMinds Junior India",
   description: "Choose a Digital Marketing Agency Chandigarh businesses can trust for SEO, Google Ads, social media, PPC, web development and performance-driven growth.",
+  keywords: [
+  "best digital marketing agency in Chandigarh",
+  "digital marketing company in Chandigarh",
+  "best SEO services in Chandigarh"
+],
 };
 
 
